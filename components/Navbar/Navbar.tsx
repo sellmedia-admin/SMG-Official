@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-bg-ash-1 h-24 flex items-center justify-between px-2 md:px-[120px] bg-b-grey-2 border-b-1 border-b-light-grey">
+      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between px-2 md:px-[120px] bg-b-grey-2 border-b-1 border-b-light-grey">
         <Box className="flex items-center">
           <img
             src="/imgs/logo.png"

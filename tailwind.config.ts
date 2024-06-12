@@ -18,8 +18,10 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "custom-gradient":
-          "linear-gradient(to right, #C82090 50%, #6A14D1 50%)",
+          "linear-gradient(to right, #C82090 0%, #C82090 25%, #6A14D1 75%, #6A14D1 100%);",
+        "hero-bg": "url(/imgs/hero-bg.png)",
       },
+
       colors: {
         "b-pink": " #C82090",
         "b-darkPink": "#A01A73",
@@ -37,10 +39,13 @@ module.exports = {
         4: "4px",
         10: "10px",
         15: "15px",
+        20: "20px",
       },
       borderColor: {
-        "b-dark-grey": "#828282",
-        "b-light-grey": "#E7E7E7",
+        "bd-ash": "#484848",
+        "bd-grey-1": "#c3c3c3",
+        "bd-dark-grey": "#828282",
+        "bd-light-grey": "#E7E7E7",
       },
       backgroundColor: {
         "bg-green-1": "#009E74",
@@ -50,13 +55,13 @@ module.exports = {
         "blue-50": "0 2px 2px 0 rgba(4, 35, 65, 0.50)",
       },
     },
-    screens: {
-      sm: "390px",
-      mob: "620px",
-      md: "850px",
-      lg: "1024px",
-      xl: "1271px",
-      "2xl": "1600px",
-    },
+    // screens: {
+    //   sm: "390px",
+    //   mob: "620px",
+    //   md: "850px",
+    //   lg: "1024px",
+    //   xl: "1271px",
+    //   "2xl": "1600px",
+    // },
   },
 };
