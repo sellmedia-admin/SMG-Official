@@ -10,3 +10,14 @@ body {
 img {
   max-width: 100%;
 }
+
+.min-h-home {
+  min-height: calc(100vh - 96px);
+  background-color: #f5f4f6;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 42px;
+}

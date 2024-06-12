@@ -15,6 +15,7 @@ interface CustomButtonProps extends ButtonProps {
   width?: string;
   color?: string;
   rounded?: string;
+  height?: string;
 }
 
 const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
@@ -32,8 +33,8 @@ const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
       fontWeight = 600,
       rightIcon,
       className,
-      width = "100%",
-      color = "#fff",
+      height = "48px",
+      width = "170px",
       ...rest
     },
     ref
@@ -42,12 +43,10 @@ const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
       <Button
         type={type}
         w={width}
-        border={"none"}
         borderRadius={rounded}
         spinnerPlacement="start"
         leftIcon={leftIcon}
         rightIcon={rightIcon}
-        color={color}
         py={paddingY}
         paddingY={paddingY}
         px={paddingX}
@@ -55,7 +54,8 @@ const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
         variant={variant}
         onClick={onClick}
         fontSize={fontSize}
-        className={cn(" text-white  leading-5 h-full", className)}
+        height={height}
+        className={cn(" text-white  leading-[23px] h-full", className)}
         _hover={{ opacity: "0.9" }}
         // _disabled={{
         //   cursor: "not-allowed",
