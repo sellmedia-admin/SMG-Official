@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-  color: red;
+  /* color: red; */
+  color: #000;
+}
+
+img {
+  max-width: 100%;
 }

@@ -17,17 +17,18 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "custom-gradient":
+          "linear-gradient(to right, #C82090 50%, #6A14D1 50%)",
       },
       colors: {
-        "b-red-1": " #9B0000",
-        "b-red-2": "#C1272D",
-        "b-teal-1": " #CAF0F8",
-        "b-teal-2": "#EFFBFD",
-        "b-blue-1": " #042341",
-        "b-green-1": "#1BAA04",
-        "b-green-2": "#0E8F1A",
-        "b-black-1": "#181818",
-        "b-ash-1": "#242424",
+        "b-pink": " #C82090",
+        "b-darkPink": "#A01A73",
+        "b-black": "#0B0B0B",
+        "b-green": "#00BA72",
+        "b-white": "#FAFAFA",
+        "b-ash": "#484848",
+        "b-grey": "#828282",
+        "b-grey-2": "#F5F4F6",
       },
       borderWidth: {
         1: "1px",
@@ -38,15 +39,11 @@ module.exports = {
         15: "15px",
       },
       borderColor: {
-        "b-error-5": "#F04438",
-        "b-red-6": "#C1272D",
+        "b-dark-grey": "#828282",
+        "b-light-grey": "#E7E7E7",
       },
       backgroundColor: {
         "bg-green-1": "#009E74",
-        "bg-red-1": "#D83D3D",
-        "bg-blue-1": "#042341",
-        "bg-black-1": "#000000",
-        "bg-ash-1": "#242424",
       },
       boxShadow: {
         "black-30": "0 2px 2px 0 rgba(0, 0, 0, 0.30)",
