@@ -1,5 +1,6 @@
-import { AboutSections, CustomButton } from "@/components";
-import { cn } from "@/utils/cn";
+import { AboutSections, CustomButton, ServicesSection } from "@/components";
+import { SERVICES } from "@/data";
+
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -93,7 +94,34 @@ export default function Home() {
         </Flex>
       </section>
 
-      <section className="text-center w-full min-h-screen"></section>
+      <section className=" w-full min-h-screen">
+        {SERVICES.map((service) => (
+          <ServicesSection
+            key={service.topTitle}
+            image={service.image}
+            topTitle={service.topTitle}
+            bottomTitle={service.bottomTitle}
+            linkTo={service.linkTo}
+            contentTitle={service.contentTitle}
+            contentText={service.contentText}
+            orderBy={service.orderBy}
+          />
+        ))}
+      </section>
+
+      <section className="min-h-screen text-center bg-b-black">
+        <Flex gap={8} alignItems={"center"} justifyContent={"center"}>
+          <img
+            src={`/icons/achievements-star.svg`}
+            alt={"achievements-star"}
+            width={30}
+            height={30}
+          />
+          <Text color={"white"}>Achievements</Text>
+        </Flex>
+
+        <h2 className="mt-[40px] mb-6 text-white">Our Stories in Numbers  </h2>
+      </section>
     </>
   );
 }
