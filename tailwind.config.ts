@@ -31,6 +31,7 @@ module.exports = {
         "b-ash": "#484848",
         "b-grey": "#828282",
         "b-grey-2": "#F5F4F6",
+        "b-light-green": "#E6FDF4",
       },
       borderWidth: {
         1: "1px",
