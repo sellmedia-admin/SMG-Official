@@ -1,7 +1,8 @@
 import { AboutSections, CustomButton, ServicesSection } from "@/components";
-import { SERVICES } from "@/data";
+import { ACHIEVEMENTS, SERVICES } from "@/data";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
             Innovating at the Intersection of Media and Technology  
           </h1>
 
-          <Text className="text-[18px] leading-9 my-6">
+          <Text className="leading-9 my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
             Strategies Meet Creative Innovation, click below to get started with
             us
@@ -110,17 +111,105 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen text-center bg-b-black">
-        <Flex gap={8} alignItems={"center"} justifyContent={"center"}>
-          <img
-            src={`/icons/achievements-star.svg`}
-            alt={"achievements-star"}
-            width={30}
-            height={30}
-          />
-          <Text color={"white"}>Achievements</Text>
-        </Flex>
+        <Box paddingTop={80} marginBottom={40}>
+          <Flex gap={8} alignItems={"center"} justifyContent={"center"}>
+            <img
+              src={`/icons/achievements-star.svg`}
+              alt={"achievements-star"}
+              width={30}
+              height={30}
+            />
+            <Text color={"white"}>Achievements</Text>
+          </Flex>
 
-        <h2 className="mt-[40px] mb-6 text-white">Our Stories in Numbers  </h2>
+          <h2 className="mt-[40px] mb-6 text-white text-[36px] leading-[57px]">
+            Our Stories in Numbers  
+          </h2>
+        </Box>
+        {/*  -------------------- */}
+        <Box className="flex justify-between w-full max-w-[1299px] mx-auto">
+          <img
+            src="/imgs/highlight-left-white.png"
+            alt="highlight icon"
+            width={60}
+            height={65}
+          />
+          <img
+            src="/imgs/highlight-right-white.png"
+            alt="highlight icon"
+            width={60}
+            height={65}
+          />
+        </Box>
+        <Box className="max-w-[1205px] mx-auto grid grid-cols-3 gap-[18px] -mt-5">
+          {ACHIEVEMENTS.map((achievement) => (
+            <Box
+              key={achievement.title}
+              className="rounded-10 border-2 border-white text-white text-center h-[223px] flex flex-col items-center justify-center gap-6 "
+            >
+              <div className="text-center mx-auto max-w-[259px]">
+                <h2>{achievement.title}</h2>
+              </div>
+              <Text className="max-w-[339px]">{achievement.text}</Text>
+            </Box>
+          ))}
+        </Box>
+      </section>
+
+      <section className="min-h-screen">
+        <Box className="min-h-[60vh] grid grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
+          <Box>
+            <Flex gap={8} alignItems={"center"}>
+              <img
+                src={`/icons/about-icon.svg`}
+                alt={"clientele-star"}
+                width={30}
+                height={30}
+              />
+              <Text className="text-b-pink">Clientele</Text>
+            </Flex>
+
+            <h2 className="mt-10 mb-6">Brands That Trust Us  </h2>
+            <Text className="leading-9">
+              We are proud to partner with some of the most respected brands in
+              the industry. Our clients trust us to deliver innovative solutions
+              and drive their success. Notable brands include
+            </Text>
+          </Box>
+
+          <Image
+            src={"/imgs/brands.png"}
+            alt="brands that trust us"
+            height={416}
+            width={591}
+          />
+
+          {/* -------- */}
+        </Box>
+
+        {/* ----- get started ---- */}
+        <Box className="bg-b-light-green h-full min-h-[40vh] py-[80px] px-[120px] text-center">
+          <h2>Get Started  </h2>
+          <Text className="mt-6 mb-10">
+            Ready to embark on your own transformative journey with SellMedia
+            Group? Take the first step today.
+          </Text>
+          <>
+            <Flex alignItems={"center"} gap={8} className=" w-max mx-auto">
+              <div className="bg-custom-gradient p-[1px] rounded-20">
+                <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+                  Start a project
+                </CustomButton>
+              </div>
+              <Link
+                href={"/"}
+                className=" p-[1px] rounded-20 border border-bd-grey-1"
+              >
+                <CustomButton className="text-b-ash">Contact Us</CustomButton>
+              </Link>
+            </Flex>
+          </>
+        </Box>
       </section>
     </>
   );

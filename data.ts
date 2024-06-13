@@ -31,3 +31,21 @@ export const SERVICES = [
     orderBy: "",
   },
 ];
+
+export const ACHIEVEMENTS = [
+  { title: "7 years", text: "Selling Vision, Perception, & Growth" },
+  {
+    title: "100+ Projects",
+    text: "Ideas & growth driven marketing executed",
+  },
+  { title: "20+ Awards", text: "Recognitize in media and technology" },
+  {
+    title: "Clientele",
+    text: "We’ve partnered with top-tier firms globally",
+  },
+  { title: "Global Standard", text: "Our approach and processes" },
+  {
+    title: "Global Clientele",
+    text: "We’re visible in 5 continents, & growing",
+  },
+];

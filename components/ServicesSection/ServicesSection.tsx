@@ -19,7 +19,7 @@ const ServiceText = ({ title, text, linkTo }: { [x: string]: string }) => {
   return (
     <Box className="max-w-[523px]">
       <h3 className="leading-[46px]">{title}</h3>
-      <Text className="text-[18px] leading-9 my-6">{text}</Text>
+      <Text className="leading-9 my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
           className="text-b-pink !justify-start"
