@@ -29,6 +29,8 @@ module.exports = {
         "b-green": "#00BA72",
         "b-white": "#FAFAFA",
         "b-ash": "#484848",
+        "b-ash1": "#232323",
+        "b-ash2": "#303030",
         "b-grey": "#828282",
         "b-grey-2": "#F5F4F6",
         "b-light-green": "#E6FDF4",

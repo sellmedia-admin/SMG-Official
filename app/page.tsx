@@ -106,6 +106,7 @@ export default function Home() {
             contentTitle={service.contentTitle}
             contentText={service.contentText}
             orderBy={service.orderBy}
+            separator={service.separator}
           />
         ))}
       </section>

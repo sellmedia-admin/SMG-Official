@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 const inter = Sora({ subsets: ["latin"] });
 
@@ -22,6 +22,7 @@ export default function RootLayout({
         <NextTopLoader />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
