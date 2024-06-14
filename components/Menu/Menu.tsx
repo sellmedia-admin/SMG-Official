@@ -44,7 +44,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
           <img src="/icons/arrow-drop-down.svg" width={24} height={24} />
         }
         bg="white"
-        className="rounded-lg !border-white !outline-none text-b-black px-2 bg-white"
+        className="!rounded-lg !border-white !outline-none text-b-black !px-2 bg-white !h-[48px]"
       >
         <Flex align="center">
           <Image
@@ -56,12 +56,24 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
           <Box className="font-600 leading-[18px]">{selectedValue?.label}</Box>
         </Flex>
       </MenuButton>
-      <MenuList bg="white" mt={-6} paddingY={10} className="w-full rounded-lg">
+      <MenuList
+        bg="white"
+        mt={-1}
+        minWidth={""}
+        paddingY={6}
+        className="!w-[125px] !rounded-lg"
+      >
         {teamList.map((option) => (
           <MenuItem
             key={option.value}
             onClick={() => handleMenuItemClick(option.value)}
-            className="w-full m-4"
+            className="my-4"
+            sx={{
+              backgroundColor: "transparent",
+              "&:focus": {
+                outline: "none",
+              },
+            }}
           >
             <Flex align="center" className="px-[8px]">
               <Image

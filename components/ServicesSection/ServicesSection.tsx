@@ -22,7 +22,7 @@ const ServiceText = ({ title, text, linkTo }: { [x: string]: string }) => {
       <Text className="leading-9 my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
-          className="text-b-pink !justify-start"
+          className="text-b-pink !justify-start !pl-0"
           rightIcon={<img src="/icons/arrows-long-right.svg" />}
         >
           Learn more
