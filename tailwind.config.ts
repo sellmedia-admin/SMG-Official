@@ -35,8 +35,7 @@ module.exports = {
         "b-grey": "#828282",
         "b-grey-2": "#F5F4F6",
         "b-light-green": "#E6FDF4",
-        "b-new-pink": "#F5F4de",
-        "b-sec-pink": "#FAE9F4",
+        "b-lightPink": "#FAE9F4",
         "b-pry-purple": "#F0E8FA",
       },
       borderWidth: {

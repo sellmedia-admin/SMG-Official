@@ -4,7 +4,7 @@ export const SERVICES = [
     topTitle: "Using technology to power creative ",
     bottomTitle: "solutions for your brand",
     linkTo: "/",
-    contentTitle: "Creativity powered by Data, and Artificial Intelligence  ",
+    contentTitle: "Creativity powered by Data, and Artificial Intelligence",
     contentText:
       "Our Marketing Communication services are designed to cut through the noise. We develop and deliver messages that capture attention and drive engagement. By understanding your audience and crafting tailored content, we ensure your brand's voice is heard loud and clear.",
     orderBy: "",
@@ -13,21 +13,20 @@ export const SERVICES = [
   {
     image: "service2.png",
     topTitle: "Using Marketing Analytics to make",
-    bottomTitle: "informed decisions ",
+    bottomTitle: "informed decisions",
     linkTo: "/",
-    contentTitle:
-      "Drive home your ROI using data and media proven strategies  ",
+    contentTitle: "Drive home your ROI using data and media proven strategies",
     contentText:
       "Data-driven decision-making is at the heart of our Marketing Analysis services. We delve deep into market research, competitive analysis, and consumer behavior studies to provide actionable insights. Our analytical prowess empowers you to make informed decisions that drive growth and success.",
-    orderBy: "-order-1",
+    orderBy: "-1",
     separator: "7rem",
   },
   {
     image: "service3.png",
     topTitle: "Using SaaS products designed for your",
-    bottomTitle: "business growth   ",
+    bottomTitle: "business growth",
     linkTo: "/",
-    contentTitle: "Customised products and solutions designed to growth    ",
+    contentTitle: "Customised products and solutions designed to growth",
     contentText:
       "Stay ahead of the curve with our Marketing Technology services. We integrate the latest technological advancements into your marketing strategy, enhancing efficiency and effectiveness. From automation tools to advanced analytics, we equip you with the technology to thrive in a digital-first world.",
     orderBy: "",
@@ -63,7 +62,7 @@ export const SERVICES_HELP = [
     title: "In-Depth Marketing Analysis",
     text: "Leveraging data to uncover insights and drive strategy and informed business decisions.",
     icon: "analysis-icon",
-    bgColor: "bg-b-new-pink",
+    bgColor: "bg-b-lightPink",
   },
   {
     title: "Advanced Marketing Technology",

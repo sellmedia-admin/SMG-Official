@@ -7,6 +7,7 @@ import {
 } from "@/components";
 import { ACHIEVEMENTS, SERVICES, SERVICES_HELP } from "@/data";
 import { cn } from "@/utils/cn";
+import { motion } from "framer-motion";
 
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
@@ -124,15 +125,20 @@ export default function Home() {
           />
         </Flex>
 
-        <Box className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px]">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          // transition={{ delay: 0.5, type: "spring", stiffness: 20 }}
+          className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px] -mt-6"
+        >
           {SERVICES_HELP.map((achievement) => (
             <Box
               key={achievement.title}
-              className="rounded-10 bg-white border-1 border-[#B3B3B3]  text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue"
+              className="rounded-10 bg-white border border-[#B3B3B3] text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
             >
               <div
                 className={cn(
-                  "w-[80px] h-[80px] rounded-full grid place-items-center",
+                  "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white",
                   achievement.bgColor
                 )}
               >
@@ -151,7 +157,7 @@ export default function Home() {
               </Text>
             </Box>
           ))}
-        </Box>
+        </motion.div>
       </section>
 
       <section className=" w-full min-h-screen">
