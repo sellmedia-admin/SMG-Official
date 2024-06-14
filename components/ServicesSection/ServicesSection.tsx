@@ -65,7 +65,7 @@ const ServicesSection = ({
             title={contentTitle}
             text={contentText}
           />
-          <Box className={orderBy}>
+          <Box order={orderBy}>
             <Image
               src={`/imgs/${image}`}
               alt={image}

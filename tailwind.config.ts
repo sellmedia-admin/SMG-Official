@@ -15,6 +15,7 @@ module.exports = {
         // poppins: ["Poppins", "sans-serif"],
         // barlow: ["Barlow", "sans-serif"],
       },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "custom-gradient":
@@ -23,7 +24,7 @@ module.exports = {
       },
 
       colors: {
-        "b-pink": " #C82090",
+        "b-pink": "#C82090",
         "b-darkPink": "#A01A73",
         "b-black": "#0B0B0B",
         "b-green": "#00BA72",
@@ -34,6 +35,8 @@ module.exports = {
         "b-grey": "#828282",
         "b-grey-2": "#F5F4F6",
         "b-light-green": "#E6FDF4",
+        "b-lightPink": "#FAE9F4",
+        "b-pry-purple": "#F0E8FA",
       },
       borderWidth: {
         1: "1px",
@@ -56,6 +59,7 @@ module.exports = {
       boxShadow: {
         "black-30": "0 2px 2px 0 rgba(0, 0, 0, 0.30)",
         "blue-50": "0 2px 2px 0 rgba(4, 35, 65, 0.50)",
+        "pale-blue": "0px 16px 40px rgba(112, 144, 176, 0.2)",
       },
     },
     // screens: {

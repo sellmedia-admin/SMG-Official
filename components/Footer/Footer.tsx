@@ -79,16 +79,19 @@ const Footer = () => {
                 <Flex
                   align="center"
                   direction={"column"}
-                  gap={8}
+                  gap={2}
                   className=""
                   key={option.value}
                 >
-                  <Image
-                    src={`/icons/${option.label.toLowerCase()}-special.svg`}
-                    alt={option.label}
-                    width={32}
-                    height={32}
-                  />
+                  <Link href={"#"} className="grid place-items-center">
+                    <Image
+                      src={`/icons/${option.label.toLowerCase()}-special.svg`}
+                      alt={option.label}
+                      width={32}
+                      height={32}
+                      className="transition ease-in-out hover:scale-110"
+                    />
+                  </Link>
                   <Box className="font-600 leading-[18px]">{option.label}</Box>
                 </Flex>
               ))}

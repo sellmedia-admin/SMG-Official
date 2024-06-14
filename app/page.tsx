@@ -5,15 +5,15 @@ import {
   Modal,
   ServicesSection,
 } from "@/components";
-import { ACHIEVEMENTS, SERVICES } from "@/data";
+import { ACHIEVEMENTS, SERVICES, SERVICES_HELP } from "@/data";
+import { cn } from "@/utils/cn";
+import { motion } from "framer-motion";
 
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Home() {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -124,6 +124,40 @@ export default function Home() {
             height={65}
           />
         </Flex>
+
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          // transition={{ delay: 0.5, type: "spring", stiffness: 20 }}
+          className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px] -mt-6"
+        >
+          {SERVICES_HELP.map((achievement) => (
+            <Box
+              key={achievement.title}
+              className="rounded-10 bg-white border border-[#B3B3B3] text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
+            >
+              <div
+                className={cn(
+                  "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white",
+                  achievement.bgColor
+                )}
+              >
+                <img
+                  src={`icons/${achievement.icon}.svg`}
+                  alt={achievement.icon}
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div className="text-center mx-auto max-w-[291px]">
+                <h2 className="text-2xl leading-8">{achievement.title}</h2>
+              </div>
+              <Text className="max-w-[339px] text-base leading-[30px]">
+                {achievement.text}
+              </Text>
+            </Box>
+          ))}
+        </motion.div>
       </section>
 
       <section className=" w-full min-h-screen">
