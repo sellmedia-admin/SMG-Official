@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const inter = Sora({ subsets: ["latin"] });
 
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NextTopLoader />
-        <Navbar />
-        {children}
+        <ChakraProvider>
+          <NextTopLoader />
+          <Navbar />
+          {children}
+          <Footer />
+        </ChakraProvider>
       </body>
     </html>
   );

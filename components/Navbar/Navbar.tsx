@@ -1,7 +1,5 @@
 "use client";
-import { Box, Select, Text } from "@chakra-ui/react";
-
-import Image from "next/image";
+import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -61,12 +59,7 @@ const Navbar = () => {
         {/* buttons at the right */}
         <Box className="ml-auto flex gap-4 ">
           <Link href={"/bet-converter"}>
-            <CustomButton
-              className="bg-b-black  h-12"
-              paddingY="12"
-              paddingX="24"
-              rounded="20"
-            >
+            <CustomButton className="bg-b-black text-white" rounded="20">
               Start a project
             </CustomButton>
           </Link>

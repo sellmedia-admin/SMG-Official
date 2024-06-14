@@ -1,11 +1,20 @@
-import { AboutSections, CustomButton, ServicesSection } from "@/components";
+"use client";
+import {
+  AboutSections,
+  CustomButton,
+  Modal,
+  ServicesSection,
+} from "@/components";
 import { ACHIEVEMENTS, SERVICES } from "@/data";
 
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-2 place-items-center">
@@ -19,23 +28,45 @@ export default function Home() {
             Strategies Meet Creative Innovation, click below to get started with
             us
           </Text>
-          <Flex alignItems={"center"} gap={8}>
-            <div className="bg-custom-gradient p-[1px] rounded-20">
-              <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
-                Start a project
-              </CustomButton>
+          <Box position={"relative"}>
+            <Flex alignItems={"center"} gap={8}>
+              <div className="bg-custom-gradient p-[1px] rounded-20">
+                <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+                  Start a project
+                </CustomButton>
+              </div>
+              <Link
+                href={"#"}
+                className=" p-[1px] rounded-20 border border-bd-grey-1"
+              >
+                <CustomButton
+                  className="text-b-ash rounded-20 "
+                  onClick={onOpen}
+                >
+                  Contact Us
+                </CustomButton>
+              </Link>
+            </Flex>
+            <div className="">
+              <img
+                src="/gif/arrow.gif"
+                alt="arrows"
+                width={224}
+                height={224}
+                className="rotate-45"
+              />
             </div>
-            <Link
-              href={"/"}
-              className=" p-[1px] rounded-20 border border-bd-grey-1"
-            >
-              <CustomButton className="text-b-ash">Contact Us</CustomButton>
-            </Link>
-          </Flex>
+          </Box>
         </div>
 
         <div>
-          <img src="/imgs/hero-star.png" alt="star" width={185} height={185} />
+          <img
+            src="/imgs/hero-star.png"
+            alt="star"
+            width={185}
+            height={185}
+            className="-mt-16"
+          />
         </div>
       </main>
 
@@ -106,12 +137,13 @@ export default function Home() {
             contentTitle={service.contentTitle}
             contentText={service.contentText}
             orderBy={service.orderBy}
+            separator={service.separator}
           />
         ))}
       </section>
 
       <section className="min-h-screen text-center bg-b-black">
-        <Box paddingTop={80} marginBottom={40}>
+        <Box className="pt-[80px]">
           <Flex gap={8} alignItems={"center"} justifyContent={"center"}>
             <img
               src={`/icons/achievements-star.svg`}
@@ -211,6 +243,8 @@ export default function Home() {
           </>
         </Box>
       </section>
+
+      <Modal isOpen={isOpen} onClose={onClose} />
     </>
   );
 }

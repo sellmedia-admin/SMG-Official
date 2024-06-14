@@ -22,7 +22,7 @@ const ServiceText = ({ title, text, linkTo }: { [x: string]: string }) => {
       <Text className="leading-9 my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
-          className="text-b-pink !justify-start"
+          className="text-b-pink !justify-start !pl-0"
           rightIcon={<img src="/icons/arrows-long-right.svg" />}
         >
           Learn more
@@ -46,13 +46,15 @@ const ServicesSection = ({
     <Box className="text-center mt-[80px]">
       <Box className="mx-auto w-max">
         <Text className="font-bold text-[37px]">{topTitle}</Text>
+
         <img
           src="/imgs/line-separator.png"
           alt="line"
           width={"200px"}
           height={"15px"}
-          className={separator}
+          style={{ marginLeft: separator }}
         />
+
         <Text className="font-bold text-[37px]">{bottomTitle}</Text>
       </Box>
 
