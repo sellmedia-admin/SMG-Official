@@ -8,7 +8,6 @@ import {
 import { ACHIEVEMENTS, SERVICES, SERVICES_HELP } from "@/data";
 import { cn } from "@/utils/cn";
 import { motion } from "framer-motion";
-
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
