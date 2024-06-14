@@ -5,15 +5,14 @@ import {
   Modal,
   ServicesSection,
 } from "@/components";
-import { ACHIEVEMENTS, SERVICES } from "@/data";
+import { ACHIEVEMENTS, SERVICES, SERVICES_HELP } from "@/data";
+import { cn } from "@/utils/cn";
 
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Home() {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -124,6 +123,35 @@ export default function Home() {
             height={65}
           />
         </Flex>
+
+        <Box className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px]">
+          {SERVICES_HELP.map((achievement) => (
+            <Box
+              key={achievement.title}
+              className="rounded-10 bg-white border-1 border-[#B3B3B3]  text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue"
+            >
+              <div
+                className={cn(
+                  "w-[80px] h-[80px] rounded-full grid place-items-center",
+                  achievement.bgColor
+                )}
+              >
+                <img
+                  src={`icons/${achievement.icon}.svg`}
+                  alt={achievement.icon}
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div className="text-center mx-auto max-w-[291px]">
+                <h2 className="text-2xl leading-8">{achievement.title}</h2>
+              </div>
+              <Text className="max-w-[339px] text-base leading-[30px]">
+                {achievement.text}
+              </Text>
+            </Box>
+          ))}
+        </Box>
       </section>
 
       <section className=" w-full min-h-screen">

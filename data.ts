@@ -52,3 +52,23 @@ export const ACHIEVEMENTS = [
     text: "We’re visible in 5 continents, & growing",
   },
 ];
+export const SERVICES_HELP = [
+  {
+    title: "Strategic Marketing Communications",
+    text: "Crafting compelling messages that resonate with your targets audience, inspiring them to take your desired actions.",
+    icon: "marketing-icon",
+    bgColor: "bg-b-light-green",
+  },
+  {
+    title: "In-Depth Marketing Analysis",
+    text: "Leveraging data to uncover insights and drive strategy and informed business decisions.",
+    icon: "analysis-icon",
+    bgColor: "bg-b-new-pink",
+  },
+  {
+    title: "Advanced Marketing Technology",
+    text: "Implementing the latest technologies to enhance your marketing efforts and drive business outcomes.",
+    icon: "technology-icon",
+    bgColor: "bg-b-pry-purple",
+  },
+];
