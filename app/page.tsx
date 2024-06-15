@@ -1,13 +1,15 @@
 "use client";
 import {
-  AboutSections,
+  ContactModal,
   CustomButton,
+  GetStarted,
+  LandingPageAbout,
+  LandingPageAchievements,
+  LandingPageServices,
   Modal,
-  ServicesSection,
+  SectionTitle,
 } from "@/components";
-import { ACHIEVEMENTS, SERVICES, SERVICES_HELP } from "@/data";
-import { cn } from "@/utils/cn";
-import { motion } from "framer-motion";
+
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -71,169 +73,25 @@ export default function Home() {
 
       {/* ------------ */}
       <section className="text-center w-full min-h-screen">
-        <AboutSections
-          title="About Us"
-          titleColor="#C82090"
-          icon="about-icon"
-          header="We Are Our First Client  "
-          className="mb-[80px]"
-        >
-          <Text>
-            At SellMedia Group, we champion the fusion of media and technology.
-            As pioneers on this transformative journey, we embody our own
-            philosophy, consistently pushing boundaries and setting new
-            standards. Our diverse and dynamic team, equipped with cutting-edge
-            technologies, crafts solutions that redefine the media and marketing
-            landscape. We are driven by a relentless pursuit of creativity and
-            innovation, empowering enterprises to navigate the digital age with
-            confidence.
-          </Text>
-        </AboutSections>
-        <AboutSections
-          title="Our Services"
-          titleColor="#00BA72"
-          icon="services-icon"
-          header="How Can We Help You?    "
-        >
-          <Text>
-            SellMedia Group offers a comprehensive suite of marketing services
-            designed to deliver results. Our 360-degree marketing approach
-            ensures that we address every facet of your marketing needs, from
-            strategic planning to execution. Our services include:
-          </Text>
-        </AboutSections>
-
-        <Flex
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          marginTop={20}
-          maxWidth={1300}
-          className="mx-auto"
-        >
-          <img
-            src="/imgs/highlight-left.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
-          <img
-            src="/imgs/highlight-right.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
-        </Flex>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          // transition={{ delay: 0.5, type: "spring", stiffness: 20 }}
-          className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px] -mt-6"
-        >
-          {SERVICES_HELP.map((achievement) => (
-            <Box
-              key={achievement.title}
-              className="rounded-10 bg-white border border-[#B3B3B3] text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
-            >
-              <div
-                className={cn(
-                  "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white",
-                  achievement.bgColor
-                )}
-              >
-                <img
-                  src={`icons/${achievement.icon}.svg`}
-                  alt={achievement.icon}
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className="text-center mx-auto max-w-[291px]">
-                <h2 className="text-2xl leading-8">{achievement.title}</h2>
-              </div>
-              <Text className="max-w-[339px] text-base leading-[30px]">
-                {achievement.text}
-              </Text>
-            </Box>
-          ))}
-        </motion.div>
+        <LandingPageAbout />
       </section>
 
       <section className=" w-full min-h-screen">
-        {SERVICES.map((service) => (
-          <ServicesSection
-            key={service.topTitle}
-            image={service.image}
-            topTitle={service.topTitle}
-            bottomTitle={service.bottomTitle}
-            linkTo={service.linkTo}
-            contentTitle={service.contentTitle}
-            contentText={service.contentText}
-            orderBy={service.orderBy}
-            separator={service.separator}
-          />
-        ))}
+        <LandingPageServices />
       </section>
 
       <section className="min-h-screen text-center bg-b-black">
-        <Box className="pt-[80px]">
-          <Flex gap={8} alignItems={"center"} justifyContent={"center"}>
-            <img
-              src={`/icons/achievements-star.svg`}
-              alt={"achievements-star"}
-              width={30}
-              height={30}
-            />
-            <Text color={"white"}>Achievements</Text>
-          </Flex>
-
-          <h2 className="mt-[40px] mb-6 text-white text-[36px] leading-[57px]">
-            Our Stories in Numbers  
-          </h2>
-        </Box>
-        {/*  -------------------- */}
-        <Box className="flex justify-between w-full max-w-[1299px] mx-auto">
-          <img
-            src="/imgs/highlight-left-white.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
-          <img
-            src="/imgs/highlight-right-white.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
-        </Box>
-        <Box className="max-w-[1205px] mx-auto grid grid-cols-3 gap-[18px] -mt-5">
-          {ACHIEVEMENTS.map((achievement) => (
-            <Box
-              key={achievement.title}
-              className="rounded-10 border-2 border-white text-white text-center h-[223px] flex flex-col items-center justify-center gap-6 "
-            >
-              <div className="text-center mx-auto max-w-[259px]">
-                <h2>{achievement.title}</h2>
-              </div>
-              <Text className="max-w-[339px]">{achievement.text}</Text>
-            </Box>
-          ))}
-        </Box>
+        <LandingPageAchievements />
       </section>
 
       <section className="min-h-screen">
         <Box className="min-h-[60vh] grid grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
           <Box>
-            <Flex gap={8} alignItems={"center"}>
-              <img
-                src={`/icons/about-icon.svg`}
-                alt={"clientele-star"}
-                width={30}
-                height={30}
-              />
-              <Text className="text-b-pink">Clientele</Text>
-            </Flex>
-
+            <SectionTitle
+              title="Clientele"
+              leftIcon="pink-star"
+              titleColor="text-b-pink"
+            />
             <h2 className="mt-10 mb-6">Brands That Trust Us  </h2>
             <Text className="leading-9">
               We are proud to partner with some of the most respected brands in
@@ -248,75 +106,13 @@ export default function Home() {
             height={416}
             width={591}
           />
-
-          {/* -------- */}
         </Box>
 
-        {/* ----- get started ---- */}
-        <Box className="bg-b-light-green h-full min-h-[40vh] py-[80px] px-[120px] text-center">
-          <h2>Get Started  </h2>
-          <Text className="mt-6 mb-10">
-            Ready to embark on your own transformative journey with SellMedia
-            Group? Take the first step today.
-          </Text>
-          <>
-            <Flex alignItems={"center"} gap={8} className=" w-max mx-auto">
-              <div className="bg-custom-gradient p-[1px] rounded-20">
-                <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
-                  Start a project
-                </CustomButton>
-              </div>
-              <Link
-                href={"/"}
-                className=" p-[1px] rounded-20 border border-bd-grey-1"
-              >
-                <CustomButton className="text-b-ash" onClick={onOpen}>
-                  Contact Us
-                </CustomButton>
-              </Link>
-            </Flex>
-          </>
-        </Box>
+        <GetStarted />
       </section>
 
       <Modal isOpen={isOpen} onClose={onClose}>
-        <Box>
-          <div className="border border-[#E5E5EA] flex items-start gap-6 p-6">
-            <img
-              src="/icons/pink-contact.svg"
-              alt="contact"
-              width={35}
-              height={35}
-            />
-
-            <div>
-              <Text className="text-b-pink mb-2">Contact us </Text>
-              <Text className="text-[#7C7C7C] text-base leading-[30px]">
-                For technical assistance or support-related queries, please
-                contact our dedicated support team at
-              </Text>
-              <Text className=" text-base leading-[30px]">
-                hello@sellmedia.africa{" "}
-              </Text>
-            </div>
-          </div>
-
-          <div className="border border-[#E5E5EA] flex items-start gap-6 p-6">
-            <img
-              src="/icons/pink-phone.svg"
-              alt="contact"
-              width={35}
-              height={35}
-            />
-
-            <div>
-              <Text className="text-b-pink mb-2">Phone Number</Text>
-              <Text className="text-[#7C7C7C] text-base leading-[30px]">
-                +234706 419 1282 
-              </Text>
-            </div>
-          </div>
-        </Box>{" "}
+        <ContactModal />
       </Modal>
     </>
   );
