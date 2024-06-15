@@ -13,9 +13,11 @@ import {
 const CustomModal = ({
   isOpen,
   onClose,
+  children,
 }: {
   isOpen: boolean;
   onClose: any;
+  children: any;
 }) => {
   return (
     <Modal
@@ -25,19 +27,19 @@ const CustomModal = ({
       closeOnOverlayClick={true}
     >
       <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>CustomModal</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          {/* Your modal content goes here */}
-          <Text>Hello</Text>
-          hiii
-        </ModalBody>
-        <ModalFooter>
+      <ModalContent
+        maxW={744}
+        borderRadius={20}
+        className="py-[54px] px-[129px] rounded-20"
+      >
+        {/* <ModalHeader>CustomModal</ModalHeader>
+        <ModalCloseButton /> */}
+        <ModalBody>{children}</ModalBody>
+        {/* <ModalFooter>
           <Button colorScheme="blue" mr={3} onClick={onClose}>
             Close
           </Button>
-        </ModalFooter>
+        </ModalFooter> */}
       </ModalContent>
     </Modal>
   );
