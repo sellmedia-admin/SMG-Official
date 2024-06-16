@@ -14,3 +14,7 @@ export { default as LandingPageAchievements } from "./Home/Achievements";
 export { default as LandingPageServices } from "./Home/Services";
 export { default as ContactModal } from "./Home/Contact";
 export { default as GetStarted } from "./Home/GetStarted";
+
+// ----------------------------------------------------------------
+export { default as AboutStepsCard } from "./About/StepsCard";
+export { default as Hero } from "./About/Hero";

@@ -21,6 +21,7 @@ module.exports = {
         "custom-gradient":
           "linear-gradient(to right, #C82090 0%, #C82090 25%, #6A14D1 75%, #6A14D1 100%);",
         "hero-bg": "url(/imgs/hero-bg.png)",
+        "aboutUs-bg": "url(/imgs/about-us-bg.png)",
       },
 
       colors: {
