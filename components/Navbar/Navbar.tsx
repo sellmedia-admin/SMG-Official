@@ -58,7 +58,7 @@ const Navbar = () => {
         </Box>
         {/* buttons at the right */}
         <Box className="ml-auto flex gap-4 ">
-          <Link href={"/bet-converter"}>
+          <Link href={"/start-project"}>
             <CustomButton className="bg-b-black text-white" rounded="20">
               Start a project
             </CustomButton>

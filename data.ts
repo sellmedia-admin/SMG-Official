@@ -210,3 +210,21 @@ export const TEAM = [
   { img: "ezenwa", name: "Ezenwa Ossai", description: "Creative Designer" },
   { img: "eniola", name: "Eniola Cmas", description: "Associate Partnerships" },
 ];
+
+("Agriculture");
+("Automobiles and Components");
+("Commercial and Professional Service");
+("Constructions and Real Estate");
+("Consumer Services");
+("Education");
+("Energy and Utilities");
+("Financial Institution");
+("Food, Beverage, and Tobacco");
+("Healthcare");
+("Healthcare");
+("Hospitality");
+("Insurance");
+("Media and Entertainment");
+("Non-Governmental Organization");
+("Oil and Gas");
+("Retail");
