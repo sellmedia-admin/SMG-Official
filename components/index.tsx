@@ -6,6 +6,8 @@ export { default as ServicesSection } from "./ServicesSection/ServicesSection";
 export { default as Footer } from "./Footer/Footer";
 export { default as Modal } from "./Modal/Modal";
 export { default as SectionTitle } from "./SectionTitles/SectionTitle";
+export { default as ContactForm } from "./Contact/Contact";
+export { default as Input } from "./Input/Input";
 
 // ----------------------------------------------------------------
 

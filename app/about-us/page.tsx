@@ -1,6 +1,7 @@
 "use client";
 import {
   AboutStepsCard,
+  ContactForm,
   GetStarted,
   Hero,
   LandingPageAchievements,
@@ -276,7 +277,7 @@ const AboutUsPage = () => {
 
               <Box className="flex gap-2 mb-2">
                 {footprint.map((p) => (
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1" key={p.bg}>
                     <div
                       className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
                     />
@@ -286,7 +287,7 @@ const AboutUsPage = () => {
               </Box>
               <Box className="flex gap-2">
                 {footprint2.map((p) => (
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1" key={p.bg}>
                     <div
                       className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
                     />
@@ -312,7 +313,10 @@ const AboutUsPage = () => {
           </Text>
           <div className="grid grid-cols-4 gap-6 max-w-[1208px] mx-auto pb-[80px]">
             {TEAM.map((member) => (
-              <div className="bg-black text-white py-6 rounded-lg">
+              <div
+                className="bg-black text-white py-6 rounded-lg"
+                key={member.name}
+              >
                 <img
                   src={`/imgs/avatars/${member.img}.png`}
                   alt={member.name}
