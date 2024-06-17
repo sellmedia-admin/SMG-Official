@@ -61,6 +61,7 @@ module.exports = {
         "black-30": "0 2px 2px 0 rgba(0, 0, 0, 0.30)",
         "blue-50": "0 2px 2px 0 rgba(4, 35, 65, 0.50)",
         "pale-blue": "0px 16px 40px rgba(112, 144, 176, 0.2)",
+        "dark-blue": "0 4px 20px  rgba(4, 60, 72, 0.08)",
       },
     },
     // screens: {

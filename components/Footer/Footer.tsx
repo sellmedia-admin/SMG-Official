@@ -131,7 +131,7 @@ const Footer = () => {
                             <Link
                               href={link.link}
                               key={linkIndex}
-                              className="hover:underline hover:text-b-green-2 block"
+                              className="block"
                             >
                               {link.name}
                             </Link>

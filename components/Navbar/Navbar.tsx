@@ -45,10 +45,8 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <Link href={item.link} key={index}>
               <Box
-                className={`inline-flex items-center cursor-pointer h-full px-4 font-[600] ${
-                  pathname === item.link
-                    ? "bg-b-green-2 text-b-pink"
-                    : "text-b-grey"
+                className={`inline-flex items-center cursor-pointer h-full px-4 font-[600] hover:text-b-darkPink ${
+                  pathname === item.link ? "text-b-pink" : "text-b-grey"
                 }`}
               >
                 <Text>{item.name}</Text>
