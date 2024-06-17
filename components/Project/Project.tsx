@@ -1,19 +1,20 @@
 "use client";
 import React, { useState } from "react";
 import { Input } from "..";
-import { Select } from "@chakra-ui/react";
+import { FormLabel, Select } from "@chakra-ui/react";
+import { PROJECTS } from "@/data";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [companyEmail, setCompanyEmail] = useState("");
 
-  const handleTeamChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleProjectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     console.log(event.target.value);
   };
 
   return (
-    <div>
+    <div className="max-w-[744px] mx-auto">
       <Input
         id="first-name"
         name="first-name"
@@ -42,21 +43,44 @@ const Contact = () => {
         onChange={(e) => setCompanyEmail(e.target.value)}
       />
 
-      {/* <Select
-          iconColor="white"
-          required
-          backgroundColor={"#242424"}
-          onChange={handleTeamChange}
-          className="!border-[1px] !border-white !outline-none text-white mt-4 bg-black"
-          icon={<img src="/icons/arrow-drop-down.svg" alt="dropdown" width={24} height={24} />}
-          placeholder="Select Team"
-        >
-          {teamList.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </Select> */}
+      <FormLabel
+        htmlFor={"project"}
+        fontSize="14px"
+        lineHeight="27px"
+        fontWeight="400"
+        mb="2"
+      >
+        Select project
+      </FormLabel>
+      <Select
+        required
+        id="project"
+        name="project"
+        onChange={handleProjectChange}
+        className="border-solid border-1 border-gray-300 rounded-md h-16 p-4"
+        icon={
+          <img
+            src="/icons/arrow-drop-down.svg"
+            alt="dropdown"
+            width={24}
+            height={24}
+          />
+        }
+        placeholder="Select Project"
+        sx={{
+          "::placeholder": {
+            color: "gray.500",
+            fontSize: "16px",
+            lineHeight: "30px",
+          },
+        }}
+      >
+        {PROJECTS.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </Select>
     </div>
   );
 };

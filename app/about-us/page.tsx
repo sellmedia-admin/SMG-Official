@@ -326,7 +326,7 @@ const AboutUsPage = () => {
 
                 <p>{member.name}</p>
                 <span className="text-[#CCD0D4] text-[12px]">
-                  {member.name}
+                  {member.description}
                 </span>
               </div>
             ))}
