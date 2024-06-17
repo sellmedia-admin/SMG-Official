@@ -9,18 +9,23 @@ import { useState } from "react";
 
 interface ReusableInputProps {
   id: string;
+  name: string;
   label: string;
   type: "text" | "number" | "email";
   placeholder: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const ReusableInput: React.FC<ReusableInputProps> = ({
   id,
+  name,
   label,
   type,
   placeholder,
+  value,
+  onChange,
 }) => {
-  const [inputValue, setInputValue] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
 
   const validate = (value: string) => {
@@ -39,8 +44,8 @@ const ReusableInput: React.FC<ReusableInputProps> = ({
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value.trim();
-    setInputValue(value);
     setIsInvalid(!validate(value));
+    onChange(event); // Call the onChange prop with the event
   };
 
   return (
@@ -56,8 +61,9 @@ const ReusableInput: React.FC<ReusableInputProps> = ({
       </FormLabel>
       <Input
         id={id}
+        name={name}
         type={type}
-        value={inputValue}
+        value={value}
         onChange={handleChange}
         placeholder={placeholder}
         size="lg"
