@@ -61,6 +61,7 @@ const AboutSection = () => (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
       className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px] -mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
@@ -84,9 +85,9 @@ const AboutSection = () => (
           <div className="text-center mx-auto max-w-[291px]">
             <h2 className="text-2xl leading-8">{achievement.title}</h2>
           </div>
-          <Text className="max-w-[339px] text-base leading-[30px]">
+          <p className="max-w-[339px] text-base leading-[30px]">
             {achievement.text}
-          </Text>
+          </p>
         </div>
       ))}
     </motion.div>

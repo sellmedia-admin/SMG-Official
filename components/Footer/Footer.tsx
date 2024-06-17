@@ -45,7 +45,7 @@ const Footer = () => {
   ];
 
   return (
-    <section>
+    <section className="relative z-50">
       <EmailForm />
       <footer className="bg-b-ash-2 py-10 text-white bg-b-black">
         <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between">

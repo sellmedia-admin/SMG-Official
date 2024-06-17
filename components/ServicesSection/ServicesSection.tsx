@@ -27,13 +27,13 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
   const Component = orderBy ? "div" : motion.div;
   return (
     <Component
-      initial={orderBy ? {} : { x: -100, opacity: 0 }}
+      initial={orderBy ? {} : { x: -50, opacity: 0 }}
       whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
-      transition={orderBy ? {} : { delay: 1, type: "spring", stiffness: 20 }}
+      transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
       className="max-w-[523px]"
     >
       <h3 className="leading-[46px]">{title}</h3>
-      <Text className="leading-9 my-6">{text}</Text>
+      <Text className=" my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
           className="text-b-pink !justify-start !pl-0"
@@ -83,10 +83,10 @@ const ServicesSection = ({
 
         <Box order={orderBy}>
           <Component
-            initial={orderBy ? {} : { x: 20, opacity: 0 }}
+            initial={orderBy ? {} : { x: 50, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
             transition={
-              orderBy ? {} : { delay: 1, type: "spring", stiffness: 20 }
+              orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }
             }
           >
             <Image

@@ -20,11 +20,9 @@ export default function Home() {
     <>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-2 place-items-center">
         <div className="max-w-[750px] ml-[100px]">
-          <h1 className="text-6xl leading-[101px] font-bold">
-            Innovating at the Intersection of Media and Technology  
-          </h1>
+          <h1>Innovating at the Intersection of Media and Technology  </h1>
 
-          <Text className="leading-9 my-6">
+          <Text className=" my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
             Strategies Meet Creative Innovation, click below to get started with
             us
@@ -93,7 +91,7 @@ export default function Home() {
               titleColor="text-b-pink"
             />
             <h2 className="mt-10 mb-6">Brands That Trust Us  </h2>
-            <Text className="leading-9">
+            <Text>
               We are proud to partner with some of the most respected brands in
               the industry. Our clients trust us to deliver innovative solutions
               and drive their success. Notable brands include
