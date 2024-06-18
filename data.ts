@@ -255,12 +255,12 @@ export const SERVICES_OFFERED = [
   {
     icon: "/icons/services/communications.svg",
     service: "Marketing Communications",
-    link: "#",
+    link: "#communications",
   },
   {
     icon: "/icons/services/analytics.svg",
     service: "Marketing Analytics",
-    link: "#",
+    link: "#analytics",
   },
   {
     icon: "/icons/services/technology.svg",
