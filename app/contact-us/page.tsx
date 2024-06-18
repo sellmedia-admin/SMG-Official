@@ -7,19 +7,19 @@ const ContactUsPage = () => {
   const SM = [
     {
       link: "https://www.facebook.com",
-      icon: "/icons/facebook.svg",
+      icon: "/icons/sm/fb.svg",
     },
     {
       link: "https://www.twitter.com",
-      icon: "/icons/twitter.svg",
+      icon: "/icons/sm/twitter.svg",
     },
     {
       link: "https://www.instagram.com",
-      icon: "/icons/instagram.svg",
+      icon: "/icons/sm/ig.svg",
     },
     {
       link: "https://www.linkedin.com",
-      icon: "/icons/linkedin.svg",
+      icon: "/icons/sm/linkedin.svg",
     },
   ];
   const [firstName, setFirstName] = useState("");

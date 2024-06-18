@@ -101,7 +101,7 @@ const Footer = () => {
             {footerLinks.map((section, index) => (
               <Box key={index}>
                 <div className="mb-[14px]">
-                  <Text className="font-semibold  text-white opacity-80">
+                  <Text className="font-semibold text-white opacity-80">
                     {section.title}
                   </Text>
                   <div className="w-full max-w-[80px]" />
@@ -153,7 +153,9 @@ const Footer = () => {
                         )}
                         <Link
                           href={link.link}
-                          className="hover:underline hover:text-b-green-2"
+                          className={`hover:underline hover:text-b-green-2 ${
+                            link.name.includes("@") ? "underline" : ""
+                          }`}
                         >
                           {link.name}
                         </Link>
@@ -222,11 +224,13 @@ const footerLinks = [
     title: "Products",
     links: [
       { name: "SellMerch", link: "#" },
-      { name: "BrandMate", link: "#" },
+      { name: "SellCrea8", link: "#" },
+      { name: "SellTalk", link: "#" },
+      { name: "SellPlanner", link: "#" },
     ],
   },
   {
-    title: "Social Media",
+    title: "SocialMedia Inc",
     links: [
       {
         name: "",

@@ -112,7 +112,7 @@ export const ApproachStep2 = [
     title: "Identify Exposure",
     description:
       "Integrating insights from the Discovery and Research stages to develop a cohesive project plan. Refining functional requirements to ensure a seamless design and execution process",
-    delay: 2.8,
+    delay: 2.0,
   },
   {
     stage: "Stage 5",
@@ -120,14 +120,14 @@ export const ApproachStep2 = [
     description:
       "Creating a comprehensive touchpoint processes to deliver impactful brand experiences tailored to the targeted audience.",
     className: "mt-[75px]",
-    delay: 3.8,
+    delay: 2.4,
   },
   {
     stage: "Stage 6",
     title: "Assets",
     description:
       "Formally approving the project's completion, ensuring alignment with specifications, and preparing for release to the intended audience.",
-    delay: 4.6,
+    delay: 2.8,
   },
 ];
 
