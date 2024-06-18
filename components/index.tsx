@@ -20,3 +20,4 @@ export { default as GetStarted } from "./Home/GetStarted";
 // ----------------------------------------------------------------
 export { default as AboutStepsCard } from "./About/StepsCard";
 export { default as Hero } from "./About/Hero";
+export * from "./About/Statement";
