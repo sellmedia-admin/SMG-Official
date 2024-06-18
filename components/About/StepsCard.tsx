@@ -25,15 +25,11 @@ const ApproachCard = forwardRef<HTMLDivElement, ApproachCardProps>(
   }
 );
 
-const MotionApproachCard = motion(ApproachCard);
-
-interface ArrowProps {
-  src: string;
-  className: string;
-  delay: number;
-}
-
-const Arrow: React.FC<ArrowProps> = ({ src, className, delay }) => (
+const Arrow: React.FC<{ src: string; className: string; delay: number }> = ({
+  src,
+  className,
+  delay,
+}) => (
   <motion.img
     src={src}
     alt="arrow"
@@ -43,6 +39,7 @@ const Arrow: React.FC<ArrowProps> = ({ src, className, delay }) => (
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ delay }}
+    viewport={{ once: true }}
   />
 );
 
@@ -54,12 +51,7 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => (
   <div className="grid grid-cols-5 mt-10">
     {cards.map((card, index) => (
       <Fragment key={card.stage}>
-        <MotionApproachCard
-          {...card}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: card.delay }}
-        />
+        <ApproachCard {...card} />
         {index % 2 === 0 && index < cards.length - 1 && (
           <Arrow
             src="/icons/arrow.svg"

@@ -112,7 +112,7 @@ export const ApproachStep2 = [
     title: "Identify Exposure",
     description:
       "Integrating insights from the Discovery and Research stages to develop a cohesive project plan. Refining functional requirements to ensure a seamless design and execution process",
-    delay: 2.8,
+    delay: 2.0,
   },
   {
     stage: "Stage 5",
@@ -120,14 +120,14 @@ export const ApproachStep2 = [
     description:
       "Creating a comprehensive touchpoint processes to deliver impactful brand experiences tailored to the targeted audience.",
     className: "mt-[75px]",
-    delay: 3.8,
+    delay: 2.4,
   },
   {
     stage: "Stage 6",
     title: "Assets",
     description:
       "Formally approving the project's completion, ensuring alignment with specifications, and preparing for release to the intended audience.",
-    delay: 4.6,
+    delay: 2.8,
   },
 ];
 
@@ -196,7 +196,7 @@ export const TEAM = [
   { img: "lateef", name: "Lekan Oganla", description: "Group CEO" },
   { img: "tayewo", name: "Tayewo Osiyemi", description: "Country Director" },
   { img: "lateephah", name: "Lateephah Abdul", description: "Country Manager" },
-  { img: "lateef", name: "Joshua Theophilus", description: "VP of Product" },
+  { img: "joshua", name: "Joshua Theophilus", description: "VP of Product" },
   {
     img: "rasheed",
     name: "Rasheed Olamilekan",
@@ -211,20 +211,30 @@ export const TEAM = [
   { img: "eniola", name: "Eniola Cmas", description: "Associate Partnerships" },
 ];
 
-("Agriculture");
-("Automobiles and Components");
-("Commercial and Professional Service");
-("Constructions and Real Estate");
-("Consumer Services");
-("Education");
-("Energy and Utilities");
-("Financial Institution");
-("Food, Beverage, and Tobacco");
-("Healthcare");
-("Healthcare");
-("Hospitality");
-("Insurance");
-("Media and Entertainment");
-("Non-Governmental Organization");
-("Oil and Gas");
-("Retail");
+export const PROJECTS = [
+  { label: "Agriculture", value: "Agriculture".replace(/\s+/g, "-") },
+  { label: "Automobiles and Components", value: "Automobiles-and-Components" },
+  {
+    label: "Commercial and Professional Service",
+    value: "Commercial-and-Professional-Service",
+  },
+  {
+    label: "Constructions and Real Estate",
+    value: "Constructions-and-Real-Estate",
+  },
+  { label: "Consumer Services", value: "Consumer-Services" },
+  { label: "Education", value: "Education" },
+  { label: "Energy and Utilities", value: "Energy-and-Utilities" },
+  { label: "Financial Institution", value: "Financial-Institution" },
+  { label: "Food, Beverage, and Tobacco", value: "Food-Beverage-and-Tobacco" },
+  { label: "Healthcare", value: "Healthcare" },
+  { label: "Hospitality", value: "Hospitality" },
+  { label: "Insurance", value: "Insurance" },
+  { label: "Media and Entertainment", value: "Media-and-Entertainment" },
+  {
+    label: "Non-Governmental Organization",
+    value: "Non-Governmental-Organization",
+  },
+  { label: "Oil and Gas", value: "Oil-and-Gas" },
+  { label: "Retail", value: "Retail" },
+];
