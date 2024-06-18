@@ -3,8 +3,11 @@ import {
   AboutStepsCard,
   GetStarted,
   Hero,
+  ImageBlock,
   LandingPageAchievements,
-  SectionTitle,
+  MotionDiv,
+  StatementSection,
+  TextBlock,
 } from "@/components";
 import {
   ApproachStep1,
@@ -15,93 +18,15 @@ import {
   STORY_CONTENTS,
   TEAM,
   VALUES,
+  footprint,
+  footprint2,
 } from "@/data";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ReactNode } from "react";
-
-type StatementProps = {
-  title: string;
-  backgroundColor: string;
-  textContent: string;
-};
-
-const StatementSection: React.FC<StatementProps> = ({
-  title,
-  backgroundColor,
-  textContent,
-}) => {
-  return (
-    <div className={`rounded-15 ${backgroundColor} py-6 px-4`}>
-      <SectionTitle
-        title={title}
-        titleColor="text-b-black"
-        leftIcon="pink-star"
-        rightIcon="pink-star"
-        className="w-max mx-auto"
-        textStyle="!text-[28px]"
-      />
-
-      <Text className="mt-[26px]">{textContent}</Text>
-    </div>
-  );
-};
-
-const MotionDiv: React.FC<{ children: ReactNode; initialX: number }> = ({
-  children,
-  initialX,
-}) => (
-  <motion.div
-    initial={{ x: initialX, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
-    className="flex gap-[23px] items-center"
-  >
-    {children}
-  </motion.div>
-);
-
-const TextBlock: React.FC<{ title?: string; content: string }> = ({
-  title,
-  content,
-}) => (
-  <div>
-    {title && <h2 className="mb-[24px]">{title}</h2>}
-    <p>{content}</p>
-  </div>
-);
-
-const ImageBlock: React.FC<{
-  src1: string;
-  src2: string;
-  applyMarginAuto?: boolean;
-}> = ({ src1, src2, applyMarginAuto }) => (
-  <div className="w-full max-w-[500px]">
-    <img
-      src={src1}
-      width={60}
-      height={65}
-      alt="highlight"
-      className={applyMarginAuto ? "ml-auto" : ""}
-    />
-    <img src={src2} width={486} height={286} alt="smg" />
-  </div>
-);
 
 const AboutUsPage = () => {
-  const footprint = [
-    { bg: "#F7B500", name: "OOH" },
-    { bg: "#B620E0", name: "EVENTS" },
-    { bg: "#32C5FF", name: "RESEARCH" },
-  ];
-  const footprint2 = [
-    { bg: "#FF3030", name: "PRODUCTION" },
-    { bg: "#0091FF", name: "TECHNOLOGY" },
-    { bg: "#6236FF", name: "WORKSHOP & TRADING" },
-  ];
   return (
     <div className="bg-white">
       <Hero
@@ -183,7 +108,7 @@ const AboutUsPage = () => {
             </>
           </Box>
         </section>
-        {/* ----- */}
+        {/* ----- culture ------- */}
         <section className="min-h-screen text-center bg-white pt-[160px]">
           <h2>Systematic Culture</h2>
           <p>We’re deeply rooted in process</p>
@@ -261,6 +186,7 @@ const AboutUsPage = () => {
           </Box>
         </section>
 
+        {/* -------- footprint ---------- */}
         <section className="min-h-screen">
           <Box className="min-h-[60vh] grid grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
             <Box>
@@ -305,6 +231,7 @@ const AboutUsPage = () => {
           </Box>
         </section>
 
+        {/* team */}
         <section className="min-h-screen text-center">
           <h2>Faces behind the genius</h2>
           <Text className="mt-6 mb-10">

@@ -36,6 +36,9 @@ const EmailForm = () => {
 };
 
 const Footer = () => {
+  const whatsappNumber = "+2349121169737";
+  const message = "Hi, I want to make enquiries";
+  const encodedMessage = encodeURIComponent(message);
   const currentYear = new Date().getFullYear();
   const teamList = [
     { label: "NG", value: "Nigeria" },
@@ -106,7 +109,7 @@ const Footer = () => {
                   </Text>
                   <div className="w-full max-w-[80px]" />
                 </div>
-                {section.title === "Social Media" ? (
+                {section.title === "SocialMedia Inc" ? (
                   <>
                     <Flex gap={4}>
                       {section.links.map(
@@ -172,6 +175,21 @@ const Footer = () => {
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
         </Box>
+
+        <a
+          href={`https://wa.me/${whatsappNumber}/?text=${encodedMessage}`}
+          target="_blank"
+        >
+          <div className="ml-auto bg-white text-black w-max flex gap-2 rounded-tl-lg rounded-bl-lg p-2">
+            <p>Live chat</p>
+            <img
+              src="/icons/whatsapp-icon.svg"
+              alt="whatsapp"
+              width={32}
+              height={32}
+            />
+          </div>
+        </a>
       </footer>
     </section>
   );
