@@ -6,7 +6,8 @@ import {
   TechnologyTab,
 } from "@/components";
 import { Flex, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 interface ServiceType {
   [key: string]: {
     title: string;
@@ -21,17 +22,10 @@ const Service = ({ params }: { params: { slug: string } }) => {
     "marketing-technology",
   ];
   const [activeTab, setActiveTab] = useState(params.slug);
-
-  function handleTabChange(tab: string) {
-    setActiveTab(tab);
-  }
-
-  function formatTabName(name: string) {
-    return name
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
+  const [heroContent, setHeroContent] = useState({
+    mainHeading: "",
+    textContent: "",
+  });
 
   const SERVICES: ServiceType = {
     "marketing-communication": {
@@ -47,9 +41,36 @@ const Service = ({ params }: { params: { slug: string } }) => {
     "marketing-technology": {
       title: "Marketing Technology",
       subTitle:
-        "We harness the power of technology to create customized experiences that ultimately lead to  higher conversion rates and increased sales.",
+        "We harness the power of technology to create customized experiences that ultimately lead to higher conversion rates and increased sales.",
     },
   };
+
+  useEffect(() => {
+    if (params.slug) {
+      setHeroContent({
+        mainHeading: SERVICES[params.slug].title,
+        textContent: SERVICES[params.slug].subTitle,
+      });
+    }
+  }, [params.slug]);
+
+  useEffect(() => {
+    setHeroContent({
+      mainHeading: SERVICES[activeTab].title,
+      textContent: SERVICES[activeTab].subTitle,
+    });
+  }, [activeTab]);
+
+  function handleTabChange(tab: string) {
+    setActiveTab(tab);
+  }
+
+  function formatTabName(name: string) {
+    return name
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
 
   if (!params.slug) {
     return <p>Please wait...</p>;
@@ -62,8 +83,8 @@ const Service = ({ params }: { params: { slug: string } }) => {
         title=""
         titleColor=""
         leftIcon=""
-        mainHeading={SERVICES[params.slug].title}
-        textContent={SERVICES[params.slug].subTitle}
+        mainHeading={heroContent.mainHeading}
+        textContent={heroContent.textContent}
       />
 
       <div className="min-h-screen max-w-[1295px] mx-auto pt-10">
