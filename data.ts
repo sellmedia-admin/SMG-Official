@@ -372,14 +372,14 @@ export const MARKETING_ANALYTICS = [
       "Implementing analytical tools and softwares to help collect and analyse marketing data across different channels for informed business decision making.",
   },
   {
-    icon: "data-visualization",
-    service: "Data Visualization",
+    icon: "data-visualisation",
+    service: "Data Visualisation",
     description:
       "Presenting complex marketing data in visually appealing and easy-to-understand formats such as charts, graphs, and dashboards to facilitate decision-making.",
   },
   {
-    icon: "measurement-and-optimization",
-    service: "Measurement and Optimization",
+    icon: "measurement-and-optimisation",
+    service: "Measurement and Optimisation",
     description:
       "Leveraging first and third party data touchpoints to measure campaigns and marketing efforts to decide if the desired outcomes were meet and uncover areas of opportunities.",
   },
@@ -418,7 +418,7 @@ export const MARKETING_TECHNOLOGY = [
       "We Personalize marketing campaigns with the help of artificial intelligence.",
   },
   {
-    icon: "analytics-Attribution-softwares",
+    icon: "analytics-attribution-softwares",
     service: "Analytics/ Attribution Softwares",
     description:
       "Tracking and measurement of effectiveness of marketing campaigns, attributing conversions and sales to specific channels and touchpoints.",
