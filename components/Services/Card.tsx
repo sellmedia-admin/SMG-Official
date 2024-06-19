@@ -8,7 +8,7 @@ const Card = ({ img, title, description }: { [x: string]: string }) => {
     <>
       <Box
         key={img}
-        className="min-h-[528px] rounded-10 text-center flex flex-col gap-6 items-center justify-center py-10 px-[24.5px] shadow-pale-blue border border-[#b3b3b3]"
+        className="min-h-[528px] rounded-10 text-center flex flex-col gap-6 items-center  py-10 px-[24.5px] shadow-pale-blue border border-[#b3b3b3]"
       >
         <img
           src={`/icons/services/${img}.svg`}
@@ -16,6 +16,7 @@ const Card = ({ img, title, description }: { [x: string]: string }) => {
           width={80}
           height={80}
         />
+
         <VStack spacing={4} align="center">
           <h3 className="text-[#434343] max-w-[291px]">{title}</h3>
           <p className="text-[16px]">{description}</p>
