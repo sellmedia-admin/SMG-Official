@@ -21,3 +21,8 @@ export { default as GetStarted } from "./Home/GetStarted";
 export { default as AboutStepsCard } from "./About/StepsCard";
 export { default as Hero } from "./About/Hero";
 export * from "./About/Statement";
+
+// ----------------------------------------------------------------
+export { default as AnalyticsTab } from "./Services/Analytics";
+export { default as CommunicationTab } from "./Services/Communication";
+export { default as TechnologyTab } from "./Services/Technology";
