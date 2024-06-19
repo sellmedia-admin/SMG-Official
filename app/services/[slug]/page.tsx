@@ -1,5 +1,10 @@
 "use client";
-import { Hero } from "@/components";
+import {
+  AnalyticsTab,
+  CommunicationTab,
+  Hero,
+  TechnologyTab,
+} from "@/components";
 import { Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 interface ServiceType {
@@ -83,7 +88,7 @@ const Service = ({ params }: { params: { slug: string } }) => {
           justifyContent={"space-between"}
           alignItems={"center"}
           marginTop={20}
-          marginBottom={-8}
+          marginBottom={-4}
           className="mx-auto"
         >
           <img
@@ -99,6 +104,13 @@ const Service = ({ params }: { params: { slug: string } }) => {
             height={65}
           />
         </Flex>
+
+        {/* tabs */}
+        <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
+          {activeTab === "marketing-communication" && <CommunicationTab />}
+          {activeTab === "marketing-analytics" && <AnalyticsTab />}
+          {activeTab === "marketing-technology" && <TechnologyTab />}
+        </div>
       </div>
     </div>
   );
