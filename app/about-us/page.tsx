@@ -25,6 +25,42 @@ import {
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+
+const TeamComponent = ({ TEAM }: any) => {
+  const [hoveredMember, setHoveredMember] = useState(null);
+
+  return (
+    <>
+      {TEAM.map((member: any) => (
+        <div
+          className={`bg-black text-white py-6 rounded-lg ${
+            hoveredMember === member.name ? "bg-blue-500" : ""
+          }`}
+          key={member.name}
+          onMouseEnter={() => setHoveredMember(member.name)}
+          onMouseLeave={() => setHoveredMember(null)}
+        >
+          <img
+            src={
+              hoveredMember === member.name
+                ? "/icons/linkedin.png"
+                : `/imgs/avatars/${member.img}.png`
+            }
+            alt={member.name}
+            width={88}
+            height={88}
+            className="mx-auto"
+          />
+          <p>{member.name}</p>
+          <span className="text-[#CCD0D4] text-[12px]">
+            {member.description}
+          </span>
+        </div>
+      ))}
+    </>
+  );
+};
 
 const AboutUsPage = () => {
   return (
@@ -238,25 +274,7 @@ const AboutUsPage = () => {
             A seasoned, hand picked for quality executions
           </Text>
           <div className="grid grid-cols-4 gap-6 max-w-[1208px] mx-auto pb-[80px]">
-            {TEAM.map((member) => (
-              <div
-                className="bg-black text-white py-6 rounded-lg"
-                key={member.name}
-              >
-                <img
-                  src={`/imgs/avatars/${member.img}.png`}
-                  alt={member.name}
-                  width={88}
-                  height={88}
-                  className="mx-auto"
-                />
-
-                <p>{member.name}</p>
-                <span className="text-[#CCD0D4] text-[12px]">
-                  {member.description}
-                </span>
-              </div>
-            ))}
+            <TeamComponent TEAM={TEAM} />
           </div>
 
           <GetStarted />

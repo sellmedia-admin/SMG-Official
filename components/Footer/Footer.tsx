@@ -7,7 +7,7 @@ import Image from "next/image";
 const EmailForm = () => {
   return (
     <Box className="bg-b-ash1 py-10 text-white">
-      <Box className="max-w-[1184px] flex justify-between items-center mx-auto">
+      <Box className="max-w-[1184px] flex justify-between items-center mx-auto px-[5%]">
         <div className="flex flex-col gap-[18px]">
           <h2>Stay informed</h2>
           <Text fontWeight={600}>Signup for our newsletter</Text>
@@ -170,7 +170,7 @@ const Footer = () => {
             ))}
           </Box>
         </Box>
-        <Box className="max-w-[1184px] mx-auto flex justify-center pt-[23px] mt-10 border-t border-t-b-ash2">
+        <Box className="max-w-[1184px] mx-auto  px-[5%] flex justify-center pt-[23px] mt-10 border-t border-t-b-ash2">
           <span className="text-sm text-center text-[14px] text-b-grey">
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
@@ -209,8 +209,8 @@ const footerLinks = [
   {
     title: "Privacy & Security",
     links: [
-      { name: "Privacy Policy", link: "#" },
-      { name: "Terms and Condition", link: "#" },
+      { name: "Privacy Policy", link: "/privacy-policy" },
+      { name: "Terms and Condition", link: "/terms-and-conditions" },
       { name: "Social Media Policy", link: "#" },
       { name: "Copyright Notice", link: "#" },
     ],

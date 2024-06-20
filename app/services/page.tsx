@@ -140,7 +140,7 @@ const Services = () => {
         {/* service 3 */}
         <section
           id="technology"
-          className="flex max-w-[1250px] gap-10 items-center mx-auto py-[80px]"
+          className="flex max-w-[1250px] gap-10 items-center mx-auto py-[80px] px-[5%]"
         >
           <div className=" space-y-6">
             <h3>Marketing Technology</h3>

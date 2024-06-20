@@ -20,7 +20,9 @@ export default function Home() {
     <>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-2 place-items-center">
         <div className="max-w-[750px] ml-[100px]">
-          <h1>Innovating at the Intersection of Media and Technology  </h1>
+          <h1 className="text-[50px]">
+            Innovating at the Intersection of Media and Technology  
+          </h1>
 
           <Text className=" my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven

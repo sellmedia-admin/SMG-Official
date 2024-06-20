@@ -87,7 +87,7 @@ const Service = ({ params }: { params: { slug: string } }) => {
         textContent={heroContent.textContent}
       />
 
-      <div className="min-h-screen max-w-[1295px] mx-auto pt-10">
+      <div className="min-h-screen max-w-[1295px] px-[5%] mx-auto pt-10">
         <div className="w-max mx-auto">
           {topHeaders?.map((tabName) => (
             <Text
@@ -127,7 +127,7 @@ const Service = ({ params }: { params: { slug: string } }) => {
         </Flex>
 
         {/* tabs */}
-        <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
+        <div className="max-w-[1200px] px-[5%] mx-auto grid grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
           {activeTab === "marketing-communication" && <CommunicationTab />}
           {activeTab === "marketing-analytics" && <AnalyticsTab />}
           {activeTab === "marketing-technology" && <TechnologyTab />}
