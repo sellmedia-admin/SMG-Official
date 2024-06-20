@@ -32,7 +32,9 @@ const AboutBox: React.FC<AboutBoxProps> = ({
         />
       )}
 
-      <h1 className="mt-10 mb-6 max-w-[1200px] mx-auto">{mainHeading}</h1>
+      <h1 className="mt-10 mb-6 max-w-[1200px] px-[5%] mx-auto">
+        {mainHeading}
+      </h1>
       <Text className="max-w-[946px] mx-auto">{textContent}</Text>
     </Box>
   );

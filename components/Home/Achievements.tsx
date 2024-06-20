@@ -31,7 +31,7 @@ const AchievementsSection = () => (
         height={65}
       />
     </Box>
-    <Box className="max-w-[1205px] mx-auto grid grid-cols-3 gap-[18px] -mt-5">
+    <Box className="max-w-[1205px] mx-auto px-[5%] grid grid-cols-3 gap-[18px] -mt-5">
       {ACHIEVEMENTS.map((achievement) => (
         <Box
           key={achievement.title}

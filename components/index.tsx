@@ -8,6 +8,7 @@ export { default as Modal } from "./Modal/Modal";
 export { default as SectionTitle } from "./SectionTitles/SectionTitle";
 export { default as ProjectForm } from "./Project/Project";
 export { default as Input } from "./Input/Input";
+export { default as Policies } from "./Policies/Policies";
 
 // ----------------------------------------------------------------
 
