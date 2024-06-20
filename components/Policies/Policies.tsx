@@ -32,7 +32,7 @@ const Policies: React.FC<PoliciesProps> = ({ policy }) => {
           {item.list && (
             <ol className="list-decimal ml-[20px]">
               {item.list.map((listItem, index) => (
-                <li key={index} className="mb-2">
+                <li key={index} className="mb-2 text-[18px]">
                   {listItem}
                 </li>
               ))}

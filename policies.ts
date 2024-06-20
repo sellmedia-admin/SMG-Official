@@ -160,3 +160,63 @@ export const GROUP_TERMS_AND_CONDITIONS = [
     text: "To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will: </br> limit or exclude our or your liability for death or personal injury; </br> limit or exclude our or your liability for fraud or fraudulent misrepresentation; </br> limit any of our or your liabilities in any way that is not permitted under applicable law; or </b> exclude any of our or your liabilities that may not be excluded under applicable law. </br> The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty. </br> As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature",
   },
 ];
+
+export const GROUP_SOCIAL_MEDIA_POLICY = [
+  {
+    text: "This Social Media Policy aims to provide guidelines for employees of SellMedia Group and other authorized representatives when using social media. These guidelines apply to social media content created on platforms including but not limited to Instagram, Facebook, Twitter, LinkedIn, YouTube, and Pinterest under the handle “SellMedia Inc”.",
+  },
+  {
+    subtitle: "Purpose:",
+    text: "The purpose of this policy is to protect the brand image and reputation of SellMedia Group while encouraging participation in social media for business purposes and ensuring that all content disseminated is consistent with the company’s values and professional standards.",
+  },
+  {
+    subtitle: "Scope:",
+    text: "This policy applies to all employees, contractors, and other stakeholders who are authorized to post or interact on social media on behalf of SellMedia Group.",
+  },
+  {
+    subtitle: "Policy Guidelines",
+  },
+  {
+    subtitle: "Professionalism",
+    text: "All communications on social media must be professional, respectful, and courteous. Employees must not engage in conduct that could be detrimental to the company’s reputation.Content must be accurate and appropriate, without revealing confidential or proprietary company information.",
+  },
+  {
+    subtitle: "Identity",
+    text: "Employees must clearly identify themselves as a member of the SellMedia Group team when discussing company-related matters. However, they should also add a disclaimer stating that their views do not represent the official stance of the company.",
+  },
+  {
+    subtitle: "Engagement",
+    text: "Interaction on social media should be considered and thoughtful. Responses should be prompt, respectful, and within the boundaries of the company’s communication policy",
+  },
+  {
+    text: "Queries or comments that require a detailed response or are of a sensitive nature should be directed to the official hello@sellmedia.africa email address.",
+  },
+  {
+    subtitle: "Content Management",
+    text: "Only authorized persons should post content to official SellMedia Group social media accounts. Regular audits and reviews of social media accounts will be conducted to ensure compliance with these policies.",
+  },
+  {
+    subtitle: "Legal Compliance",
+    text: "Content must not infringe on copyrights, trademarks, privacy laws, or other legal rights. </br> No posts should contain libelous, defamatory, offensive, racist, or sexist comments. </br> Employees must adhere to all privacy and confidentiality agreements and the GDPR guidelines regarding any personal data.",
+  },
+  {
+    subtile: "Security",
+    text: "Care should be taken to avoid phishing scams and hacking. Do not disclose personal or sensitive company information on social media platforms. </br> Use strong passwords and change them regularly.",
+  },
+  {
+    subtitle: "Training",
+    text: "SellMedia Group will provide training on effective and safe use of social media to ensure all team members understand this policy and how to implement it.",
+  },
+  {
+    subtitle: "Monitoring and Enforcement",
+    text: "SellMedia Group reserves the right to monitor social media usage as it relates to the business to ensure that compliance with this policy is maintained. Violations of this policy may lead to disciplinary action, up to and including termination of employment.",
+  },
+  {
+    subtitle: "Questions and Clarifications",
+    text: "For any questions or clarification regarding this policy, employees should contact their supervisor or the Human Resources department.",
+  },
+  {
+    subtitle: "For More Information:",
+    text: "If you have any questions or concerns about our use of cookies, please contact us at support@sellmedia.africa. </br> Thank you for visiting SellMedia Group.",
+  },
+];

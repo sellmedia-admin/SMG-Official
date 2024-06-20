@@ -265,7 +265,7 @@ export const SERVICES_OFFERED = [
   {
     icon: "/icons/services/technology.svg",
     service: "Marketing Technology",
-    link: "#",
+    link: "#technology",
   },
 ];
 

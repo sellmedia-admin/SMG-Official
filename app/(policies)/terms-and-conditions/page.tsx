@@ -22,6 +22,9 @@ const PrivacyPolicy = () => {
       />
 
       <div className="max-w-[1248px] mx-auto py-[33px] px-[5%] pb-20">
+        <p className="mb-4 text-[#460B32] font-[600]">
+          Welcome to SellMedia Group's Terms and Conditions.
+        </p>
         <Policies policy={GROUP_TERMS_AND_CONDITIONS} />
       </div>
     </div>
