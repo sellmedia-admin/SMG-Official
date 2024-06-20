@@ -44,7 +44,7 @@ const TeamComponent = ({ TEAM }: any) => {
           <img
             src={
               hoveredMember === member.name
-                ? "/icons/linkedin.png"
+                ? "/icons/linkedin-main.png"
                 : `/imgs/avatars/${member.img}.png`
             }
             alt={member.name}
@@ -99,7 +99,7 @@ const AboutUsPage = () => {
           ))}
         </div>
 
-        <div className="max-w-[1200px] mx-auto text-center grid grid-cols-2 gap-6 mt-[80px]">
+        <div className="max-w-[1200px] mx-auto text-center grid grid-cols-2 gap-6 mt-[80px] pb-[80px]">
           {STATEMENTS.map((statement, index) => (
             <StatementSection
               key={index}

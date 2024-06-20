@@ -1,5 +1,5 @@
 import { ACHIEVEMENTS } from "@/data";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import SectionTitle from "../SectionTitles/SectionTitle";
 
 const AchievementsSection = () => (
@@ -17,7 +17,7 @@ const AchievementsSection = () => (
         Our Stories in Numbers
       </h2>
     </Box>
-    <Box className="flex justify-between w-full max-w-[1299px] mx-auto">
+    <Box className="flex justify-between w-full max-w-[1299px] mx-auto px-[5%] pb-[80px]">
       <img
         src="/imgs/highlight-left-white.png"
         alt="highlight icon"
