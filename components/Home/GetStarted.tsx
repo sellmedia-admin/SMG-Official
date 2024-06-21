@@ -6,14 +6,14 @@ import { ContactModal, Modal } from "..";
 const GetStarted = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box className="bg-b-light-green h-full min-h-[40vh] py-[80px] px-[120px] text-center">
+    <Box className="bg-b-light-green h-full  py-10 px-5 md:py-[80px] md:px-[120px] md:text-center">
       <h2>Get Started  </h2>
       <Text className="mt-6 mb-10">
         Ready to embark on your own transformative journey with SellMedia Group?
         Take the first step today.
       </Text>
       <>
-        <Flex alignItems={"center"} gap={8} className=" w-max mx-auto">
+        <Flex alignItems={"center"} gap={8} className="max-w-max md:mx-auto">
           <div className="bg-custom-gradient p-[1px] rounded-20">
             <Link href={"/start-project"}>
               <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">

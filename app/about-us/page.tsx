@@ -35,7 +35,7 @@ const TeamComponent = ({ TEAM }: any) => {
       {TEAM.map((member: any) => (
         <div
           className={`bg-black text-white py-6 rounded-lg ${
-            hoveredMember === member.name ? "bg-blue-500" : ""
+            hoveredMember === member.name ? "bg-white" : ""
           }`}
           key={member.name}
           onMouseEnter={() => setHoveredMember(member.name)}
@@ -44,7 +44,7 @@ const TeamComponent = ({ TEAM }: any) => {
           <img
             src={
               hoveredMember === member.name
-                ? "/icons/linkedin-main.png"
+                ? "/icons/linkedin-main.svg"
                 : `/imgs/avatars/${member.img}.png`
             }
             alt={member.name}
@@ -52,8 +52,20 @@ const TeamComponent = ({ TEAM }: any) => {
             height={88}
             className="mx-auto"
           />
-          <p>{member.name}</p>
-          <span className="text-[#CCD0D4] text-[12px]">
+          <p
+            className={`${
+              hoveredMember === member.name
+                ? "text-[#0076B6] font-semibold"
+                : ""
+            }`}
+          >
+            {member.name}
+          </p>
+          <span
+            className={`text-[#CCD0D4] text-[12px] ${
+              hoveredMember === member.name ? "text-[#0076B6]" : ""
+            }`}
+          >
             {member.description}
           </span>
         </div>

@@ -18,13 +18,13 @@ export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-2 place-items-center">
-        <div className="max-w-[750px] ml-[100px]">
+      <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-1 md:grid-cols-2 place-items-center">
+        <div className="max-w-[750px] py-10 md:py-40 px-5 md:ml-[100px]">
           <h1 className="text-[50px]">
             Innovating at the Intersection of Media and Technology  
           </h1>
 
-          <Text className=" my-6">
+          <Text className="my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
             Strategies Meet Creative Innovation, click below to get started with
             us
@@ -48,7 +48,7 @@ export default function Home() {
                 </CustomButton>
               </Link>
             </Flex>
-            <div className="">
+            <div className="hidden md:block">
               <img
                 src="/gif/arrow.gif"
                 alt="arrows"
@@ -60,7 +60,7 @@ export default function Home() {
           </Box>
         </div>
 
-        <div>
+        <div className="hidden md:block">
           <img
             src="/imgs/hero-star.png"
             alt="star"
@@ -72,7 +72,7 @@ export default function Home() {
       </main>
 
       {/* ------------ */}
-      <section className="text-center w-full min-h-screen">
+      <section className=" w-full min-h-screen">
         <LandingPageAbout />
       </section>
 
@@ -80,12 +80,12 @@ export default function Home() {
         <LandingPageServices />
       </section>
 
-      <section className="min-h-screen text-center bg-b-black">
+      <section className="min-h-screen text-center bg-b-black pb-10">
         <LandingPageAchievements />
       </section>
 
-      <section className="min-h-screen">
-        <Box className="min-h-[60vh] grid grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
+      <section>
+        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px] px-5 md:px-0">
           <Box>
             <SectionTitle
               title="Clientele"

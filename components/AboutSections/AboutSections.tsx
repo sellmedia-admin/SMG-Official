@@ -24,11 +24,11 @@ const AboutSections = ({
         className
       )}
     >
-      <Box className="w-max mx-auto">
+      <Box className="w-max md:mx-auto">
         <SectionTitle title={title} titleColor={titleColor} leftIcon={icon} />
       </Box>
 
-      <h2 className="mt-[40px] mb-6">{header}</h2>
+      <h2 className="mt-[40px] mb-6 text-start md:text-center">{header}</h2>
       {children}
     </Box>
   );

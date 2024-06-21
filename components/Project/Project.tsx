@@ -76,7 +76,7 @@ const Contact = () => {
         id="project"
         name="project"
         onChange={handleProjectChange}
-        className="border-solid border-1 border-gray-300 rounded-md  !h-16 mb-3"
+        className="border-solid border-1 border-gray-300 !rounded-20  !h-16 mb-3"
         icon={
           <div className="!-mt-2">
             <img
@@ -113,7 +113,7 @@ const Contact = () => {
           required
           id="message"
           name="message"
-          className="border-solid border-1 border-gray-300 rounded-md mb-6 !p-4"
+          className="border-solid border-1 border-gray-300 !rounded-20 mb-6 !p-4"
           placeholder="Type in your message"
           _placeholder={{
             color: "#7C7C7C",

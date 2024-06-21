@@ -14,7 +14,7 @@ const AboutSection = () => (
       header="We Are Our First Client"
       className="mb-[80px]"
     >
-      <Text>
+      <Text className="text-start md:text-center ">
         At SellMedia Group, we champion the fusion of media and technology. As
         pioneers on this transformative journey, we embody our own philosophy,
         consistently pushing boundaries and setting new standards. Our diverse
@@ -30,7 +30,7 @@ const AboutSection = () => (
       icon="green-star"
       header="How Can We Help You?"
     >
-      <Text>
+      <Text className="text-start md:text-center ">
         SellMedia Group offers a comprehensive suite of marketing services
         designed to deliver results. Our 360-degree marketing approach ensures
         that we address every facet of your marketing needs, from strategic
@@ -62,12 +62,12 @@ const AboutSection = () => (
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
-      className="grid grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] -mt-6"
+      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] -mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
         <div
           key={achievement.title}
-          className="rounded-10 bg-white border border-[#B3B3B3] text-center h-[344px] flex flex-col items-center justify-center gap-6 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
+          className="rounded-10 bg-white border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-4 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
         >
           <div
             className={cn(
@@ -82,7 +82,7 @@ const AboutSection = () => (
               height={50}
             />
           </div>
-          <div className="text-center mx-auto max-w-[291px]">
+          <div className=" md:mx-auto max-w-[291px]">
             <h2 className="text-2xl leading-8">{achievement.title}</h2>
           </div>
           <p className="max-w-[339px] text-base leading-[30px]">

@@ -67,7 +67,7 @@ const ReusableInput: React.FC<ReusableInputProps> = ({
         onChange={handleChange}
         placeholder={placeholder}
         size="lg"
-        className="border-solid border-1 border-gray-300 rounded-md !h-16 p-4"
+        className="border-solid border-1 border-gray-300 !rounded-20 !h-16 p-4"
         _placeholder={{
           color: "#7C7C7C",
           fontSize: "16px",

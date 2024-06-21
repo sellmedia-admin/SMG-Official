@@ -30,10 +30,10 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
       initial={orderBy ? {} : { x: -50, opacity: 0 }}
       whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
       transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
-      className="max-w-[523px]"
+      className="md:max-w-[523px]"
     >
       <h3 className="leading-[46px]">{title}</h3>
-      <Text className=" my-6">{text}</Text>
+      <Text className="my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
           className="text-b-pink !justify-start !pl-0"
@@ -57,9 +57,10 @@ const ServicesSection = ({
   orderBy,
 }: SectionServices) => {
   const Component = orderBy ? "div" : motion.div;
+
   return (
-    <Box className="text-center mt-[80px]">
-      <Box className="mx-auto w-max">
+    <Box className="text-center mt-[80px] px-[20px] md:px-0">
+      <Box className="mx-auto max-w-max">
         <Text className="font-bold text-[37px]">{topTitle}</Text>
 
         <img
@@ -73,15 +74,17 @@ const ServicesSection = ({
         <Text className="font-bold text-[37px]">{bottomTitle}</Text>
       </Box>
 
-      <Box className="w-full max-w-[1217px] mx-auto grid place-items-center grid-cols-2 text-start gap-[54px]  mt-[40px] mb-[80px]">
-        <ServiceText
-          linkTo={linkTo}
-          title={contentTitle}
-          text={contentText}
-          orderBy={orderBy}
-        />
+      <Box className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
+        <Box className={`order-2 md:order-${orderBy === "-1" ? "1" : "2"}`}>
+          <ServiceText
+            linkTo={linkTo}
+            title={contentTitle}
+            text={contentText}
+            orderBy={orderBy}
+          />
+        </Box>
 
-        <Box order={orderBy}>
+        <Box className={`order-1 md:order-${orderBy === "-1" ? "2" : "1"}`}>
           <Component
             initial={orderBy ? {} : { x: 50, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
