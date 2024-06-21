@@ -23,6 +23,8 @@ module.exports = {
         "darkCustom-gradient":
           "linear-gradient(to right, #b41d82 0%, #5f12bc 25%, #5f12bc 75%, #5f12bc 100%);",
         "hero-bg": "url(/imgs/hero-bg.png)",
+        "home-bg": "url(/imgs/home-bg.png)",
+        "mobile-bg": "url(/imgs/mobileHome-bg.png)",
         "aboutUs-bg": "url(/imgs/about-us-bg.png)",
       },
 

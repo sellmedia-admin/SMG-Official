@@ -38,7 +38,6 @@ export const MotionDiv: React.FC<{ children: ReactNode; initialX: number }> = ({
   <motion.div
     initial={{ x: initialX, opacity: 0 }}
     whileInView={{ x: 0, opacity: 1 }}
-    viewport={{ once: true }}
     transition={{ duration: 0.8 }}
     className="flex flex-col md:flex-row gap-[23px] items-center"
   >

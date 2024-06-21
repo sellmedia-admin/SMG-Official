@@ -42,7 +42,6 @@ const Section: React.FC<SectionProps> = ({
       <motion.div
         initial={{ x: reverse ? -100 : 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="w-full max-w-[487px]"
       >
@@ -58,7 +57,6 @@ const Section: React.FC<SectionProps> = ({
       <motion.div
         initial={{ x: reverse ? 100 : -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="space-y-6 text-center md:text-left px-5 md:px-0 "
       >

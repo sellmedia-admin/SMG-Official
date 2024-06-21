@@ -39,7 +39,6 @@ const Arrow: React.FC<{ src: string; className: string; delay: number }> = ({
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ delay }}
-    viewport={{ once: true }}
   />
 );
 
@@ -57,7 +56,6 @@ const DownArrow: React.FC<{
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ delay }}
-    viewport={{ once: true }}
   />
 );
 

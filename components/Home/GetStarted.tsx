@@ -21,14 +21,13 @@ const GetStarted = () => {
               </CustomButton>
             </Link>
           </div>
-          <Link
-            href={"#"}
-            className=" p-[1px] rounded-20 border border-bd-grey-1"
+
+          <CustomButton
+            className="text-b-ash p-[1px] rounded-20 !border !border-bd-grey-1"
+            onClick={onOpen}
           >
-            <CustomButton className="text-b-ash" onClick={onOpen}>
-              Contact Us
-            </CustomButton>
-          </Link>
+            Contact Us
+          </CustomButton>
         </Flex>
       </>
 
