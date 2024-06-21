@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -25,7 +25,7 @@ const Navbar = () => {
   const teamList = [
     { label: "NG", value: "Nigeria" },
     { label: "CA", value: "Canada" },
-    { label: "UK", value: "united kingdom" },
+    { label: "UK", value: "United Kingdom" },
     { label: "US", value: "United States" },
   ];
 
@@ -39,7 +39,6 @@ const Navbar = () => {
               width={"123px"}
               height={"40px"}
               alt="smg logo"
-              // className="mr-4"
             />
           </a>
         </Box>
@@ -57,7 +56,7 @@ const Navbar = () => {
           ))}
         </Box>
         {/* buttons at the right */}
-        <Box className="ml-auto flex gap-4 ">
+        <Box className="ml-auto hidden lg:flex gap-4">
           <Link href={"/start-project"}>
             <CustomButton className="bg-b-black text-white" rounded="20">
               Start a project
@@ -69,7 +68,7 @@ const Navbar = () => {
         <Box className="lg:hidden">
           <button onClick={() => setIsNavOpen(!isNavOpen)}>
             <img
-              src="/icons/hamburger.svg"
+              src={isNavOpen ? "/icons/close.svg" : "/icons/hamburger.svg"}
               alt="toggle"
               width={24}
               height={24}
@@ -79,21 +78,45 @@ const Navbar = () => {
       </nav>
       {/* for mobile */}
       {isNavOpen && (
-        <Box className="absolute z-50 top-[11rem] left-0 w-full min-h-[50vh] bg-b-black-1 text-b-grey pl-4">
+        <Box className="absolute z-50 top-0 mt-[80px] left-0 w-full h-full bg-white border-t text-b-grey px-5 py-20">
           {navItems.map((item, index) => (
             <Link href={item.link} key={index}>
               <Box
                 onClick={() => handleLinkClick(item.link)}
-                className={`px-4 py-2 cursor-pointer ${
-                  pathname === item.link
-                    ? "bg-b-green-2 text-b-grey"
-                    : "text-b-grey"
+                className={`mb-5 px-4 py-2 cursor-pointer ${
+                  pathname === item.link ? " text-b-darkPink" : "text-b-grey"
                 }`}
               >
                 <Text>{item.name}</Text>
               </Box>
             </Link>
           ))}
+          <div className="flex  gap-5 mt-5 pl-4 mb-5">
+            {teamList.map((option) => (
+              <Flex
+                align="center"
+                direction="column"
+                gap={2}
+                key={option.value}
+              >
+                <Link href="#">
+                  <img
+                    src={`/icons/${option.label.toLowerCase()}-special.svg`}
+                    alt={option.label}
+                    width={32}
+                    height={32}
+                    className="transition ease-in-out hover:scale-110"
+                  />
+                </Link>
+                <Box className="font-600 leading-[18px]">{option.label}</Box>
+              </Flex>
+            ))}
+          </div>
+          <Link href={"/start-project"} className="mt-5">
+            <CustomButton className="bg-b-black text-white w-full" rounded="20">
+              Start a project
+            </CustomButton>
+          </Link>
         </Box>
       )}
     </>

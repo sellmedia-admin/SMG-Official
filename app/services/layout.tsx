@@ -7,7 +7,7 @@ export default function ServicesLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {children}
       <GetStarted />
     </div>

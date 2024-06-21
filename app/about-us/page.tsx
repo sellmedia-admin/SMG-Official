@@ -76,7 +76,7 @@ const TeamComponent = ({ TEAM }: any) => {
 
 const AboutUsPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <Hero
         title="We Are Our First Client"
         titleColor="text-b-pink"
