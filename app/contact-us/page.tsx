@@ -35,15 +35,15 @@ const ContactUsPage = () => {
         mainHeading="Your Gateway to Innovative Media-Tech Solutions"
         textContent="Discover how our cutting-edge technologies and tailored marketing strategies can drive your business forward. Reach out to our global team in the US, UK, Canada, and Africa, and let's start transforming your vision into reality."
       />
-      <Box className="text-start max-w-[1200px] mx-auto pb-[80px]">
+      <Box className="text-start max-w-[1200px] mx-auto pb-[80px] px-5 md:px-0">
         <Text className="my-[31px]">
           We appreciate your interest in Sellmedia Group. For any inquiries,
           please use the contact information below or fill out the form, and our
           team will get back to you promptly.
         </Text>
 
-        <div className="flex gap-6">
-          <div className="space-y-6">
+        <div className="flex gap-6 flex-col md:flex-row">
+          <div className="space-y-6 order-1 md:order-none">
             <div className="border border-[#E5E5EA] flex items-start gap-6 p-6">
               <img
                 src="/icons/pink-contact.svg"
@@ -104,6 +104,7 @@ const ContactUsPage = () => {
             </div>
           </div>
           {/* ------ */}
+          {/* form */}
           <div className="w-full">
             <form className=" border rounded-2xl p-8 shadow-dark-blue">
               <Input
