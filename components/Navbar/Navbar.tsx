@@ -68,8 +68,12 @@ const Navbar = () => {
 
         <Box className="lg:hidden">
           <button onClick={() => setIsNavOpen(!isNavOpen)}>
-            <Text>hamburger</Text>
-            {/* <Icon icon="ci:hamburger-lg" color="#fff" className="ml-6" /> */}
+            <img
+              src="/icons/hamburger.svg"
+              alt="toggle"
+              width={24}
+              height={24}
+            />
           </button>
         </Box>
       </nav>

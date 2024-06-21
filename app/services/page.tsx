@@ -5,6 +5,82 @@ import { Box, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+
+interface SectionProps {
+  id: string;
+  bgClass?: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  link: string;
+  onOpen: () => void;
+  highlight: string;
+  reverse?: boolean;
+}
+
+const Section: React.FC<SectionProps> = ({
+  id,
+  bgClass = "",
+  title,
+  description,
+  imageUrl,
+  imageAlt,
+  link,
+  onOpen,
+  highlight,
+  reverse = false,
+}) => {
+  return (
+    <section
+      id={id}
+      className={`flex max-w-[1250px] gap-10 items-center mx-auto py-[80px] ${bgClass} ${
+        reverse ? "flex-row-reverse" : ""
+      }`}
+    >
+      <motion.div
+        initial={{ x: reverse ? 100 : -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="space-y-6"
+      >
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className="space-x-2">
+          <Link href={link}>
+            <CustomButton className="bg-b-black text-white rounded-20">
+              Learn more
+            </CustomButton>
+          </Link>
+          <CustomButton
+            onClick={onOpen}
+            className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash"
+          >
+            Talk to sales
+          </CustomButton>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ x: reverse ? -100 : 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-[487px]"
+      >
+        <img
+          src={highlight}
+          alt="highlight icon"
+          width={60}
+          height={65}
+          className={`ml-auto ${reverse ? "mr-auto" : ""}`}
+        />
+        <Image src={imageUrl} alt={imageAlt} width={487} height={286} />
+      </motion.div>
+    </section>
+  );
+};
 
 const Services = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -43,145 +119,43 @@ const Services = () => {
         <h2 className="mx-auto w-max mb-[24px]">
           We drive growth and visibility
         </h2>
-        {/* service 1 */}
-        <section
+        {/* Service 1 */}
+        <Section
           id="communications"
-          className="flex max-w-[1250px] gap-10 items-center mx-auto py-[80px]"
-        >
-          <div className=" space-y-6">
-            <h3>Marketing Communication</h3>
-            <p>
-              Crafting impactful, multi-channel campaigns that amplify your
-              brand's voice and engage your target audience through strategic
-              content, social media, and public relations
-            </p>
-            <div className="space-x-2">
-              <Link href={"/services/marketing-communication"}>
-                <CustomButton className="bg-b-black text-white rounded-20">
-                  Learn more
-                </CustomButton>
-              </Link>
+          title="Marketing Communication"
+          description="Crafting impactful, multi-channel campaigns that amplify your brand's voice and engage your target audience through strategic content, social media, and public relations"
+          imageUrl="/imgs/experimental-marketing.png"
+          imageAlt="marketing communications"
+          link="/services/marketing-communication"
+          onOpen={onOpen}
+          highlight="/imgs/highlight-right.png"
+        />
 
-              <CustomButton
-                onClick={onOpen}
-                className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash"
-              >
-                Talk to sales
-              </CustomButton>
-            </div>
-          </div>
-          {/* for the image */}
-          <div className="w-full max-w-[487px] ">
-            <img
-              src="/imgs/highlight-right.png"
-              alt="highlight icon"
-              width={60}
-              height={65}
-              className="ml-auto"
-            />
-            <Image
-              src={"/imgs/experimental-marketing.png"}
-              alt="marketing communications"
-              width={487}
-              height={286}
-            />
-          </div>
-        </section>
-        {/* end service 1 */}
-
-        <section
-          className="bg-b-lightPink flex items-center justify-center py-[80px]"
+        {/* Service 2 */}
+        <Section
           id="analytics"
-        >
-          {/* service 2 */}
-          <div className="flex max-w-[1250px] gap-10 items-center  my-auto">
-            {/* for the image */}
-            <div className="w-full max-w-[487px] ">
-              <img
-                src="/imgs/highlight-left.png"
-                alt="highlight icon"
-                width={60}
-                height={65}
-              />
-              <Image
-                src={"/imgs/marketing-analytics.png"}
-                alt="marketing analytics"
-                width={487}
-                height={286}
-              />
-            </div>
-            {/* ----- */}
-            <div className=" space-y-6">
-              <h3>Marketing Analytics</h3>
-              <p>
-                Transforming complex data into actionable insights to track
-                performance, understand customer behavior, and measure ROI,
-                helping you refine strategies for better outcomes.
-              </p>
-              <div className="space-x-2">
-                <Link href={"/services/marketing-analytics"}>
-                  <CustomButton className="bg-b-black text-white rounded-20">
-                    Learn more
-                  </CustomButton>
-                </Link>
+          bgClass="bg-b-lightPink"
+          title="Marketing Analytics"
+          description="Transforming complex data into actionable insights to track performance, understand customer behavior, and measure ROI, helping you refine strategies for better outcomes."
+          imageUrl="/imgs/marketing-analytics.png"
+          imageAlt="marketing analytics"
+          link="/services/marketing-analytics"
+          onOpen={onOpen}
+          highlight="/imgs/highlight-left.png"
+          reverse
+        />
 
-                <CustomButton
-                  onClick={onOpen}
-                  className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash"
-                >
-                  Talk to sales
-                </CustomButton>
-              </div>
-            </div>
-          </div>
-          {/* end service 2 */}
-        </section>
-
-        {/* service 3 */}
-        <section
+        {/* Service 3 */}
+        <Section
           id="technology"
-          className="flex max-w-[1250px] gap-10 items-center mx-auto py-[80px] px-[5%]"
-        >
-          <div className=" space-y-6">
-            <h3>Marketing Technology</h3>
-            <p>
-              Implementing and managing cutting-edge tools and platforms, from
-              campaign execution systems to AI-driven media solutions, to
-              streamline operations and drive business innovation
-            </p>
-            <div className="space-x-2">
-              <Link href={"/services/marketing-technology"}>
-                <CustomButton className="bg-b-black text-white rounded-20">
-                  Learn more
-                </CustomButton>
-              </Link>
-
-              <CustomButton
-                onClick={onOpen}
-                className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash"
-              >
-                Talk to sales
-              </CustomButton>
-            </div>
-          </div>
-          {/* for the image */}
-          <div className="w-full max-w-[487px] ">
-            <img
-              src="/imgs/highlight-right.png"
-              alt="highlight icon"
-              width={60}
-              height={65}
-              className="ml-auto"
-            />
-            <Image
-              src={"/imgs/marketing-technology.png"}
-              alt="marketing tech"
-              width={487}
-              height={286}
-            />
-          </div>
-        </section>
-        {/* end service 3 */}
+          title="Marketing Technology"
+          description="Implementing and managing cutting-edge tools and platforms, from campaign execution systems to AI-driven media solutions, to streamline operations and drive business innovation"
+          imageUrl="/imgs/marketing-technology.png"
+          imageAlt="marketing tech"
+          link="/services/marketing-technology"
+          onOpen={onOpen}
+          highlight="/imgs/highlight-right.png"
+        />
       </div>
 
       <Modal isOpen={isOpen} onClose={onClose}>

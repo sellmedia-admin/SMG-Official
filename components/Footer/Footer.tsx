@@ -1,27 +1,33 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import React from "react";
+"use client";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import CustomButton from "../Button/Button";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailForm = () => {
   return (
-    <Box className="bg-b-ash1 py-10 text-white">
-      <Box className="max-w-[1184px] flex justify-between items-center mx-auto ">
+    <Box className="bg-b-ash1 py-10 text-white px-5">
+      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto px-5 md:px-0">
         <div className="flex flex-col gap-[18px]">
           <h2>Stay informed</h2>
           <Text fontWeight={600}>Signup for our newsletter</Text>
         </div>
-        <form action="">
-          <input
-            type="email"
-            name=""
-            id=""
-            placeholder="Your Email Address"
-            className="h-[48px] rounded-20 email-input pl-6 text-b-black w-[248px]"
-          />
+        <form
+          action=""
+          className="w-full flex flex-col md:flex-row  gap-4 md:max-w-[420px]"
+        >
+          <VStack alignItems={"left"}>
+            <label htmlFor="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+              className="h-[48px] rounded-20 email-input pl-6 text-b-black w-full md:w-[248px]"
+            />
+          </VStack>
           <CustomButton
-            className="bg-white rounded-20 text-b-black ml-[14px]"
+            className="bg-white rounded-20 text-b-black md:ml-[14px] !w-full md:!w-max self-end"
             type="submit"
             leftIcon={
               <img src="/icons/mail.svg" alt="email" width={24} height={24} />
@@ -51,7 +57,7 @@ const Footer = () => {
     <section className="relative z-50">
       <EmailForm />
       <footer className="bg-b-ash-2 py-10 text-white bg-b-black">
-        <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between">
+        <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between flex-col md:flex-row px-5 md:px-0">
           <Box className="mb-6 md:mb-0 text-start flex flex-col gap-5 max-w-[276px] mr-3">
             <Link href="/home" className="flex items-center">
               <Image
@@ -76,7 +82,6 @@ const Footer = () => {
               Suite 101, Plot 9 Gbagada - Oworonshoki Expy, beside UPS, Araromi
               105102, Lagos, Nigeria
             </p>
-
             <div className="flex gap-2 mt-[15px]">
               {teamList.map((option) => (
                 <Flex
@@ -100,7 +105,7 @@ const Footer = () => {
               ))}
             </div>
           </Box>
-          <Box className="grid grid-cols-3 sm:gap-6 gap-8">
+          <Box className="grid grid-cols-1 md:grid-cols-3 sm:gap-6 gap-8">
             {footerLinks.map((section, index) => (
               <Box key={index}>
                 <div className="mb-[14px]">
@@ -170,12 +175,11 @@ const Footer = () => {
             ))}
           </Box>
         </Box>
-        <Box className="max-w-[1184px] mx-auto  px-[5%] flex justify-center pt-[23px] mt-10 border-t border-t-b-ash2">
+        <Box className="max-w-[1184px] mx-auto px-[5%] flex justify-center pt-[23px] mt-10">
           <span className="text-sm text-center text-[14px] text-b-grey">
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
         </Box>
-
         <a
           href={`https://wa.me/${whatsappNumber}/?text=${encodedMessage}`}
           target="_blank"
@@ -190,6 +194,13 @@ const Footer = () => {
             />
           </div>
         </a>
+        <style jsx>{`
+          @media (max-width: 768px) {
+            footer {
+              border-bottom: none;
+            }
+          }
+        `}</style>
       </footer>
     </section>
   );
