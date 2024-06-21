@@ -19,10 +19,8 @@ export default function Home() {
   return (
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div className="max-w-[750px] py-10 md:py-40 px-5 md:ml-[100px]">
-          <h1 className="text-[50px]">
-            Innovating at the Intersection of Media and Technology  
-          </h1>
+        <div className="max-w-[750px] py-5  md:py-40 px-5 md:ml-[100px]">
+          <h1>Innovating at the Intersection of Media and Technology  </h1>
 
           <Text className="my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
@@ -31,8 +29,8 @@ export default function Home() {
           </Text>
           <Box position={"relative"}>
             <Flex alignItems={"center"} gap={8}>
-              <div className="bg-custom-gradient p-[1px] rounded-20">
-                <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+              <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
+                <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
                   Start a project
                 </CustomButton>
               </div>

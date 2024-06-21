@@ -236,7 +236,7 @@ const AboutUsPage = () => {
         </section>
 
         {/* -------- footprint ---------- */}
-        <section className="min-h-screen">
+        <section className="min-h-screen px-5 md:px-0">
           <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
             <Box>
               <h2 className="mt-10 mb-6">Footprint & Clientele  </h2>

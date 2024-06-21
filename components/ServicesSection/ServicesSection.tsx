@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface SectionServices {
+  index: number;
   topTitle: string;
   bottomTitle: string;
   image: string;
@@ -27,7 +28,7 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
   const Component = orderBy ? "div" : motion.div;
   return (
     <Component
-      initial={orderBy ? {} : { x: -50, opacity: 0 }}
+      initial={orderBy ? {} : { x: -100, opacity: 0 }}
       whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
       transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
       className="md:max-w-[523px]"
@@ -47,6 +48,7 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
 };
 
 const ServicesSection = ({
+  index,
   topTitle,
   bottomTitle,
   image,
@@ -57,6 +59,7 @@ const ServicesSection = ({
   orderBy,
 }: SectionServices) => {
   const Component = orderBy ? "div" : motion.div;
+  const isImageRight = index === 0 || index === 2;
 
   return (
     <Box className="text-center mt-[80px] px-[20px] md:px-0">
@@ -75,7 +78,7 @@ const ServicesSection = ({
       </Box>
 
       <Box className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
-        <Box className={`order-2 md:order-${orderBy === "-1" ? "1" : "2"}`}>
+        <Box className={`order-2 md:order-${isImageRight ? "1" : "2"}`}>
           <ServiceText
             linkTo={linkTo}
             title={contentTitle}
@@ -84,9 +87,9 @@ const ServicesSection = ({
           />
         </Box>
 
-        <Box className={`order-1 md:order-${orderBy === "-1" ? "2" : "1"}`}>
+        <Box className={`order-1 md:order-${isImageRight ? "2" : "1"}`}>
           <Component
-            initial={orderBy ? {} : { x: 50, opacity: 0 }}
+            initial={orderBy ? {} : { x: 100, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
             transition={
               orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }

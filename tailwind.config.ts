@@ -20,6 +20,8 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "custom-gradient":
           "linear-gradient(to right, #C82090 0%, #C82090 25%, #6A14D1 75%, #6A14D1 100%);",
+        "darkCustom-gradient":
+          "linear-gradient(to right, #b41d82 0%, #5f12bc 25%, #5f12bc 75%, #5f12bc 100%);",
         "hero-bg": "url(/imgs/hero-bg.png)",
         "aboutUs-bg": "url(/imgs/about-us-bg.png)",
       },
