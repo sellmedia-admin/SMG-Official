@@ -35,7 +35,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`flex flex-col md:flex-row max-w-[1250px] gap-10 items-center mx-auto py-[80px] ${bgClass} ${
+      className={`flex flex-col md:flex-row md:px-[20%] gap-10 items-center mx-auto py-[80px] ${bgClass} ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >
