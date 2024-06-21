@@ -88,14 +88,14 @@ const Service = ({ params }: { params: { slug: string } }) => {
       />
 
       <div className="min-h-screen max-w-[1295px] px-[5%] mx-auto pt-10">
-        <div className="w-max mx-auto">
+        <div className="w-max mx-auto flex items-center justify-between">
           {topHeaders?.map((tabName) => (
             <Text
               className={`${
                 activeTab === tabName
                   ? "text-b-pink bg-b-green-2 border-b-2 border-b-darkPink pb-3"
                   : "text-[#7c7c7c]"
-              }  font-medium cursor-pointer py-2 m-3 max-w-max inline`}
+              }  font-semibold cursor-pointer text-center py-2 m-3 max-w-[122px] md:max-w-max leading-6 text-[14px] md:text-[18px]`}
               key={tabName}
               onClick={() => handleTabChange(tabName)}
             >
@@ -127,7 +127,7 @@ const Service = ({ params }: { params: { slug: string } }) => {
         </Flex>
 
         {/* tabs */}
-        <div className="max-w-[1200px] px-[5%] mx-auto grid grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
+        <div className="max-w-[1200px] px-[5%] mx-auto grid md:grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
           {activeTab === "marketing-communication" && <CommunicationTab />}
           {activeTab === "marketing-analytics" && <AnalyticsTab />}
           {activeTab === "marketing-technology" && <TechnologyTab />}

@@ -35,33 +35,10 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`flex max-w-[1250px] gap-10 items-center mx-auto py-[80px] ${bgClass} ${
-        reverse ? "flex-row-reverse" : ""
+      className={`flex flex-col md:flex-row max-w-[1250px] gap-10 items-center mx-auto py-[80px] ${bgClass} ${
+        reverse ? "md:flex-row-reverse" : ""
       }`}
     >
-      <motion.div
-        initial={{ x: reverse ? 100 : -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="space-y-6"
-      >
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <div className="space-x-2">
-          <Link href={link}>
-            <CustomButton className="bg-b-black text-white rounded-20">
-              Learn more
-            </CustomButton>
-          </Link>
-          <CustomButton
-            onClick={onOpen}
-            className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash"
-          >
-            Talk to sales
-          </CustomButton>
-        </div>
-      </motion.div>
       <motion.div
         initial={{ x: reverse ? -100 : 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -74,9 +51,32 @@ const Section: React.FC<SectionProps> = ({
           alt="highlight icon"
           width={60}
           height={65}
-          className={`ml-auto ${reverse ? "mr-auto" : ""}`}
+          className={` ${reverse ? "mr-auto md:mr-0" : "ml-auto md:ml-0"}`}
         />
         <Image src={imageUrl} alt={imageAlt} width={487} height={286} />
+      </motion.div>
+      <motion.div
+        initial={{ x: reverse ? 100 : -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="space-y-6 text-center md:text-left px-5 md:px-0 "
+      >
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className="space-x-2 flex flex-row justify-center md:justify-start items-center">
+          <Link href={link}>
+            <CustomButton className="bg-b-black text-white rounded-20">
+              Learn more
+            </CustomButton>
+          </Link>
+          <CustomButton
+            onClick={onOpen}
+            className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash "
+          >
+            Talk to sales
+          </CustomButton>
+        </div>
       </motion.div>
     </section>
   );
@@ -94,7 +94,7 @@ const Services = () => {
         textContent="From crafting impactful, multi-channel campaigns that amplify your brand's voice and engage your target audience to transforming complex data into actionable insights to track performance, understand customer behavior, and measure ROI, SMG aims at helping you refine your brand strategies for better business outcomes."
       />
 
-      <div className="flex  gap-6 max-w-[1200px] mx-auto my-[80px]">
+      <div className="flex flex-col md:flex-row  gap-6 max-w-[1200px] mx-auto my-[80px] px-5 md:px-0">
         {SERVICES_OFFERED.map((service) => (
           <Box
             key={service.icon}
@@ -115,8 +115,8 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="text-start pt-[80px]">
-        <h2 className="mx-auto w-max mb-[24px]">
+      <div className="text-start pt-[80px] px-5 md:px-0">
+        <h2 className="text-center mb-[24px]">
           We drive growth and visibility
         </h2>
         {/* Service 1 */}
