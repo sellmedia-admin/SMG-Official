@@ -40,7 +40,7 @@ export const MotionDiv: React.FC<{ children: ReactNode; initialX: number }> = ({
     whileInView={{ x: 0, opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
-    className="flex gap-[23px] items-center"
+    className="flex flex-col md:flex-row gap-[23px] items-center"
   >
     {children}
   </motion.div>
@@ -50,7 +50,7 @@ export const TextBlock: React.FC<{ title?: string; content: string }> = ({
   title,
   content,
 }) => (
-  <div>
+  <div className="order-1 md:order-none px-5 md:px-0">
     {title && <h2 className="mb-[24px]">{title}</h2>}
     <p>{content}</p>
   </div>
@@ -61,7 +61,7 @@ export const ImageBlock: React.FC<{
   src2: string;
   applyMarginAuto?: boolean;
 }> = ({ src1, src2, applyMarginAuto }) => (
-  <div className="w-full max-w-[500px]">
+  <div className="w-full px-5 md:px-0 md:max-w-[600px] order-2 md:order-none">
     <img
       src={src1}
       width={60}
@@ -69,6 +69,6 @@ export const ImageBlock: React.FC<{
       alt="highlight"
       className={applyMarginAuto ? "ml-auto" : ""}
     />
-    <img src={src2} width={486} height={286} alt="smg" />
+    <img src={src2} width={600} height={286} alt="smg" />
   </div>
 );

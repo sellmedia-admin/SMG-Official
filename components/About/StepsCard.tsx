@@ -43,28 +43,58 @@ const Arrow: React.FC<{ src: string; className: string; delay: number }> = ({
   />
 );
 
+const DownArrow: React.FC<{
+  src: string;
+  className: string;
+  delay: number;
+}> = ({ src, className, delay }) => (
+  <motion.img
+    src={src}
+    alt="down-arrow"
+    width={20}
+    height={50}
+    className={className}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay }}
+    viewport={{ once: true }}
+  />
+);
+
 interface CardSectionProps {
   cards: ApproachCardProps[];
 }
 
 const CardSection: React.FC<CardSectionProps> = ({ cards }) => (
-  <div className="grid grid-cols-5 mt-10">
+  <div className="grid grid-cols-1 md:grid-cols-5 mt-10 gap-y-6 md:gap-y-0 px-5 md:px-0">
     {cards.map((card, index) => (
       <Fragment key={card.stage}>
         <ApproachCard {...card} />
-        {index % 2 === 0 && index < cards.length - 1 && (
-          <Arrow
-            src="/icons/arrow.svg"
-            className="mt-[105px] ml-8"
-            delay={card.delay + 0.4}
-          />
-        )}
-        {index % 2 === 1 && index < cards.length - 1 && (
-          <Arrow
-            src="/icons/arrow-down.svg"
-            className="ml-8"
-            delay={card.delay + 0.4}
-          />
+        {index < cards.length - 1 && (
+          <>
+            <div className="hidden md:block">
+              {index % 2 === 0 ? (
+                <Arrow
+                  src="/icons/arrow.svg"
+                  className="mt-[105px] ml-8"
+                  delay={card.delay + 0.4}
+                />
+              ) : (
+                <Arrow
+                  src="/icons/arrow-down.svg"
+                  className="ml-8"
+                  delay={card.delay + 0.4}
+                />
+              )}
+            </div>
+            <div className="md:hidden">
+              <DownArrow
+                src="/icons/down-arrow.svg"
+                className="mx-auto"
+                delay={card.delay + 0.4}
+              />
+            </div>
+          </>
         )}
       </Fragment>
     ))}

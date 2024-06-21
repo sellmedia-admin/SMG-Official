@@ -20,7 +20,7 @@ const AboutBox: React.FC<AboutBoxProps> = ({
   noTitle = false,
 }) => {
   return (
-    <Box className="min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover text-center pt-[54px]">
+    <Box className="min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover md:text-center pt-[54px] pb-10 px-5">
       {noTitle ? (
         ""
       ) : (
@@ -28,14 +28,12 @@ const AboutBox: React.FC<AboutBoxProps> = ({
           title={title}
           titleColor={titleColor}
           leftIcon={leftIcon}
-          className="w-max mx-auto"
+          className="w-max md:mx-auto"
         />
       )}
 
-      <h1 className="mt-10 mb-6 max-w-[1200px] px-[5%] mx-auto">
-        {mainHeading}
-      </h1>
-      <Text className="max-w-[946px] mx-auto">{textContent}</Text>
+      <h1 className="mt-10 mb-6 max-w-[1200px] md:mx-auto">{mainHeading}</h1>
+      <Text className="max-w-[946px] md:mx-auto">{textContent}</Text>
     </Box>
   );
 };

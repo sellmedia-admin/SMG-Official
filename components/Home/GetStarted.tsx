@@ -6,7 +6,7 @@ import { ContactModal, Modal } from "..";
 const GetStarted = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box className="bg-b-light-green h-full  py-10 px-5 md:py-[80px] md:px-[120px] md:text-center">
+    <Box className="bg-b-light-green h-full  py-10 px-5 md:py-[80px] md:px-[120px] text-start md:text-center">
       <h2>Get Started  </h2>
       <Text className="mt-6 mb-10">
         Ready to embark on your own transformative journey with SellMedia Group?
