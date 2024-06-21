@@ -16,7 +16,7 @@ const GetStarted = () => {
         <Flex alignItems={"center"} gap={8} className="max-w-max md:mx-auto">
           <div className="bg-custom-gradient p-[1px] rounded-20">
             <Link href={"/start-project"}>
-              <CustomButton className="bg-custom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+              <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
                 Start a project
               </CustomButton>
             </Link>

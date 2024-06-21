@@ -62,7 +62,7 @@ const AboutSection = () => (
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
-      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] -mt-6"
+      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] md:px-0 -mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
         <div
@@ -71,7 +71,7 @@ const AboutSection = () => (
         >
           <div
             className={cn(
-              "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white",
+              "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white ",
               achievement.bgColor
             )}
           >

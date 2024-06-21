@@ -7,7 +7,7 @@ import Image from "next/image";
 const EmailForm = () => {
   return (
     <Box className="bg-b-ash1 py-10 text-white px-5">
-      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto px-5 md:px-0">
+      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto md:px-0">
         <div className="flex flex-col gap-[18px]">
           <h2>Stay informed</h2>
           <Text fontWeight={600}>Signup for our newsletter</Text>
@@ -175,7 +175,7 @@ const Footer = () => {
             ))}
           </Box>
         </Box>
-        <Box className="max-w-[1184px] mx-auto px-[5%] flex justify-center pt-[23px] mt-10">
+        <Box className="max-w-[1184px] mx-auto px-[5%] flex justify-center pt-[23px] mt-10 md:border-t border-b-ash">
           <span className="text-sm text-center text-[14px] text-b-grey">
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
@@ -184,7 +184,7 @@ const Footer = () => {
           href={`https://wa.me/${whatsappNumber}/?text=${encodedMessage}`}
           target="_blank"
         >
-          <div className="ml-auto bg-white text-black w-max flex gap-2 rounded-tl-lg rounded-bl-lg p-2">
+          <div className="ml-auto bg-white text-black w-max flex gap-2 rounded-tl-lg rounded-bl-lg p-2 mt-4">
             <p>Live chat</p>
             <img
               src="/icons/whatsapp-icon.svg"
@@ -194,13 +194,6 @@ const Footer = () => {
             />
           </div>
         </a>
-        <style jsx>{`
-          @media (max-width: 768px) {
-            footer {
-              border-bottom: none;
-            }
-          }
-        `}</style>
       </footer>
     </section>
   );
