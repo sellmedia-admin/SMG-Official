@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div className="max-w-[750px] py-5  md:py-40 px-5 md:ml-[100px]">
+        <div className="max-w-[750px] -mt-10 md:mt-0 py-5  md:py-40 px-5 md:ml-[100px]">
           <h1>Innovating at the Intersection of Media and Technology  </h1>
 
           <Text className="my-6">
