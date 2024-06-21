@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
+    <Box overflowX={"hidden"}>
       <main className="min-h-home bg-hero-bg bg-no-repeat bg-center bg-cover  grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div className="max-w-[750px] py-10 md:py-40 px-5 md:ml-[100px]">
           <h1 className="text-[50px]">
@@ -76,6 +76,7 @@ export default function Home() {
         <LandingPageAbout />
       </section>
 
+      {/* TODO: */}
       <section className=" w-full min-h-screen">
         <LandingPageServices />
       </section>
@@ -114,6 +115,6 @@ export default function Home() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ContactModal />
       </Modal>
-    </>
+    </Box>
   );
 }
