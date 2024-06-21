@@ -61,13 +61,12 @@ const AboutSection = () => (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true }}
       className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] md:px-0 -mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
         <div
           key={achievement.title}
-          className="rounded-10 bg-white border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-4 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
+          className="rounded-10 bg-white  border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-4 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
         >
           <div
             className={cn(

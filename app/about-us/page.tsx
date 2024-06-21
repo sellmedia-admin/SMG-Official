@@ -188,7 +188,6 @@ const AboutUsPage = () => {
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 px-5 md:px-0"
             >
@@ -212,7 +211,6 @@ const AboutUsPage = () => {
             <motion.div
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 px-5 md:px-0"
             >

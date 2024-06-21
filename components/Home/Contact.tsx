@@ -21,7 +21,7 @@ const Contact = () => {
             our dedicated support team at
           </Text>
           <Text className=" text-base leading-[30px]">
-            hello@sellmedia.africa{" "}
+            <a href="mailto:hello@sellmedia.africa">hello@sellmedia.africa</a>
           </Text>
         </div>
       </div>
@@ -32,7 +32,7 @@ const Contact = () => {
         <div>
           <Text className="text-b-pink mb-2">Phone Number</Text>
           <Text className="text-[#7C7C7C] text-base leading-[30px]">
-            +234706 419 1282 
+            <a href="tel:+2347064191282 "> +234706 419 1282 </a>
           </Text>
         </div>
       </div>

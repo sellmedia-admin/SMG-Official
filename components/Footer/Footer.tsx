@@ -17,7 +17,7 @@ const EmailForm = () => {
           className="w-full flex flex-col md:flex-row  gap-4 md:max-w-[420px]"
         >
           <VStack alignItems={"left"}>
-            <label htmlFor="email">Email Address</label>
+            {/* <label htmlFor="email">Email Address</label> */}
             <input
               type="email"
               name="email"
@@ -205,9 +205,18 @@ const footerLinks = [
   {
     title: "Our Services",
     links: [
-      { name: "Marketing Analytics", link: "#" },
-      { name: "Marketing Communications", link: "#" },
-      { name: "Marketing Technology", link: "#" },
+      {
+        name: "Marketing Analytics",
+        link: "https://sellmedia.africa/services/marketing-analytics",
+      },
+      {
+        name: "Marketing Communications",
+        link: "https://sellmedia.africa/services/marketing-comms",
+      },
+      {
+        name: "Marketing Technology",
+        link: "https://sellmedia.africa/services/marketing-tech",
+      },
     ],
   },
   {
@@ -238,7 +247,7 @@ const footerLinks = [
       },
       {
         name: "+234 706 419 1282",
-        link: "tel:+2347064191282",
+        link: "tel:+234013300401",
       },
     ],
   },
@@ -256,22 +265,22 @@ const footerLinks = [
     links: [
       {
         name: "",
-        link: "https://www.facebook.com",
+        link: "https://www.facebook.com/sellmediagroup",
         icon: "/icons/facebook.svg",
       },
       {
         name: "",
-        link: "https://www.twitter.com",
+        link: "https://twitter.com/SellMediaInc",
         icon: "/icons/twitter.svg",
       },
       {
         name: "",
-        link: "https://www.instagram.com",
+        link: "https://www.instagram.com/sellmediainc/",
         icon: "/icons/instagram.svg",
       },
       {
         name: "",
-        link: "https://www.linkedin.com",
+        link: "https://www.linkedin.com/company/sellmedia-inc/",
         icon: "/icons/linkedin.svg",
       },
       {

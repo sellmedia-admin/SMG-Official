@@ -59,7 +59,8 @@ const ServicesSection = ({
   orderBy,
 }: SectionServices) => {
   const Component = orderBy ? "div" : motion.div;
-  const isImageRight = index === 0 || index === 2;
+  const isImageRight = index === 1;
+  console.log(index);
 
   return (
     <Box className="text-center mt-[80px] px-[20px] md:px-0">
@@ -78,7 +79,7 @@ const ServicesSection = ({
       </Box>
 
       <Box className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
-        <Box className={`order-2 md:order-${isImageRight ? "1" : "2"}`}>
+        <Box className={`order-2 md:order-${isImageRight ? 2 : 1}`}>
           <ServiceText
             linkTo={linkTo}
             title={contentTitle}
@@ -87,7 +88,7 @@ const ServicesSection = ({
           />
         </Box>
 
-        <Box className={`order-1 md:order-${isImageRight ? "2" : "1"}`}>
+        <Box className={`order-1  md:order-${isImageRight ? 1 : 2}`}>
           <Component
             initial={orderBy ? {} : { x: 100, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
