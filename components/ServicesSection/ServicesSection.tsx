@@ -28,7 +28,7 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
   const Component = orderBy ? "div" : motion.div;
   return (
     <Component
-      initial={orderBy ? {} : { x: -100, opacity: 0 }}
+      initial={orderBy ? {} : { x: 100, opacity: 0 }}
       whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
       transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
       className="md:max-w-[523px]"
@@ -90,7 +90,7 @@ const ServicesSection = ({
 
         <Box className={`order-1  md:order-${isImageRight ? 1 : 2}`}>
           <Component
-            initial={orderBy ? {} : { x: 100, opacity: 0 }}
+            initial={orderBy ? {} : { x: -100, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
             transition={
               orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }

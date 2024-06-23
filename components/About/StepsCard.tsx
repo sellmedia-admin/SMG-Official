@@ -64,7 +64,7 @@ interface CardSectionProps {
 }
 
 const CardSection: React.FC<CardSectionProps> = ({ cards }) => (
-  <div className="grid grid-cols-1 md:grid-cols-5 mt-10 gap-y-6 md:gap-y-0 px-5 md:px-0">
+  <div className="grid grid-cols-1 md:grid-cols-5 mt-10 gap-y-6 md:gap-y-0 px-5 md:px-0 overflow-x-hidden">
     {cards.map((card, index) => (
       <Fragment key={card.stage}>
         <ApproachCard {...card} />

@@ -3,6 +3,7 @@ import { Text } from "@chakra-ui/react";
 import SectionTitle from "../SectionTitles/SectionTitle";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/utils/cn";
 
 type StatementProps = {
   title: string;
@@ -16,14 +17,14 @@ export const StatementSection: React.FC<StatementProps> = ({
   textContent,
 }) => {
   return (
-    <div className={`rounded-15 ${backgroundColor} py-6 px-4`}>
+    <div className={cn("rounded-15 py-6 px-4 bg-pryPurple", backgroundColor)}>
       <SectionTitle
         title={title}
         titleColor="text-b-black"
         leftIcon="pink-star"
         rightIcon="pink-star"
         className="w-max mx-auto"
-        textStyle="!text-[28px]"
+        textStyle="md:text-[28px]"
       />
 
       <Text className="mt-[26px]">{textContent}</Text>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
-import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { Footer, Navbar } from "@/components";
 import { ChakraProvider } from "@chakra-ui/react";
+import "./globals.css";
 
 const inter = Sora({ subsets: ["latin"] });
 

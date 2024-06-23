@@ -60,6 +60,34 @@ input:focus {
   border: none;
 }
 
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 3.5rem;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 1.7rem;
+  }
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 1.12rem;
+  }
+
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 30px;
@@ -67,7 +95,7 @@ input:focus {
   }
   h2 {
     font-size: 24px;
-    line-height: 1.7rem;
+    line-height: 1.5rem;
   }
   h3 {
     font-size: 20px;
@@ -75,5 +103,10 @@ input:focus {
 
   h4 {
     font-size: 1.12rem;
+  }
+
+  a,
+  li {
+    font-size: 16px !important;
   }
 }

@@ -3,11 +3,8 @@
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./containers/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -27,7 +24,6 @@ module.exports = {
         "mobile-bg": "url(/imgs/mobileHome-bg.png)",
         "aboutUs-bg": "url(/imgs/about-us-bg.png)",
       },
-
       colors: {
         "b-pink": "#C82090",
         "b-darkPink": "#A01A73",
@@ -41,7 +37,7 @@ module.exports = {
         "b-grey-2": "#F5F4F6",
         "b-light-green": "#E6FDF4",
         "b-lightPink": "#FAE9F4",
-        "b-pry-purple": "#F0E8FA",
+        pryPurple: "#F0E9FA",
       },
       borderWidth: {
         1: "1px",
@@ -70,7 +66,7 @@ module.exports = {
     },
     // screens: {
     //   sm: "390px",
-    //   mob: "620px",
+    tab: "990px",
     //   md: "850px",
     //   lg: "1024px",
     //   xl: "1271px",

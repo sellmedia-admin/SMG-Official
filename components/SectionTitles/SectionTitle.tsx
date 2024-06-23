@@ -26,9 +26,8 @@ const SectionTitle = ({
         height={30}
       />
       <Text
-        className={cn(titleColor, textStyle)}
+        className={cn("text-[16px]", titleColor, textStyle)}
         fontWeight={700}
-        fontSize={"16px"}
       >
         {title}
       </Text>
