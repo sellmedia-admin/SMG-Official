@@ -1,4 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import CustomButton from "../Button/Button";
 
 const Contact = () => {
   return (
@@ -32,10 +34,16 @@ const Contact = () => {
         <div>
           <Text className="text-b-pink mb-2">Phone Number</Text>
           <Text className="text-[#7C7C7C] text-base leading-[30px]">
-            <a href="tel:+2347064191282 "> +234706 419 1282 </a>
+            <a href="tel:+2347064191282 "> +234706419282 </a>
           </Text>
         </div>
       </div>
+
+      <Link href={"/start-project"}>
+        <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200 mt-3">
+          Start a project
+        </CustomButton>
+      </Link>
     </Box>
   );
 };

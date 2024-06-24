@@ -258,6 +258,7 @@ const footerLinks = [
       { name: "SellCrea8", link: "#" },
       { name: "SellTalk", link: "#" },
       { name: "SellPlanner", link: "#" },
+      { name: "Piazza", link: "#" },
     ],
   },
   {
