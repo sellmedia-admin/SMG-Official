@@ -57,7 +57,7 @@ const Footer = () => {
     <div className="relative z-50">
       <EmailForm />
       <footer className="bg-b-ash-2 py-10 text-white bg-b-black">
-        <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between flex-col tab:flex-row px-5 md:px-0">
+        <Box className="mx-auto w-full max-w-[1184px] flex md:justify-between flex-col md:flex-row px-5 md:px-0">
           <Box className="mb-6 md:mb-0 text-start flex flex-col gap-5 max-w-[276px] mr-3">
             <Link href="/home" className="flex items-center">
               <Image

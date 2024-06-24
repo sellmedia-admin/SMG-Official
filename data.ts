@@ -87,7 +87,7 @@ export const ApproachStep1 = [
     title: "Discovery",
     description:
       "Defining and finalizing project requirements and goals, outlining timelines and key milestones, and gaining a deep understanding of the challenges to be addressed",
-    delay: 0.4,
+    delay: 0.2,
   },
   {
     stage: "Stage 2",
@@ -95,14 +95,14 @@ export const ApproachStep1 = [
     description:
       "Bridging knowledge gaps through in-depth research and analysis into behaviors, needs, and motivations. Analyzing competitive landscapes, markets, and industries to craft informed project strategy",
     className: "mt-[75px]",
-    delay: 1.2,
+    delay: 0.6,
   },
   {
     stage: "Stage 3",
     title: "Strategy",
     description:
       "Integrating insights from the Discovery and Research stages to develop a cohesive project plan. Refining functional requirements to ensure a seamless design and execution process",
-    delay: 2.0,
+    delay: 1.0,
   },
 ];
 
@@ -112,7 +112,7 @@ export const ApproachStep2 = [
     title: "Identify Exposure",
     description:
       "Integrating insights from the Discovery and Research stages to develop a cohesive project plan. Refining functional requirements to ensure a seamless design and execution process",
-    delay: 2.0,
+    delay: 0.2,
   },
   {
     stage: "Stage 5",
@@ -120,14 +120,14 @@ export const ApproachStep2 = [
     description:
       "Creating a comprehensive touchpoint processes to deliver impactful brand experiences tailored to the targeted audience.",
     className: "mt-[75px]",
-    delay: 2.4,
+    delay: 0.6,
   },
   {
     stage: "Stage 6",
     title: "Assets",
     description:
       "Formally approving the project's completion, ensuring alignment with specifications, and preparing for release to the intended audience.",
-    delay: 2.8,
+    delay: 1.0,
   },
 ];
 

@@ -35,7 +35,9 @@ const TeamComponent = ({ TEAM }: any) => {
       {TEAM.map((member: any) => (
         <div
           className={`bg-black text-white py-6 rounded-lg ${
-            hoveredMember === member.name ? "bg-white" : ""
+            hoveredMember === member.name
+              ? "bg-white border border-[#0076B6]"
+              : ""
           }`}
           key={member.name}
           onMouseEnter={() => setHoveredMember(member.name)}
@@ -48,8 +50,8 @@ const TeamComponent = ({ TEAM }: any) => {
                 : `/imgs/avatars/${member.img}.png`
             }
             alt={member.name}
-            width={88}
-            height={88}
+            width={60}
+            height={60}
             className="mx-auto"
           />
           <p
@@ -63,7 +65,7 @@ const TeamComponent = ({ TEAM }: any) => {
           </p>
           <span
             className={`text-[#CCD0D4] text-[12px] ${
-              hoveredMember === member.name ? "text-[#0076B6]" : ""
+              hoveredMember === member.name ? "!text-[#0076B6]" : ""
             }`}
           >
             {member.description}

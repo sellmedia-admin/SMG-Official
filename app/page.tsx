@@ -18,14 +18,17 @@ export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box overflowX={"hidden"}>
-      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div className="max-w-[750px] -mt-10 md:mt-0 py-5  md:py-40 px-5 md:ml-[100px]">
-          <h1>Innovating at the Intersection of Media and Technology  </h1>
+      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
+        <div className="max-w-[900px] -mt-10 md:mt-0 py-5  md:py-40 px-5 md:ml-[100px]">
+          <h1>
+            Innovating at the <br /> Intersection of Media <br /> and
+            Technology  
+          </h1>
 
           <Text className="my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
-            Strategies Meet Creative Innovation, click below to get started with
-            us
+            Strategies <br /> Meet Creative Innovation, click below to get
+            started with us
           </Text>
           <Box position={"relative"}>
             <Flex alignItems={"center"} gap={8}>
@@ -48,7 +51,7 @@ export default function Home() {
                 </CustomButton>
               </Link>
             </Flex>
-            <div className="hidden md:block">
+            <div className="hidden md:block -mt-4">
               <img
                 src="/gif/arrow.gif"
                 alt="arrows"
@@ -60,13 +63,13 @@ export default function Home() {
           </Box>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block mr-[95px]">
           <img
             src="/imgs/hero-star.png"
             alt="star"
             width={185}
             height={185}
-            className="-mt-16"
+            className="-mt-12"
           />
         </div>
       </main>

@@ -4,6 +4,7 @@ import CustomButton from "../Button/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { cn } from "@/utils/cn";
 
 interface SectionServices {
   index: number;
@@ -28,7 +29,7 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
   const Component = orderBy ? "div" : motion.div;
   return (
     <Component
-      initial={orderBy ? {} : { x: 100, opacity: 0 }}
+      initial={orderBy ? {} : { x: -100, opacity: 0 }}
       whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
       transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
       className="md:max-w-[523px]"
@@ -60,12 +61,11 @@ const ServicesSection = ({
 }: SectionServices) => {
   const Component = orderBy ? "div" : motion.div;
   const isImageRight = index === 1;
-  console.log(index);
 
   return (
-    <Box className="text-center mt-[80px] px-[20px] md:px-0">
-      <Box className="mx-auto max-w-max">
-        <Text className="font-bold text-[37px]">{topTitle}</Text>
+    <div className="text-center mt-[80px] px-[20px] md:px-0">
+      <div className="mx-auto max-w-max">
+        <h2 className="font-bold ">{topTitle}</h2>
 
         <img
           src="/imgs/line-separator.png"
@@ -75,22 +75,22 @@ const ServicesSection = ({
           style={{ marginLeft: separator }}
         />
 
-        <Text className="font-bold text-[37px]">{bottomTitle}</Text>
-      </Box>
+        <h2 className="font-bold ">{bottomTitle}</h2>
+      </div>
 
-      <Box className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
-        <Box className={`order-2 md:order-${isImageRight ? 2 : 1}`}>
+      <div className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
+        <div className={cn("order-1", `md:order-${isImageRight ? 2 : 1}`)}>
           <ServiceText
             linkTo={linkTo}
             title={contentTitle}
             text={contentText}
             orderBy={orderBy}
           />
-        </Box>
+        </div>
 
-        <Box className={`order-1  md:order-${isImageRight ? 1 : 2}`}>
+        <div className={cn("order-1", `md:order-${isImageRight ? 1 : 2}`)}>
           <Component
-            initial={orderBy ? {} : { x: -100, opacity: 0 }}
+            initial={orderBy ? {} : { x: 100, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
             transition={
               orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }
@@ -103,9 +103,9 @@ const ServicesSection = ({
               height={466}
             />
           </Component>
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

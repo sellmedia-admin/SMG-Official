@@ -62,7 +62,7 @@ export const ImageBlock: React.FC<{
   src2: string;
   applyMarginAuto?: boolean;
 }> = ({ src1, src2, applyMarginAuto }) => (
-  <div className="w-full px-5 md:px-0 md:max-w-[580px] order-2 md:order-none">
+  <div className="w-full px-5 md:px-0 md:max-w-[486px] order-2 md:order-none">
     <img
       src={src1}
       width={60}
