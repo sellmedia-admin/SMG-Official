@@ -30,9 +30,11 @@ export default function Home() {
           <Box position={"relative"}>
             <Flex alignItems={"center"} gap={8}>
               <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
-                <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
-                  Start a project
-                </CustomButton>
+                <Link href={"/start-project"}>
+                  <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+                    Start a project
+                  </CustomButton>
+                </Link>
               </div>
               <Link
                 href={"#"}

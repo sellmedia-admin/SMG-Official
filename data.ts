@@ -68,7 +68,7 @@ export const SERVICES_HELP = [
     title: "Advanced Marketing Technology",
     text: "Implementing the latest technologies to enhance your marketing efforts and drive business outcomes.",
     icon: "technology-icon",
-    bgColor: "bg-b-pry-purple",
+    bgColor: "bg-pryPurple",
   },
 ];
 
@@ -140,7 +140,7 @@ export const STATEMENTS = [
   },
   {
     title: "Mission Statement",
-    backgroundColor: "bg-b-pry-purple",
+    backgroundColor: "bg-pryPurple",
     textContent:
       "To empower businesses with cutting-edge media technology and customized marketing solutions, leveraging advanced data and analytics to drive growth, efficiency, and strategic success worldwide",
   },

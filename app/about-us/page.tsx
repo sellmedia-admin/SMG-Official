@@ -76,7 +76,7 @@ const TeamComponent = ({ TEAM }: any) => {
 
 const AboutUsPage = () => {
   return (
-    <div className="bg-white overflow-x-hidden">
+    <div className="bg-red-500 ">
       <Hero
         title="We Are Our First Client"
         titleColor="text-b-pink"
@@ -85,7 +85,7 @@ const AboutUsPage = () => {
         textContent="Driven by a relentless pursuit of creativity and innovation, we empower enterprises to navigate the digital age with confidence"
       />
 
-      <section className="bg-white pt-[80px] min-h-screen">
+      <section className="bg-white pt-[80px] min-h-screen overflow-x-hidden">
         <div className="grid max-w-[1200px] mx-auto text-left gap-8">
           {STORY_CONTENTS.map((content, index) => (
             <MotionDiv key={index} initialX={content.initialX}>
@@ -111,7 +111,7 @@ const AboutUsPage = () => {
           ))}
         </div>
 
-        <div className="max-w-[1200px] px-5 md:px-0 mx-auto text-center grid md:grid-cols-2 gap-6 mt-[80px] pb-[80px]">
+        <div className="max-w-[1200px]  mx-auto text-center grid md:grid-cols-2 gap-6 mt-[80px] pb-[80px]">
           {STATEMENTS.map((statement, index) => (
             <StatementSection
               key={index}
@@ -123,12 +123,13 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      <section className="under-section min-h-screen bg-black text-center sticky  top-0 z-10 pb-20 md:pb-10">
+      <section className="min-h-screen bg-black text-center sticky top-0 z-10 pb-20 md:pb-10">
+        {" "}
         <LandingPageAchievements />
       </section>
       {/* -----  values ---------*/}
-      <div className="relative z-20 bg-white">
-        <section className="min-h-screen bg-white text-center pt-[80px] px-5 md:px-0">
+      <div className="relative z-20 bg-white overflow-x-hidden">
+        <section className="min-h-screen bg-white text-center pt-[80px] px-5 md:px-0 ">
           <Box maxW={1200} className="mx-auto">
             <h2>Our Core Value</h2>
             <div className="mt-10 mb-[160px]  grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-[18px]">
@@ -143,7 +144,7 @@ const AboutUsPage = () => {
                     width={80}
                     height={80}
                   />
-                  <span className="text-[#5D5D5D] md:text-[24px] font-bold">
+                  <span className="text-[#5D5D5D] md:text-[18px] lg:text-[24px] font-bold">
                     {value}
                   </span>
                 </Box>
@@ -159,17 +160,11 @@ const AboutUsPage = () => {
           </Box>
         </section>
         {/* ----- culture ------- */}
-        <section className="min-h-screen text-center bg-white pt-[160px]">
+        <section className="min-h-screen text-center bg-white pt-[160px] ">
           <h2>Systematic Culture</h2>
           <p>We’re deeply rooted in process</p>
 
-          <Flex
-            justifyContent={"space-between"}
-            alignItems={"center"}
-            marginTop={20}
-            maxWidth={1300}
-            className="mx-auto px-5 md:px-0 mb-0 md:-mb-4"
-          >
+          <div className="flex justify-between max-w-[1300px] mt-5 items-center mx-auto mb-0 md:-mb-4">
             <img
               src="/imgs/highlight-left.png"
               alt="highlight icon"
@@ -182,19 +177,19 @@ const AboutUsPage = () => {
               width={60}
               height={65}
             />
-          </Flex>
+          </div>
           {/* --------- */}
-          <Box className="flex flex-col gap-[29px] pb-[90px]">
+          <Box className="flex flex-col gap-[29px] pb-[90px] ">
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 px-5 md:px-0"
+              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6  "
             >
               {CULTURE1.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center py-6  shadow-pale-blue p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center   shadow-pale-blue p-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -212,12 +207,12 @@ const AboutUsPage = () => {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 px-5 md:px-0"
+              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 "
             >
               {CULTURE2.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center py-6  shadow-pale-blue p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center   shadow-pale-blue p-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -279,17 +274,16 @@ const AboutUsPage = () => {
         </section>
 
         {/* team */}
-        <section className="min-h-screen text-center px-5 md:px-0">
+        <section className="text-center">
           <h2>Faces behind the genius</h2>
           <Text className="mt-6 mb-10">
             A seasoned, hand picked for quality executions
           </Text>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1208px] mx-auto pb-[80px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1208px]  px-5 md:px-0 mx-auto pb-[80px]">
             <TeamComponent TEAM={TEAM} />
           </div>
-
-          <GetStarted />
         </section>
+        <GetStarted />
       </div>
     </div>
   );

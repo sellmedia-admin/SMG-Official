@@ -50,7 +50,7 @@ const Section: React.FC<SectionProps> = ({
           alt="highlight icon"
           width={60}
           height={65}
-          className={` ${reverse ? "mr-auto md:mr-0" : "ml-auto md:ml-0"}`}
+          className={`${reverse ? "mr-auto md:mr-0" : "ml-auto"}`}
         />
         <Image src={imageUrl} alt={imageAlt} width={487} height={286} />
       </motion.div>

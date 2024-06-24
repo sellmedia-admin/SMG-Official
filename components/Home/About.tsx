@@ -69,10 +69,7 @@ const AboutSection = () => (
           className="rounded-10 bg-white  border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-4 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
         >
           <div
-            className={cn(
-              "w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white ",
-              achievement.bgColor
-            )}
+            className={`w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white ${achievement.bgColor}`}
           >
             <img
               src={`icons/${achievement.icon}.svg`}

@@ -54,10 +54,10 @@ const Footer = () => {
   ];
 
   return (
-    <section className="relative z-50">
+    <div className="relative z-50">
       <EmailForm />
       <footer className="bg-b-ash-2 py-10 text-white bg-b-black">
-        <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between flex-col md:flex-row px-5 md:px-0">
+        <Box className="mx-auto w-full max-w-[1184px] md:flex md:justify-between flex-col tab:flex-row px-5 md:px-0">
           <Box className="mb-6 md:mb-0 text-start flex flex-col gap-5 max-w-[276px] mr-3">
             <Link href="/home" className="flex items-center">
               <Image
@@ -105,7 +105,7 @@ const Footer = () => {
               ))}
             </div>
           </Box>
-          <Box className="grid grid-cols-1 md:grid-cols-3 sm:gap-6 gap-8">
+          <Box className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {footerLinks.map((section, index) => (
               <Box key={index}>
                 <div className="mb-[14px]">
@@ -195,7 +195,7 @@ const Footer = () => {
           </div>
         </a>
       </footer>
-    </section>
+    </div>
   );
 };
 
@@ -258,6 +258,7 @@ const footerLinks = [
       { name: "SellCrea8", link: "#" },
       { name: "SellTalk", link: "#" },
       { name: "SellPlanner", link: "#" },
+      { name: "Piazza", link: "#" },
     ],
   },
   {
