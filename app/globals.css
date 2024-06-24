@@ -10,6 +10,7 @@ body {
   /* color: red; */
   color: #000;
   overflow-x: hidden;
+  letter-spacing: -0.02em !important;
 }
 
 img {
@@ -17,7 +18,7 @@ img {
 }
 
 .min-h-home {
-  min-height: calc(100vh - 96px);
+  height: calc(100vh - 96px);
   background-color: #f5f4f6;
 }
 
