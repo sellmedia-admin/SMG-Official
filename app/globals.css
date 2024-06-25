@@ -133,3 +133,11 @@ input:focus {
   min-height: auto;
   height: auto;
 }
+
+/* custom.css or any other CSS file you are using */
+@media (max-width: 767px) {
+  .grid-cols-2-150px {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+  }
+}
