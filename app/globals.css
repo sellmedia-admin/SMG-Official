@@ -121,8 +121,7 @@ input:focus {
   }
 
   .min-h-home {
-    height: auto;
-    min-height: 100vh;
+    height: 60vh;
   }
 
   .min-h-about {

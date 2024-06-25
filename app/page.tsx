@@ -20,7 +20,7 @@ export default function Home() {
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
         <div className="max-w-[900px] -mt-20 md:mt-0  md:py-40 px-5 md:ml-[100px]">
-          <h1>
+          <h1 className="max-w-[350px] md:w-full">
             Innovating at the <br /> Intersection of Media <br /> and
             Technology  
           </h1>
@@ -41,7 +41,7 @@ export default function Home() {
             started with us
           </Text>
           <Box position={"relative"}>
-            <Flex alignItems={"center"} className="gap-2 md:gap-6">
+            <Flex alignItems={"center"} className="gap-4 md:gap-6">
               <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
                 <Link href={"/start-project"}>
                   <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">

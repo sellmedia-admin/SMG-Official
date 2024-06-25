@@ -20,7 +20,7 @@ const AboutSections = ({
   return (
     <Box
       className={cn(
-        "mt-[80px] w-full max-w-[1200px] md:px-4 mx-auto text-center",
+        "mt-10 md:mt-[80px] w-full max-w-[1200px] md:px-4 mx-auto text-center",
         className
       )}
     >
@@ -28,7 +28,9 @@ const AboutSections = ({
         <SectionTitle title={title} titleColor={titleColor} leftIcon={icon} />
       </Box>
 
-      <h2 className="mt-[40px] mb-6 text-start md:text-center">{header}</h2>
+      <h2 className="mt-6 md:mt-10 mb-4 md:mb-6 text-start md:text-center">
+        {header}
+      </h2>
       {children}
     </Box>
   );
