@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
-        <div className="max-w-[900px] -mt-20 md:mt-0   md:py-40 px-5 md:ml-[100px]">
+        <div className="max-w-[900px] -mt-20 md:mt-0  md:py-40 px-5 md:ml-[100px]">
           <h1>
             Innovating at the <br /> Intersection of Media <br /> and
             Technology  
@@ -61,7 +61,7 @@ export default function Home() {
                 </CustomButton>
               </Link>
             </Flex>
-            <div className="hidden md:block -mt-4">
+            <div className="hidden md:block -mt-12 max-w-max">
               <img
                 src="/gif/arrow.gif"
                 alt="arrows"
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       <section>
-        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]  md:px-0">
+        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto my-[80px]  md:px-0">
           <Box>
             <SectionTitle
               title="Clientele"

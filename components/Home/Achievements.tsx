@@ -42,7 +42,7 @@ const AchievementsSection = () => (
         />
       </div>
     </Flex>
-    <Box className="max-w-[1205px] mx-auto px-[5%] grid grid-cols-2 md:grid-cols-3 gap-[18px]">
+    <Box className="max-w-[1205px] mx-auto px-[5%] md:px-0 grid grid-cols-2 md:grid-cols-3 gap-[18px]">
       {ACHIEVEMENTS.map((achievement) => (
         <Box
           key={achievement.title}

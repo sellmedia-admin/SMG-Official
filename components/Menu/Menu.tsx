@@ -48,12 +48,14 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
       >
         <Flex align="center">
           <Image
-            src={`/icons/${selectedValue?.label.toLowerCase()}-logo.svg`}
+            src={`/icons/${selectedValue?.label.toLowerCase()}-special.svg`}
             alt={selectedValue?.label}
             boxSize="32px"
             mr="12px"
           />
-          <Box className="font-600 leading-[18px]">{selectedValue?.label}</Box>
+          <Box className="font-600 leading-[18px] text-[12px]">
+            {selectedValue?.label}
+          </Box>
         </Flex>
       </MenuButton>
       <MenuList
