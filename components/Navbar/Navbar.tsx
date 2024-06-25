@@ -50,7 +50,7 @@ const Navbar = () => {
                   pathname === item.link ? "text-b-pink" : "text-b-grey"
                 }`}
               >
-                <Text>{item.name}</Text>
+                <Text fontSize={"16px"}>{item.name}</Text>
               </Box>
             </Link>
           ))}

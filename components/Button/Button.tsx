@@ -61,7 +61,7 @@ const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
         color={color}
         height={height}
         className={cn(
-          "text-white leading-[23px] !w-[133px] !h-[36px]   md:h-full md:!w-[170px] !text-[14px] text-base",
+          "text-white leading-[23px] w-[133px] h-[36px]   md:h-full md:!w-[170px] !text-[14px] text-base",
           className
         )}
         _hover={{ opacity: "0.9" }}

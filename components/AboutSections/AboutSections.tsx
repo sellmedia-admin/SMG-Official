@@ -20,7 +20,7 @@ const AboutSections = ({
   return (
     <Box
       className={cn(
-        "mt-[80px] w-full max-w-[1200px] px-4 mx-auto text-center",
+        "mt-[80px] w-full max-w-[1200px] md:px-4 mx-auto text-center",
         className
       )}
     >
