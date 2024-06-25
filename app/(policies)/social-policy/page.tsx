@@ -12,6 +12,7 @@ const SocialPolicy = () => {
         leftIcon=""
         mainHeading={"SellMedia Group Social Media Policy"}
         textContent={"Updated: May 3, 2024"}
+        mainStyle="short-height"
       />
 
       <div className="max-w-[1248px] mx-auto py-[33px] px-[5%] pb-20">

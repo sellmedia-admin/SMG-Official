@@ -19,9 +19,10 @@ const PrivacyPolicy = () => {
         leftIcon=""
         mainHeading={"SellMedia Group Terms and Conditions"}
         textContent={"Updated: May 3, 2024"}
+        mainStyle="short-height"
       />
 
-      <div className="max-w-[1248px] mx-auto py-[33px] px-[5%] pb-20">
+      <div className="max-w-[1248px] mx-auto py-[33px] px-[5%] pb-20 ">
         <p className="mb-4 text-[#460B32] font-[600]">
           Welcome to SellMedia Group's Terms and Conditions.
         </p>

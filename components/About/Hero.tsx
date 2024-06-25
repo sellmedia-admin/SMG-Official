@@ -1,6 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import SectionTitle from "../SectionTitles/SectionTitle";
+import { cn } from "@/utils/cn";
 
 type AboutBoxProps = {
   title: string;
@@ -9,6 +10,7 @@ type AboutBoxProps = {
   mainHeading: string;
   textContent: string;
   noTitle?: boolean;
+  mainStyle?: string;
 };
 
 const AboutBox: React.FC<AboutBoxProps> = ({
@@ -17,10 +19,16 @@ const AboutBox: React.FC<AboutBoxProps> = ({
   leftIcon,
   mainHeading,
   textContent,
+  mainStyle,
   noTitle = false,
 }) => {
   return (
-    <Box className="min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover md:text-center pt-10 md:pt-[54px] pb-10 px-5">
+    <Box
+      className={cn(
+        "min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover md:text-center pt-10 md:pt-[54px] pb-10 px-5",
+        mainStyle
+      )}
+    >
       {noTitle ? (
         ""
       ) : (

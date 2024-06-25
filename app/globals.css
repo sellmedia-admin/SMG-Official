@@ -128,3 +128,8 @@ input:focus {
     padding-bottom: 40px;
   }
 }
+
+.short-height {
+  min-height: auto;
+  height: auto;
+}
