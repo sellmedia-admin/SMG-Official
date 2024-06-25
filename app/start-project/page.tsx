@@ -4,8 +4,8 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div>
-      <Box className="ml-[120px] pt-[80px] pb-10 space-y-6">
+    <div className="px-5 md:px-0">
+      <Box className=" md:ml-[120px] pt-[80px] pb-10 space-y-6">
         <SectionTitle
           title="Want to work with us?"
           leftIcon="pink-star"

@@ -20,7 +20,7 @@ const AboutBox: React.FC<AboutBoxProps> = ({
   noTitle = false,
 }) => {
   return (
-    <Box className="min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover md:text-center pt-[54px] pb-10 px-5">
+    <Box className="min-h-about bg-about-us-bg bg-no-repeat bg-center bg-cover md:text-center pt-10 md:pt-[54px] pb-10 px-5">
       {noTitle ? (
         ""
       ) : (

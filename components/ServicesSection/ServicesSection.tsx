@@ -4,7 +4,6 @@ import CustomButton from "../Button/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { cn } from "@/utils/cn";
 
 interface SectionServices {
   index: number;
@@ -34,8 +33,8 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
       transition={orderBy ? {} : { delay: 0.5, type: "spring", stiffness: 20 }}
       className="md:max-w-[523px]"
     >
-      <h3 className="leading-[46px]">{title}</h3>
-      <Text className="my-6">{text}</Text>
+      <h3 className="md:leading-[46px]">{title}</h3>
+      <Text className="my-4 md:my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
           className="text-b-pink !justify-start !pl-0"
@@ -64,9 +63,11 @@ const ServicesSection = ({
 
   return (
     <Box textAlign="center" mt="80px" px={{ base: "20px", md: "0" }}>
-      <Box mx="auto" maxW="max">
-        <Heading fontWeight="bold">{topTitle}</Heading>
-        <div className="max-w-[200px] ml-12">
+      <div className="md:max-w-max mx-auto">
+        <h2 className="text-start md:text-center text-[18px] md:text-2xl">
+          {topTitle}
+        </h2>
+        <div className="max-w-[200px] md:ml-12">
           <img
             src="/imgs/line-separator.png"
             alt="line"
@@ -75,8 +76,10 @@ const ServicesSection = ({
           />
         </div>
 
-        <Heading fontWeight="bold">{bottomTitle}</Heading>
-      </Box>
+        <h2 className="text-start md:text-center text-[18px] md:text-2xl">
+          {bottomTitle}
+        </h2>
+      </div>
 
       <Grid
         templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
@@ -89,7 +92,7 @@ const ServicesSection = ({
         textAlign="start"
         alignItems="center"
       >
-        <Box order={{ base: 1, md: isImageRight ? 2 : 1 }}>
+        <Box order={{ base: 2, md: isImageRight ? 2 : 1 }}>
           <ServiceText
             linkTo={linkTo}
             title={contentTitle}

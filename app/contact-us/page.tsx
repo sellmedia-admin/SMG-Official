@@ -106,7 +106,7 @@ const ContactUsPage = () => {
           {/* ------ */}
           {/* form */}
           <div className="w-full">
-            <form className=" border rounded-2xl p-8 shadow-dark-blue">
+            <form className="md:border rounded-2xl md:p-8 md:shadow-dark-blue">
               <Input
                 id="first-name"
                 name="first-name"

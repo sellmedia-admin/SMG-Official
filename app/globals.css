@@ -54,6 +54,11 @@ p {
   font-size: 16px;
 }
 
+.email-input::placeholder {
+  color: #7c7c7c;
+  font-size: 14px;
+}
+
 input:active,
 input:focus {
   outline: none;
@@ -89,16 +94,21 @@ input:focus {
 }
 
 @media screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
   h1 {
-    font-size: 30px;
-    line-height: 4rem;
+    font-size: 36px;
+    line-height: 40px;
   }
   h2 {
-    font-size: 24px;
-    line-height: 1.5rem;
+    font-size: 18px;
+    line-height: 26px;
   }
   h3 {
     font-size: 20px;
+    /* line-height: 24px; */
   }
 
   h4 {
@@ -107,6 +117,15 @@ input:focus {
 
   a,
   li {
-    font-size: 16px !important;
+    font-size: 14px !important;
+  }
+
+  .min-h-home {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .min-h-about {
+    padding-bottom: 40px;
   }
 }

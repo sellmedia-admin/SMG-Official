@@ -58,7 +58,11 @@ const Navbar = () => {
         {/* buttons at the right */}
         <Box className="ml-auto hidden lg:flex gap-4">
           <Link href={"/start-project"}>
-            <CustomButton className="bg-b-black text-white" rounded="20">
+            <CustomButton
+              className="bg-b-black text-white"
+              rounded="20"
+              onClick={() => handleLinkClick("/start-project")}
+            >
               Start a project
             </CustomButton>
           </Link>
@@ -78,7 +82,7 @@ const Navbar = () => {
       </nav>
       {/* for mobile */}
       {isNavOpen && (
-        <Box className="absolute z-50 top-0 mt-[80px] left-0 w-full h-full bg-white border-t text-b-grey px-5 py-20">
+        <Box className="absolute z-50 top-0 mt-[80px] left-0 w-full h-full bg-white border-t text-b-grey px-5 py-20 font-semibold">
           {navItems.map((item, index) => (
             <Link href={item.link} key={index}>
               <Box
@@ -91,7 +95,7 @@ const Navbar = () => {
               </Box>
             </Link>
           ))}
-          <div className="flex  gap-5 mt-5 pl-4 mb-5">
+          <div className="flex gap-5 mt-5 pl-4 mb-5">
             {teamList.map((option) => (
               <Flex
                 align="center"
@@ -113,7 +117,11 @@ const Navbar = () => {
             ))}
           </div>
           <Link href={"/start-project"} className="mt-5">
-            <CustomButton className="bg-b-black text-white w-full" rounded="20">
+            <CustomButton
+              className="bg-b-black text-white w-full"
+              rounded="20"
+              onClick={() => handleLinkClick("/start-project")}
+            >
               Start a project
             </CustomButton>
           </Link>

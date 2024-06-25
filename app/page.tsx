@@ -19,11 +19,21 @@ export default function Home() {
   return (
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
-        <div className="max-w-[900px] -mt-10 md:mt-0 py-5  md:py-40 px-5 md:ml-[100px]">
+        <div className="max-w-[900px] -mt-20 md:mt-0   md:py-40 px-5 md:ml-[100px]">
           <h1>
             Innovating at the <br /> Intersection of Media <br /> and
             Technology  
           </h1>
+
+          <div className="block md:hidden max-w-[49px] ml-auto">
+            <img
+              src="/imgs/hero-star.png"
+              alt="star"
+              width={"100%"}
+              height={49}
+              className="-mt-12"
+            />
+          </div>
 
           <Text className="my-6">
             Accelerate Your Growth with SellMedia Group: Where Data-Driven
@@ -31,7 +41,7 @@ export default function Home() {
             started with us
           </Text>
           <Box position={"relative"}>
-            <Flex alignItems={"center"} gap={8}>
+            <Flex alignItems={"center"} className="gap-2 md:gap-6">
               <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
                 <Link href={"/start-project"}>
                   <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
@@ -89,7 +99,7 @@ export default function Home() {
       </section>
 
       <section>
-        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px] px-5 md:px-0">
+        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]  md:px-0">
           <Box>
             <SectionTitle
               title="Clientele"
@@ -111,9 +121,8 @@ export default function Home() {
             width={591}
           />
         </Box>
-
-        <GetStarted />
       </section>
+      <GetStarted />
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ContactModal />
