@@ -18,7 +18,7 @@ export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box overflowX={"hidden"}>
-      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
+      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between pt-20">
         <div className="max-w-[900px] -mt-20 md:mt-0  md:py-40 px-5 md:ml-[100px]">
           <h1 className="max-w-[350px] md:max-w-full">
             Innovating at the <br /> Intersection of Media <br /> and
