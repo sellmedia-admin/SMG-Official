@@ -101,11 +101,11 @@ const Footer = () => {
               ))}
             </div>
           </Box>
-          <Box className="grid grid-cols-2 md:grid-cols-3 gap-x-4 !text-base">
+          <Box className="grid grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-4 text-base">
             {footerLinks.map((section, index) => (
               <Box key={index}>
                 <div className="mb-[14px]">
-                  <Text className="font-semibold text-white opacity-80 text-base">
+                  <Text className="font-semibold text-white opacity-80 ">
                     {section.title}
                   </Text>
                   <div className="w-full max-w-[80px]" />
@@ -174,8 +174,8 @@ const Footer = () => {
             ))}
           </Box>
         </Box>
-        <Box className="max-w-[1184px] mx-auto px-[5%] flex justify-center pt-[23px] mt-10 md:border-t border-b-ash">
-          <span className="text-sm text-center text-[14px] text-b-grey">
+        <Box className="max-w-[1184px] mx-auto md:px-[5%] flex justify-center pt-[23px] mt-10 md:border-t border-b-ash">
+          <span className="text-xs text-center md:text-[14px] text-b-grey">
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
         </Box>
