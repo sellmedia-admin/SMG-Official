@@ -42,9 +42,6 @@ const EmailForm = () => {
 };
 
 const Footer = () => {
-  const whatsappNumber = "+2349121169737";
-  const message = "Hi, I want to make enquiries";
-  const encodedMessage = encodeURIComponent(message);
   const currentYear = new Date().getFullYear();
   const teamList = [
     { label: "NG", value: "Nigeria" },
@@ -105,11 +102,11 @@ const Footer = () => {
               ))}
             </div>
           </Box>
-          <Box className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <Box className="grid grid-cols-2 md:grid-cols-3 gap-x-4 !text-base">
             {footerLinks.map((section, index) => (
               <Box key={index}>
                 <div className="mb-[14px]">
-                  <Text className="font-semibold text-white opacity-80">
+                  <Text className="font-semibold text-white opacity-80 text-base">
                     {section.title}
                   </Text>
                   <div className="w-full max-w-[80px]" />
@@ -150,7 +147,10 @@ const Footer = () => {
                 ) : (
                   <ul className="flex flex-col gap-2 font-medium list-none ml-0">
                     {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex} className="flex items-center gap-2">
+                      <li
+                        key={linkIndex}
+                        className="flex items-center gap-2 my-1"
+                      >
                         {link.icon && (
                           <Image
                             src={link.icon}
@@ -162,7 +162,7 @@ const Footer = () => {
                         <Link
                           href={link.link}
                           className={`hover:text-b-green-2 ${
-                            link.name.includes("@") ? "underline" : ""
+                            link.name.includes("@") ? "underline my-1" : ""
                           }`}
                         >
                           {link.name}
@@ -180,12 +180,11 @@ const Footer = () => {
             ©{currentYear} SellMedia, BOSS Global. All rights reserved
           </span>
         </Box>
-        <a
+        {/* <a
           href={`https://wa.me/${whatsappNumber}/?text=${encodedMessage}`}
           target="_blank"
         >
-          <div className="ml-auto bg-white text-black w-max flex gap-2 rounded-tl-lg rounded-bl-lg p-2 mt-4">
-            <p>Live chat</p>
+          <div className=" bg-white  rounded-md p-3 max-w-max">
             <img
               src="/icons/whatsapp-icon.svg"
               alt="whatsapp"
@@ -193,7 +192,7 @@ const Footer = () => {
               height={32}
             />
           </div>
-        </a>
+        </a> */}
       </footer>
     </div>
   );

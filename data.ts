@@ -8,7 +8,7 @@ export const SERVICES = [
     contentText:
       "Our Marketing Communication services are designed to cut through the noise. We develop and deliver messages that capture attention and drive engagement. By understanding your audience and crafting tailored content, we ensure your brand's voice is heard loud and clear.",
     orderBy: "",
-    separator: "4rem",
+    // separator: "4rem",
   },
   {
     image: "service2.png",
@@ -19,7 +19,7 @@ export const SERVICES = [
     contentText:
       "Data-driven decision-making is at the heart of our Marketing Analysis services. We delve deep into market research, competitive analysis, and consumer behavior studies to provide actionable insights. Our analytical prowess empowers you to make informed decisions that drive growth and success.",
     orderBy: "-1",
-    separator: "7rem",
+    // separator: "7rem",
   },
   {
     image: "service3.png",
@@ -30,7 +30,7 @@ export const SERVICES = [
     contentText:
       "Stay ahead of the curve with our Marketing Technology services. We integrate the latest technological advancements into your marketing strategy, enhancing efficiency and effectiveness. From automation tools to advanced analytics, we equip you with the technology to thrive in a digital-first world.",
     orderBy: "",
-    separator: "10rem",
+    // separator: "10rem",
   },
 ];
 

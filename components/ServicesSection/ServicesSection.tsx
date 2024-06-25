@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import CustomButton from "../Button/Button";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +11,7 @@ interface SectionServices {
   topTitle: string;
   bottomTitle: string;
   image: string;
-  separator?: string;
+  // separator?: string;
   linkTo: string;
   contentTitle: string;
   contentText: string;
@@ -53,7 +53,7 @@ const ServicesSection = ({
   topTitle,
   bottomTitle,
   image,
-  separator,
+  // separator,
   linkTo,
   contentTitle,
   contentText,
@@ -63,32 +63,42 @@ const ServicesSection = ({
   const isImageRight = index === 1;
 
   return (
-    <div className="text-center mt-[80px] px-[20px] md:px-0">
-      <div className="mx-auto max-w-max">
-        <h2 className="font-bold ">{topTitle}</h2>
+    <Box textAlign="center" mt="80px" px={{ base: "20px", md: "0" }}>
+      <Box mx="auto" maxW="max">
+        <Heading fontWeight="bold">{topTitle}</Heading>
+        <div className="max-w-[200px] ml-12">
+          <img
+            src="/imgs/line-separator.png"
+            alt="line"
+            width="100%"
+            height="15px"
+          />
+        </div>
 
-        <img
-          src="/imgs/line-separator.png"
-          alt="line"
-          width={"200px"}
-          height={"15px"}
-          style={{ marginLeft: separator }}
-        />
+        <Heading fontWeight="bold">{bottomTitle}</Heading>
+      </Box>
 
-        <h2 className="font-bold ">{bottomTitle}</h2>
-      </div>
-
-      <div className="w-full max-w-[1217px] mx-auto grid place-items-center md:grid-cols-2 text-start gap-[54px] mt-[40px] mb-[80px]">
-        <div className={cn("order-1", `md:order-${isImageRight ? 2 : 1}`)}>
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap="54px"
+        mt="40px"
+        mb="80px"
+        w="full"
+        maxW="1217px"
+        mx="auto"
+        textAlign="start"
+        alignItems="center"
+      >
+        <Box order={{ base: 1, md: isImageRight ? 2 : 1 }}>
           <ServiceText
             linkTo={linkTo}
             title={contentTitle}
             text={contentText}
             orderBy={orderBy}
           />
-        </div>
+        </Box>
 
-        <div className={cn("order-1", `md:order-${isImageRight ? 1 : 2}`)}>
+        <Box order={{ base: 1, md: isImageRight ? 1 : 2 }}>
           <Component
             initial={orderBy ? {} : { x: 100, opacity: 0 }}
             whileInView={orderBy ? {} : { x: 0, opacity: 1 }}
@@ -103,9 +113,9 @@ const ServicesSection = ({
               height={466}
             />
           </Component>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Grid>
+    </Box>
   );
 };
 

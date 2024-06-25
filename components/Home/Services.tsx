@@ -14,7 +14,7 @@ const ServicesOverview = () => (
         contentTitle={service.contentTitle}
         contentText={service.contentText}
         orderBy={service.orderBy}
-        separator={service.separator}
+        // separator={service.separator}
       />
     ))}
   </>
