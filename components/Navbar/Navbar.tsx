@@ -118,7 +118,7 @@ const Navbar = () => {
           </div>
           <Link href={"/start-project"} className="mt-5">
             <CustomButton
-              className="bg-b-black text-white w-full"
+              className="bg-b-black text-white"
               rounded="20"
               onClick={() => handleLinkClick("/start-project")}
             >

@@ -18,17 +18,14 @@ const SectionTitle = ({
   textStyle,
 }: SectionTitle) => {
   return (
-    <Flex gap={4} alignItems={"center"} className={className}>
+    <Flex gap={{ base: 1, md: 4 }} alignItems={"center"} className={className}>
       <img
         src={`/icons/${leftIcon}.svg`}
         alt={leftIcon}
         width={30}
         height={30}
       />
-      <Text
-        className={cn("text-[16px]", titleColor, textStyle)}
-        fontWeight={700}
-      >
+      <Text className={cn(titleColor, textStyle)} fontWeight={700}>
         {title}
       </Text>
       {rightIcon && (

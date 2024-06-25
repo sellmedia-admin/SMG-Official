@@ -11,7 +11,7 @@ const AboutSection = () => (
       titleColor="text-[#C82090]"
       icon="pink-star"
       header="We Are Our First Client"
-      className="mb-[80px]"
+      className="mb-[40px] md:mb-[80px]"
     >
       <Text className="text-start md:text-center ">
         At SellMedia Group, we champion the fusion of media and technology. As
