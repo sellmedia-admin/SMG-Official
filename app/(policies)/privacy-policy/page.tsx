@@ -19,9 +19,10 @@ const PrivacyPolicy = () => {
         leftIcon=""
         mainHeading={"SellMedia Group Privacy Policy"}
         textContent={"Updated: May 3, 2024"}
+        mainStyle="short-height"
       />
 
-      <div className="max-w-[1248px] mx-auto py-[33px] pb-20">
+      <div className="max-w-[1248px] mx-auto py-[33px] pb-20 px-[5%]">
         <Policies policy={GROUP_PRIVACY_POLICY} />
       </div>
     </div>
