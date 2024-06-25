@@ -69,13 +69,13 @@ const Section: React.FC<SectionProps> = ({
         <p>{description}</p>
         <div className="space-x-2 flex flex-row justify-between md:justify-start items-center">
           <Link href={link}>
-            <CustomButton className="bg-b-black text-white rounded-20">
+            <CustomButton className="bg-b-black text-white rounded-20 w-[171px]">
               Learn more
             </CustomButton>
           </Link>
           <CustomButton
             onClick={onOpen}
-            className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash "
+            className="bg-transparent text-b-ash rounded-20 border border-solid !border-b-ash w-[171px]"
           >
             Talk to sales
           </CustomButton>
