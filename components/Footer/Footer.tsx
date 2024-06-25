@@ -26,7 +26,7 @@ const EmailForm = () => {
             />
           </VStack>
           <CustomButton
-            className="bg-white rounded-20 text-b-black md:ml-[14px] !w-full md:!w-max self-end"
+            className="bg-white rounded-20 text-b-black md:ml-[14px] !w-full md:!w-max self-end !justify-start md:!justify-center"
             type="submit"
             leftIcon={
               <img src="/icons/mail.svg" alt="email" width={24} height={24} />
@@ -101,9 +101,12 @@ const Footer = () => {
               ))}
             </div>
           </Box>
-          <Box className="grid grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-4 text-base">
+          <Box
+            className="grid grid-cols-2-150px md:!grid-cols-3 gap-x-8 md:gap-x-4 text-base"
+            style={{ gridTemplateColumns: "repeat(2, 200px)" }}
+          >
             {footerLinks.map((section, index) => (
-              <Box key={index}>
+              <Box key={index} className="max-w-max">
                 <div className="mb-[14px]">
                   <Text className="font-semibold text-white opacity-80 ">
                     {section.title}

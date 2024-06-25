@@ -5,7 +5,7 @@ import SectionTitle from "../SectionTitles/SectionTitle";
 const AchievementsSection = () => (
   <>
     <Box className="pt-[80px]">
-      <Box className="w-max mx-auto">
+      <Box className="w-max md:mx-auto">
         <SectionTitle
           title="Achievements"
           titleColor="text-b-white"
@@ -13,7 +13,7 @@ const AchievementsSection = () => (
         />
       </Box>
 
-      <h2 className="mt-4 md:mt-10 md:mb-6 text-white md:leading-[57px]">
+      <h2 className="mt-4 md:mt-10 md:mb-6 text-white md:leading-[57px] text-start md:text-center">
         Our Stories in Numbers
       </h2>
     </Box>

@@ -11,7 +11,7 @@ export const SERVICES = [
     // separator: "4rem",
   },
   {
-    image: "service2.png",
+    image: "service2.gif",
     topTitle: "Using Marketing Analytics to make",
     bottomTitle: "informed decisions",
     linkTo: "/",

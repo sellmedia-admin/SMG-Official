@@ -20,7 +20,7 @@ export default function Home() {
     <Box overflowX={"hidden"}>
       <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between md:pt-20">
         <div className="max-w-[900px] -mt-20 md:mt-0  md:py-40 px-5 md:ml-[100px]">
-          <h1 className="max-w-[350px] md:w-full">
+          <h1 className="max-w-[350px] md:max-w-full">
             Innovating at the <br /> Intersection of Media <br /> and
             Technology  
           </h1>
@@ -61,12 +61,12 @@ export default function Home() {
                 </CustomButton>
               </Link>
             </Flex>
-            <div className="hidden md:block -mt-12 max-w-max">
+            <div className="-mt-4 md:-mt-12 max-w-[94px] max-h-[94px] md:max-w-[224px] md:max-h-[224px]">
               <img
                 src="/gif/arrow.gif"
                 alt="arrows"
-                width={224}
-                height={224}
+                width={"100%"}
+                height={"100%"}
                 className="rotate-45"
               />
             </div>
