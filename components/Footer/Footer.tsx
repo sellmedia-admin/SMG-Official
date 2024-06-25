@@ -7,17 +7,16 @@ import Image from "next/image";
 const EmailForm = () => {
   return (
     <Box className="bg-b-ash1 py-10 text-white px-5">
-      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto md:px-0">
+      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto md:px-0 gap-6">
         <div className="flex flex-col gap-[18px]">
           <h2>Stay informed</h2>
           <Text fontWeight={600}>Signup for our newsletter</Text>
         </div>
         <form
-          action=""
+          action="#"
           className="w-full flex flex-col md:flex-row  gap-4 md:max-w-[420px]"
         >
           <VStack alignItems={"left"}>
-            {/* <label htmlFor="email">Email Address</label> */}
             <input
               type="email"
               name="email"

@@ -51,7 +51,7 @@ export const TextBlock: React.FC<{ title?: string; content: string }> = ({
   title,
   content,
 }) => (
-  <div className="order-1 md:order-none px-5 md:px-0 w-full max-w-[800px]">
+  <div className="order-1 md:order-none  w-full max-w-[800px]">
     {title && <h2 className="mb-[24px]">{title}</h2>}
     <p>{content}</p>
   </div>
@@ -62,14 +62,14 @@ export const ImageBlock: React.FC<{
   src2: string;
   applyMarginAuto?: boolean;
 }> = ({ src1, src2, applyMarginAuto }) => (
-  <div className="w-full px-5 md:px-0 md:max-w-[486px] order-2 md:order-none">
-    <img
-      src={src1}
-      width={60}
-      height={65}
-      alt="highlight"
-      className={applyMarginAuto ? "ml-auto" : ""}
-    />
+  <div className="w-full md:max-w-[486px] order-2 md:order-none">
+    <div
+      className={`w-[22px] h-[24px] md:w-[60px] md:h-[65px] ${
+        applyMarginAuto ? "ml-auto" : ""
+      }`}
+    >
+      <img src={src1} width={"100%"} height={"100%"} alt="highlight" />
+    </div>
     <img src={src2} width={"100%"} height={286} alt="smg" />
   </div>
 );

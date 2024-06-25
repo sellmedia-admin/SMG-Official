@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { AboutSections } from "@/components";
 import { SERVICES_HELP } from "@/data";
-import { cn } from "@/utils/cn";
 
 const AboutSection = () => (
   <>
@@ -44,24 +43,29 @@ const AboutSection = () => (
       maxWidth={1300}
       className="mx-auto"
     >
-      <img
-        src="/imgs/highlight-left.png"
-        alt="highlight icon"
-        width={60}
-        height={65}
-      />
-      <img
-        src="/imgs/highlight-right.png"
-        alt="highlight icon"
-        width={60}
-        height={65}
-      />
+      <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+        <img
+          src="/imgs/highlight-left.png"
+          alt="highlight icon"
+          width={"100%"}
+          height={"100%"}
+        />
+      </div>
+
+      <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+        <img
+          src="/imgs/highlight-right.png"
+          alt="highlight icon"
+          width={"100%"}
+          height={"100%"}
+        />
+      </div>
     </Flex>
 
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] md:px-0 -mt-6"
+      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] md:px-0 md:-mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
         <div
@@ -79,9 +83,11 @@ const AboutSection = () => (
             />
           </div>
           <div className=" md:mx-auto max-w-[291px]">
-            <h2 className="text-2xl leading-8">{achievement.title}</h2>
+            <h2 className="text-[18px] leading-[23px] md:text-2xl md:leading-8 text-b-ash">
+              {achievement.title}
+            </h2>
           </div>
-          <p className="max-w-[339px] text-base leading-[30px]">
+          <p className="max-w-[339px] md:text-base md:leading-[30px]">
             {achievement.text}
           </p>
         </div>

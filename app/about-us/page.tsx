@@ -34,7 +34,7 @@ const TeamComponent = ({ TEAM }: any) => {
     <>
       {TEAM.map((member: any) => (
         <div
-          className={`bg-black text-white py-6 rounded-lg ${
+          className={`bg-black text-white py-6 px-3 text-center rounded-lg ${
             hoveredMember === member.name
               ? "bg-white border border-[#0076B6]"
               : ""
@@ -52,13 +52,13 @@ const TeamComponent = ({ TEAM }: any) => {
             alt={member.name}
             width={60}
             height={60}
-            className="mx-auto"
+            className="mx-auto mb-2"
           />
           <p
             className={`${
               hoveredMember === member.name
                 ? "text-[#0076B6] font-semibold"
-                : ""
+                : "font-semibold"
             }`}
           >
             {member.name}
@@ -156,7 +156,10 @@ const AboutUsPage = () => {
             {/* --------------- Approach -----------*/}
             <h2>Our Approach</h2>
             <>
-              <AboutStepsCard cards={ApproachStep1} />
+              <AboutStepsCard
+                cards={ApproachStep1}
+                addDownArrowBetween={true}
+              />{" "}
               <AboutStepsCard cards={ApproachStep2} />
             </>
           </Box>
@@ -166,20 +169,31 @@ const AboutUsPage = () => {
           <h2>Systematic Culture</h2>
           <p>We’re deeply rooted in process</p>
 
-          <div className="flex justify-between max-w-[1300px] mt-5 items-center mx-auto mb-0 md:-mb-4">
-            <img
-              src="/imgs/highlight-left.png"
-              alt="highlight icon"
-              width={60}
-              height={65}
-            />
-            <img
-              src="/imgs/highlight-right.png"
-              alt="highlight icon"
-              width={60}
-              height={65}
-            />
-          </div>
+          <Flex
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            marginTop={{ md: 20 }}
+            maxWidth={1300}
+            className="mx-auto mt-5  mb-0 md:-mb-4"
+          >
+            <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+              <img
+                src="/imgs/highlight-left.png"
+                alt="highlight icon"
+                width={"100%"}
+                height={"100%"}
+              />
+            </div>
+
+            <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+              <img
+                src="/imgs/highlight-right.png"
+                alt="highlight icon"
+                width={"100%"}
+                height={"100%"}
+              />
+            </div>
+          </Flex>
           {/* --------- */}
           <Box className="flex flex-col gap-[29px] pb-[90px] ">
             <motion.div

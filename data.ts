@@ -23,8 +23,8 @@ export const SERVICES = [
   },
   {
     image: "service3.png",
-    topTitle: "Using SaaS products designed for your",
-    bottomTitle: "business growth",
+    topTitle: "Using SaaS products designed for",
+    bottomTitle: "your business growth",
     linkTo: "/",
     contentTitle: "Customised products and solutions designed to growth",
     contentText:

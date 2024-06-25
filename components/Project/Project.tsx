@@ -15,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <form className="max-w-[744px] mx-auto mb-[80px] border rounded-2xl p-8 shadow-dark-blue">
+    <form className="max-w-[744px] mx-auto mb-[80px] md:border rounded-2xl md:p-8 md:shadow-dark-blue">
       <Input
         id="first-name"
         name="first-name"

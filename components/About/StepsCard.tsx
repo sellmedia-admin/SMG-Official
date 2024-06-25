@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { cn } from "@/utils/cn";
 import { motion } from "framer-motion";
 import { Fragment, forwardRef } from "react";
@@ -61,9 +62,13 @@ const DownArrow: React.FC<{
 
 interface CardSectionProps {
   cards: ApproachCardProps[];
+  addDownArrowBetween?: boolean;
 }
 
-const CardSection: React.FC<CardSectionProps> = ({ cards }) => (
+const CardSection: React.FC<CardSectionProps> = ({
+  cards,
+  addDownArrowBetween,
+}) => (
   <div className="grid grid-cols-1 md:grid-cols-5 mt-10 gap-y-6 md:gap-y-0 px-5 md:px-0 overflow-x-hidden">
     {cards.map((card, index) => (
       <Fragment key={card.stage}>
@@ -93,6 +98,15 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => (
               />
             </div>
           </>
+        )}
+        {addDownArrowBetween && index === cards.length - 1 && (
+          <div className="md:hidden">
+            <DownArrow
+              src="/icons/down-arrow.svg"
+              className="mx-auto"
+              delay={0.4}
+            />
+          </div>
         )}
       </Fragment>
     ))}

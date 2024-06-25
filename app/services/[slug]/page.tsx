@@ -93,9 +93,9 @@ const Service = ({ params }: { params: { slug: string } }) => {
             <Text
               className={`${
                 activeTab === tabName
-                  ? "text-b-pink bg-b-green-2 border-b-2 border-b-darkPink pb-3"
+                  ? "text-b-pink md:border-b-2 border-b-darkPink pb-3"
                   : "text-[#7c7c7c]"
-              }  font-semibold cursor-pointer text-center py-2 m-3 max-w-[122px] md:max-w-max leading-6 text-[14px] md:text-[18px]`}
+              }  font-semibold cursor-pointer text-center py-2 md:m-3 max-w-[122px] md:max-w-max leading-6 text-[14px] md:text-[18px]`}
               key={tabName}
               onClick={() => handleTabChange(tabName)}
             >
@@ -108,26 +108,31 @@ const Service = ({ params }: { params: { slug: string } }) => {
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}
-          marginTop={20}
-          marginBottom={-4}
-          className="mx-auto"
+          marginTop={{ md: 20 }}
+          maxWidth={1300}
+          className="mx-auto mt-5  mb-0 md:-mb-4"
         >
-          <img
-            src="/imgs/highlight-left.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
-          <img
-            src="/imgs/highlight-right.png"
-            alt="highlight icon"
-            width={60}
-            height={65}
-          />
+          <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+            <img
+              src="/imgs/highlight-left.png"
+              alt="highlight icon"
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
+
+          <div className="w-[22px] h-[24px] md:w-[60px] md:h-[65px]">
+            <img
+              src="/imgs/highlight-right.png"
+              alt="highlight icon"
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
         </Flex>
 
         {/* tabs */}
-        <div className="max-w-[1200px] px-[5%] mx-auto grid md:grid-cols-3 gap-x-[18px] gap-y-10 mb-20">
+        <div className="max-w-[1200px] md:px-[5%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-[18px] gap-y-10 mb-20">
           {activeTab === "marketing-communication" && <CommunicationTab />}
           {activeTab === "marketing-analytics" && <AnalyticsTab />}
           {activeTab === "marketing-technology" && <TechnologyTab />}

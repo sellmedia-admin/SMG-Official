@@ -8,7 +8,7 @@ const Card = ({ img, title, description }: { [x: string]: string }) => {
     <>
       <Box
         key={img}
-        className="min-h-[528px] rounded-10 text-center flex flex-col gap-6 items-center  py-10 px-[24.5px] shadow-pale-blue border border-[#b3b3b3]"
+        className="md:min-h-[528px] rounded-10 text-center flex flex-col gap-6 items-center py-6 px-3  md:py-10 md:px-[24.5px] shadow-pale-blue border border-[#b3b3b3]"
       >
         <img
           src={`/icons/services/${img}.svg`}
@@ -18,8 +18,10 @@ const Card = ({ img, title, description }: { [x: string]: string }) => {
         />
 
         <VStack spacing={4} align="center">
-          <h3 className="text-[#434343] max-w-[291px]">{title}</h3>
-          <p className="text-[16px]">{description}</p>
+          <h3 className="text-[#434343] max-w-[291px] text-sm  md:text-[24px]">
+            {title}
+          </h3>
+          <p className="text-xs md:text-[16px] text-[#5D5D5D]">{description}</p>
         </VStack>
         <CustomButton
           onClick={onOpen}
