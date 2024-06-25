@@ -97,7 +97,7 @@ const Services = () => {
         textContent="From crafting impactful, multi-channel campaigns that amplify your brand's voice and engage your target audience to transforming complex data into actionable insights to track performance, understand customer behavior, and measure ROI, SMG aims at helping you refine your brand strategies for better business outcomes."
       />
 
-      <div className="flex flex-col md:flex-row  gap-6 max-w-[1200px] mx-auto mt-10 md:my-[80px] px-5 md:px-0">
+      <div className="flex flex-col md:flex-row justify-between  gap-6 max-w-[1000px] mx-auto mt-10 md:my-[80px] px-5 md:px-0">
         {SERVICES_OFFERED.map((service) => (
           <Box
             key={service.icon}
@@ -120,7 +120,7 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="text-start pt-[80px] px-5 md:px-0">
+      <div className="text-start pt-[80px] px-5 md:px-0 max-w-[1200px] mx-auto">
         <h2 className="text-center mb-[24px]">
           We drive growth and visibility
         </h2>
