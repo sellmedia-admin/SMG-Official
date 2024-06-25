@@ -109,7 +109,9 @@ const Services = () => {
               width={80}
               height={80}
             />
-            <h3 className="text-[#434343] max-w-[291px]">{service.service}</h3>
+            <h3 className="text-[#434343] text-center max-w-[170px] md:max-w-[291px]">
+              {service.service}
+            </h3>
 
             <a href={service.link} className="text-b-pink font-[600]">
               Learn more

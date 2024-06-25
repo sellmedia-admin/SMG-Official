@@ -133,12 +133,16 @@ export const ApproachStep2 = [
 
 export const STATEMENTS = [
   {
+    leftIcon: "pink-star",
+    rightIcon: "pink-star",
     title: "Vision Statement",
     backgroundColor: "bg-b-lightPink",
     textContent:
       "To be a global leader in media technology, revolutionizing business solutions with innovative products and unparalleled value for our partners and stakeholders across Africa and beyond",
   },
   {
+    leftIcon: "purple-star",
+    rightIcon: "purple-star",
     title: "Mission Statement",
     backgroundColor: "bg-pryPurple",
     textContent:
@@ -253,12 +257,12 @@ export const PROJECTS = [
 
 export const SERVICES_OFFERED = [
   {
-    icon: "/icons/services/communications.svg",
+    icon: "/icons/services/analytics.svg",
     service: "Marketing Communications",
     link: "#communications",
   },
   {
-    icon: "/icons/services/analytics.svg",
+    icon: "/icons/services/communications.svg",
     service: "Marketing Analytics",
     link: "#analytics",
   },

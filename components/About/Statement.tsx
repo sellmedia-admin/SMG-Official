@@ -4,27 +4,30 @@ import SectionTitle from "../SectionTitles/SectionTitle";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 
 type StatementProps = {
   title: string;
   backgroundColor: string;
   textContent: string;
+  leftIcon: string;
+  rightIcon: string;
 };
 
 export const StatementSection: React.FC<StatementProps> = ({
   title,
   backgroundColor,
   textContent,
+  leftIcon,
+  rightIcon,
 }) => {
   return (
     <div className={cn("rounded-15 py-6 px-4 bg-pryPurple", backgroundColor)}>
       <SectionTitle
         title={title}
         titleColor="text-b-black"
-        leftIcon="pink-star"
-        rightIcon="pink-star"
-        className="w-max mx-auto"
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+        className="w-max md:mx-auto"
         textStyle="md:text-[28px]"
       />
 

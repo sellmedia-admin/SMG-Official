@@ -113,13 +113,15 @@ const AboutUsPage = () => {
           ))}
         </div>
 
-        <div className="max-w-[1200px]  mx-auto text-center grid md:grid-cols-2 gap-6 mt-[80px] pb-[80px]">
+        <div className="max-w-[1200px]  mx-auto text-start md:text-center grid md:grid-cols-2 gap-6 mt-[80px] pb-[80px]">
           {STATEMENTS.map((statement, index) => (
             <StatementSection
               key={index}
               title={statement.title}
               backgroundColor={statement.backgroundColor}
               textContent={statement.textContent}
+              leftIcon={statement.leftIcon}
+              rightIcon={statement.rightIcon}
             />
           ))}
         </div>
@@ -134,11 +136,15 @@ const AboutUsPage = () => {
         <section className="min-h-screen bg-white text-center pt-[80px] px-5 md:px-0 ">
           <Box maxW={1200} className="mx-auto">
             <h2>Our Core Value</h2>
-            <div className="mt-10 mb-[160px]  grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-[18px]">
-              {VALUES.map((value) => (
+            <div className="mt-10 mb-[160px] grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-[18px]">
+              {VALUES.map((value, index) => (
                 <Box
                   key={value}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center py-6 px-4 md:px-0  shadow-pale-blue"
+                  className={`rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center py-6 px-4 md:px-0 shadow-pale-blue ${
+                    index === VALUES.length - 1
+                      ? "col-span-2 md:col-span-1"
+                      : ""
+                  }`}
                 >
                   <img
                     src={`/icons/values/${value.toLowerCase()}.svg`}
@@ -245,7 +251,7 @@ const AboutUsPage = () => {
         </section>
 
         {/* -------- footprint ---------- */}
-        <section className="min-h-screen px-5 md:px-0">
+        <section className="min-h-screen px-5 md:px-0 text-center">
           <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
             <Box>
               <h2 className="mt-10 mb-6">Footprint & Clientele  </h2>
@@ -255,16 +261,19 @@ const AboutUsPage = () => {
                 alt="brands that trust us"
                 height={397}
                 width={416}
-                className="mt-6"
+                className="mt-6 mb-5"
               />
 
-              <Box className="flex gap-2 mb-2">
+              <Box className="flex gap-2 mb-2 justify-center md:justify-start">
                 {footprint.map((p) => (
                   <div className="flex items-center gap-1" key={p.bg}>
                     <div
                       className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
+                      style={{ backgroundColor: p.bg }}
                     />
-                    <span className="text-[12px] leading-[18px]">{p.name}</span>
+                    <span className="text-[10px] md:text-[12px] leading-[18px]">
+                      {p.name}
+                    </span>
                   </div>
                 ))}
               </Box>
@@ -273,8 +282,11 @@ const AboutUsPage = () => {
                   <div className="flex items-center gap-1" key={p.bg}>
                     <div
                       className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
+                      style={{ backgroundColor: p.bg }}
                     />
-                    <span className="text-[12px] leading-[18px]">{p.name}</span>
+                    <span className="text-[10px] md:text-[12px] leading-[18px]">
+                      {p.name}
+                    </span>
                   </div>
                 ))}
               </Box>
