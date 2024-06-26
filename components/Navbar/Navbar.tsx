@@ -31,55 +31,58 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between  max-w-[1200px] mx-auto px-5 md:px-0 bg-b-grey-2 border-b-1 border-b-light-grey">
-        <Box className="flex items-center">
-          <a href="/">
-            <img
-              src="/imgs/logo.png"
-              width={"123px"}
-              height={"40px"}
-              alt="smg logo"
-            />
-          </a>
-        </Box>
-        <Box className="hidden lg:flex items-center flex-grow justify-center">
-          {navItems.map((item, index) => (
-            <Link href={item.link} key={index}>
-              <Box
-                className={`inline-flex items-center cursor-pointer h-full px-4 font-[600] hover:text-b-darkPink ${
-                  pathname === item.link ? "text-b-pink" : "text-b-grey"
-                }`}
+      <nav className="bg-b-grey-2">
+        <div className="bg-bg-ash-2 h-24 flex items-center justify-between  max-w-[1200px] mx-auto px-5 md:px-0  border-b-1 border-b-light-grey">
+          <Box className="flex items-center">
+            <a href="/">
+              <img
+                src="/imgs/logo.png"
+                width={"123px"}
+                height={"40px"}
+                alt="smg logo"
+              />
+            </a>
+          </Box>
+          <Box className="hidden lg:flex items-center flex-grow justify-center">
+            {navItems.map((item, index) => (
+              <Link href={item.link} key={index}>
+                <Box
+                  className={`inline-flex items-center cursor-pointer h-full px-4 font-[600] hover:text-b-darkPink ${
+                    pathname === item.link ? "text-b-pink" : "text-b-grey"
+                  }`}
+                >
+                  <Text fontSize={"16px"}>{item.name}</Text>
+                </Box>
+              </Link>
+            ))}
+          </Box>
+          {/* buttons at the right */}
+          <Box className="ml-auto hidden lg:flex gap-4">
+            <Link href={"/start-project"}>
+              <CustomButton
+                className="bg-b-black text-white"
+                rounded="20"
+                onClick={() => handleLinkClick("/start-project")}
               >
-                <Text fontSize={"16px"}>{item.name}</Text>
-              </Box>
+                Start a project
+              </CustomButton>
             </Link>
-          ))}
-        </Box>
-        {/* buttons at the right */}
-        <Box className="ml-auto hidden lg:flex gap-4">
-          <Link href={"/start-project"}>
-            <CustomButton
-              className="bg-b-black text-white"
-              rounded="20"
-              onClick={() => handleLinkClick("/start-project")}
-            >
-              Start a project
-            </CustomButton>
-          </Link>
-          <Menu teamList={teamList} handleValueChange={handleValueChange} />
-        </Box>
+            <Menu teamList={teamList} handleValueChange={handleValueChange} />
+          </Box>
 
-        <Box className="lg:hidden">
-          <button onClick={() => setIsNavOpen(!isNavOpen)}>
-            <img
-              src={isNavOpen ? "/icons/close.svg" : "/icons/hamburger.svg"}
-              alt="toggle"
-              width={24}
-              height={24}
-            />
-          </button>
-        </Box>
+          <Box className="lg:hidden">
+            <button onClick={() => setIsNavOpen(!isNavOpen)}>
+              <img
+                src={isNavOpen ? "/icons/close.svg" : "/icons/hamburger.svg"}
+                alt="toggle"
+                width={24}
+                height={24}
+              />
+            </button>
+          </Box>
+        </div>
       </nav>
+
       {/* for mobile */}
       {isNavOpen && (
         <Box
