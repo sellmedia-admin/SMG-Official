@@ -87,7 +87,8 @@ const AboutUsPage = () => {
         textContent="Driven by a relentless pursuit of creativity and innovation, we empower enterprises to navigate the digital age with confidence"
       />
 
-      <section className="bg-white pt-[80px] min-h-screen overflow-x-hidden">
+      {/* our story */}
+      <section className="bg-white pt-5 md:pt-[80px] min-h-screen overflow-x-hidden">
         <div className="grid max-w-[1200px] mx-auto text-left gap-8">
           {STORY_CONTENTS.map((content, index) => (
             <MotionDiv key={index} initialX={content.initialX}>
@@ -113,7 +114,7 @@ const AboutUsPage = () => {
           ))}
         </div>
 
-        <div className="max-w-[1200px]  mx-auto text-start md:text-center grid md:grid-cols-2 gap-6 mt-[80px] pb-[80px]">
+        <div className="max-w-[1200px]  mx-auto text-start md:text-center grid md:grid-cols-2 gap-6 py-5 md:py-[80px]">
           {STATEMENTS.map((statement, index) => (
             <StatementSection
               key={index}
@@ -133,10 +134,10 @@ const AboutUsPage = () => {
       </section>
       {/* -----  values ---------*/}
       <div className="relative z-20 bg-white overflow-x-hidden">
-        <section className="min-h-screen bg-white text-center pt-[80px] px-5 md:px-0 ">
+        <section className="min-h-screen bg-white text-center pt-5 md:pt-[80px] px-5 md:px-0 ">
           <Box maxW={1200} className="mx-auto">
             <h2>Our Core Value</h2>
-            <div className="mt-10 mb-[160px] grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-[18px]">
+            <div className="mt-10 mb-10 md:mb-[160px] grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-[18px]">
               {VALUES.map((value, index) => (
                 <Box
                   key={value}
@@ -171,7 +172,7 @@ const AboutUsPage = () => {
           </Box>
         </section>
         {/* ----- culture ------- */}
-        <section className="min-h-screen text-center bg-white pt-[160px] ">
+        <section className="min-h-screen text-center bg-white pt-10 md:pt-[160px] ">
           <h2>Systematic Culture</h2>
           <p>We’re deeply rooted in process</p>
 
@@ -201,17 +202,17 @@ const AboutUsPage = () => {
             </div>
           </Flex>
           {/* --------- */}
-          <Box className="flex flex-col gap-[29px] pb-[90px] ">
+          <Box className="flex flex-col gap-[29px] md:pb-[90px]">
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6  "
+              className="grid grid-cols-2 max-w-[1200px] mx-auto gap-6"
             >
               {CULTURE1.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center   shadow-pale-blue p-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center shadow-pale-blue p-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -229,12 +230,12 @@ const AboutUsPage = () => {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="grid md:grid-cols-2 max-w-[1200px] mx-auto gap-6 "
+              className="grid grid-cols-2 max-w-[1200px] mx-auto gap-6 "
             >
               {CULTURE2.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center   shadow-pale-blue p-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center shadow-pale-blue p-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -251,8 +252,8 @@ const AboutUsPage = () => {
         </section>
 
         {/* -------- footprint ---------- */}
-        <section className="min-h-screen px-5 md:px-0 text-center">
-          <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-[80px]">
+        <section className="px-5 md:px-0 text-center">
+          <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-5 md:my-[80px]">
             <Box>
               <h2 className="mt-10 mb-6">Footprint & Clientele  </h2>
               <Text>A success story from every industry</Text>
