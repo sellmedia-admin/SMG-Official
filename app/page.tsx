@@ -18,72 +18,74 @@ export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box overflowX={"hidden"}>
-      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  flex items-center justify-between pt-20">
-        <div className="max-w-[900px] -mt-20 md:mt-0  md:py-40 px-5 md:ml-[100px]">
-          <h1 className="max-w-[350px] md:max-w-full">
-            Innovating at the <br /> Intersection of Media <br /> and
-            Technology  
-          </h1>
+      <main className="min-h-home bg-mobile-bg md:bg-home-bg bg-no-repeat bg-center bg-cover  ">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between pt-20">
+          <div className="max-w-[900px]  md:mt-0   px-5 md:px-0 ">
+            <h1 className="max-w-[350px] md:max-w-full">
+              Innovating at the <br /> Intersection of Media <br /> and
+              Technology  
+            </h1>
 
-          <div className="block md:hidden max-w-[49px] ml-auto">
+            <div className="block md:hidden max-w-[49px] ml-auto">
+              <img
+                src="/imgs/hero-star.png"
+                alt="star"
+                width={"100%"}
+                height={49}
+                className="-mt-12"
+              />
+            </div>
+
+            <Text className="my-6">
+              Accelerate Your Growth with SellMedia Group: Where Data-Driven
+              Strategies <br /> Meet Creative Innovation, click below to get
+              started with us
+            </Text>
+            <Box position={"relative"}>
+              <Flex
+                alignItems={"center"}
+                className="gap-4 md:gap-6"
+                position={"relative"}
+                zIndex={2}
+              >
+                <Link href={"/start-project"}>
+                  <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
+                    <CustomButton className="border-1 border-bd-grey-1 rounded-20 text-red-200">
+                      Start a project
+                    </CustomButton>
+                  </div>
+                </Link>
+
+                <Box className="p-[1px] rounded-20 border border-bd-grey-1">
+                  <CustomButton
+                    className="text-b-ash rounded-20 "
+                    onClick={onOpen}
+                  >
+                    Contact Us
+                  </CustomButton>
+                </Box>
+              </Flex>
+              <div className="-mt-4 md:-mt-12 max-w-[94px] max-h-[94px] md:max-w-[224px] md:max-h-[224px]">
+                <img
+                  src="/gif/arrow.gif"
+                  alt="arrows"
+                  width={"100%"}
+                  height={"100%"}
+                  className="rotate-45"
+                />
+              </div>
+            </Box>
+          </div>
+
+          <div className="hidden md:block mr-[95px]">
             <img
               src="/imgs/hero-star.png"
               alt="star"
-              width={"100%"}
-              height={49}
+              width={185}
+              height={185}
               className="-mt-12"
             />
           </div>
-
-          <Text className="my-6">
-            Accelerate Your Growth with SellMedia Group: Where Data-Driven
-            Strategies <br /> Meet Creative Innovation, click below to get
-            started with us
-          </Text>
-          <Box position={"relative"}>
-            <Flex
-              alignItems={"center"}
-              className="gap-4 md:gap-6"
-              position={"relative"}
-              zIndex={2}
-            >
-              <Link href={"/start-project"}>
-                <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
-                  <CustomButton className="border-1 border-bd-grey-1 rounded-20 text-red-200">
-                    Start a project
-                  </CustomButton>
-                </div>
-              </Link>
-
-              <Box className="p-[1px] rounded-20 border border-bd-grey-1">
-                <CustomButton
-                  className="text-b-ash rounded-20 "
-                  onClick={onOpen}
-                >
-                  Contact Us
-                </CustomButton>
-              </Box>
-            </Flex>
-            <div className="-mt-4 md:-mt-12 max-w-[94px] max-h-[94px] md:max-w-[224px] md:max-h-[224px]">
-              <img
-                src="/gif/arrow.gif"
-                alt="arrows"
-                width={"100%"}
-                height={"100%"}
-                className="rotate-45"
-              />
-            </div>
-          </Box>
-        </div>
-
-        <div className="hidden md:block mr-[95px]">
-          <img
-            src="/imgs/hero-star.png"
-            alt="star"
-            width={185}
-            height={185}
-            className="-mt-12"
-          />
         </div>
       </main>
 

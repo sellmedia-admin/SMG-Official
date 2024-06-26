@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between px-2 md:px-[120px] bg-b-grey-2 border-b-1 border-b-light-grey">
+      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between  max-w-[1200px] mx-auto bg-b-grey-2 border-b-1 border-b-light-grey">
         <Box className="flex items-center">
           <a href="/">
             <img
@@ -42,7 +42,7 @@ const Navbar = () => {
             />
           </a>
         </Box>
-        <Box className="hidden lg:flex items-center space-x-4 flex-grow justify-center">
+        <Box className="hidden lg:flex items-center flex-grow justify-center">
           {navItems.map((item, index) => (
             <Link href={item.link} key={index}>
               <Box
