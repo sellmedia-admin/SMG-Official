@@ -124,6 +124,7 @@ export default function Home() {
             alt="brands that trust us"
             height={416}
             width={591}
+            className="mt-6 md:mt-0"
           />
         </Box>
       </section>

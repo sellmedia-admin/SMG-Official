@@ -212,14 +212,16 @@ const AboutUsPage = () => {
               {CULTURE1.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center md:justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
                 >
-                  <img
-                    src={`/icons/${culture.img}-icon.svg`}
-                    alt={culture.img}
-                    width={80}
-                    height={80}
-                  />
+                  <div className="w-8 h-8 md:h-20 md:w-20">
+                    <img
+                      src={`/icons/${culture.img}-icon.svg`}
+                      alt={culture.img}
+                      width={"100%"}
+                      height={"100%"}
+                    />
+                  </div>
                   <h3 className="text-[#434343] text-base md:text-[24px]">
                     {culture.title}
                   </h3>
@@ -237,14 +239,16 @@ const AboutUsPage = () => {
               {CULTURE2.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center md:justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
                 >
-                  <img
-                    src={`/icons/${culture.img}-icon.svg`}
-                    alt={culture.img}
-                    width={80}
-                    height={80}
-                  />
+                  <div className="w-8 h-8 md:h-20 md:w-20">
+                    <img
+                      src={`/icons/${culture.img}-icon.svg`}
+                      alt={culture.img}
+                      width={"100%"}
+                      height={"100%"}
+                    />
+                  </div>
                   <h3 className="text-[#434343] text-base md:text-[24px]">
                     {culture.title}
                   </h3>
@@ -260,7 +264,10 @@ const AboutUsPage = () => {
           <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1263px] mx-auto my-5 md:my-[80px]">
             <Box>
               <h2 className="mt-10 mb-6">Footprint & Clientele  </h2>
-              <Text>A success story from every industry</Text>
+              <Text className="text-center md:text-left">
+                {" "}
+                A success story from every industry
+              </Text>
               <Image
                 src={"/gif/map.gif"}
                 alt="brands that trust us"
@@ -273,7 +280,7 @@ const AboutUsPage = () => {
                 {footprint.map((p) => (
                   <div className="flex items-center gap-1" key={p.bg}>
                     <div
-                      className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
+                      className={`w-[10px] h-[10px] md:w-[20px] md:h-[20px] rounded-full bg-[${p.bg}]`}
                       style={{ backgroundColor: p.bg }}
                     />
                     <span className="text-[10px] md:text-[12px] leading-[18px]">
@@ -286,7 +293,7 @@ const AboutUsPage = () => {
                 {footprint2.map((p) => (
                   <div className="flex items-center gap-1" key={p.bg}>
                     <div
-                      className={`w-[20px] h-[20px] rounded-full bg-[${p.bg}]`}
+                      className={`w-[10px] h-[10px] md:w-[20px] md:h-[20px] rounded-full bg-[${p.bg}]`}
                       style={{ backgroundColor: p.bg }}
                     />
                     <span className="text-[10px] md:text-[12px] leading-[18px]">

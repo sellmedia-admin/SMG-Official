@@ -29,7 +29,12 @@ const Contact = () => {
       </div>
 
       <div className="border border-[#E5E5EA] flex items-start gap-6 p-6">
-        <img src="/icons/pink-phone.svg" alt="contact" width={35} height={35} />
+        <img
+          src="/icons/social-media.svg"
+          alt="contact"
+          width={35}
+          height={35}
+        />
 
         <div>
           <Text className="text-b-pink mb-2">Phone Number</Text>
