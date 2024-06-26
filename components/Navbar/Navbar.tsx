@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between  max-w-[1200px] mx-auto bg-b-grey-2 border-b-1 border-b-light-grey">
+      <nav className="bg-bg-ash-2 h-24 flex items-center justify-between  max-w-[1200px] mx-auto px-5 md:px-0 bg-b-grey-2 border-b-1 border-b-light-grey">
         <Box className="flex items-center">
           <a href="/">
             <img
