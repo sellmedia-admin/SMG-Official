@@ -172,7 +172,7 @@ const AboutUsPage = () => {
           </Box>
         </section>
         {/* ----- culture ------- */}
-        <section className="min-h-screen text-center bg-white pt-10 md:pt-[160px] ">
+        <section className="md:min-h-screen text-center bg-white pt-10 md:pt-[160px] ">
           <h2>Systematic Culture</h2>
           <p>We’re deeply rooted in process</p>
 
@@ -212,7 +212,7 @@ const AboutUsPage = () => {
               {CULTURE1.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center shadow-pale-blue p-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -220,7 +220,9 @@ const AboutUsPage = () => {
                     width={80}
                     height={80}
                   />
-                  <h3 className="text-[#434343] ">{culture.title}</h3>
+                  <h3 className="text-[#434343] text-base md:text-[24px]">
+                    {culture.title}
+                  </h3>
                   <p>{culture.description}</p>
                 </Box>
               ))}
@@ -235,7 +237,7 @@ const AboutUsPage = () => {
               {CULTURE2.map((culture) => (
                 <Box
                   key={culture.img}
-                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-6 items-center justify-center shadow-pale-blue p-6 md:p-8 lg:p-10"
+                  className="rounded-10 bg-white border border-[#B3B3B3] text-center flex flex-col gap-2 md:gap-6 items-center justify-center shadow-pale-blue px-4 py-6 md:p-8 lg:p-10"
                 >
                   <img
                     src={`/icons/${culture.img}-icon.svg`}
@@ -243,7 +245,9 @@ const AboutUsPage = () => {
                     width={80}
                     height={80}
                   />
-                  <h3 className="text-[#434343] ">{culture.title}</h3>
+                  <h3 className="text-[#434343] text-base md:text-[24px]">
+                    {culture.title}
+                  </h3>
                   <p>{culture.description}</p>
                 </Box>
               ))}
@@ -308,7 +312,7 @@ const AboutUsPage = () => {
           <Text className="mt-6 mb-10">
             A seasoned, hand picked for quality executions
           </Text>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1208px]  px-5 md:px-0 mx-auto pb-[80px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1208px]  px-5 md:px-0 mx-auto pb-5 md:pb-[80px]">
             <TeamComponent TEAM={TEAM} />
           </div>
         </section>
