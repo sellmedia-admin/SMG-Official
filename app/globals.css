@@ -9,6 +9,7 @@ html {
 body {
   color: #000;
   overflow-x: hidden;
+  background-color: #f5f4f6 !important;
   letter-spacing: -0.02em !important;
 }
 

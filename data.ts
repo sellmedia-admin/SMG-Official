@@ -276,57 +276,53 @@ export const MARKETING_COMMUNICATION = [
   {
     icon: "brand-management",
     service: "Brand Management",
-    description:
-      "Developing and refining brand messaging to ensure consistency across all communication channels and resonate with the target market.",
+    description: "Developing and refining brand messaging for consistency.",
   },
 
   {
     icon: "content-marketing-and-creation",
     service: "Content Marketing and Creation",
     description:
-      "Offering services to create various types of content such as blog posts, articles, social media posts, infographics, videos, and podcasts tailored to specific target audiences to drive various marketing function.",
+      "Providing tailored content creation for diverse marketing needs",
   },
   {
     icon: "public-relations",
     service: "Public Relations (PR)",
     description:
-      "Crafting press releases, organizing media events, managing media relations, and handling crisis communications to maintain a positive brand image.",
+      "Managing press releases, media events, relations, and crises.",
   },
   {
     icon: "advertising-and-marketing-campaigns",
     service: "Advertising and Marketing Campaigns",
     description:
-      "Planning, designing, and executing advertising campaigns across different channels including online (social media, search engines, display ads) and offline (print, TV, radio).",
+      "Planning and executing diverse advertising campaigns across channels.",
   },
   {
     icon: "creative-design",
     service: "Creative Design",
-    description:
-      "Leveraging design communications to showcases brands and create immersive brand experience and elements to drive brands outcomes. Graphics Design, Animations and interactive designs of all kinds.",
+    description: "Using design to enhance brand presence and engagement.",
   },
   {
     icon: "social-media-management",
     service: "Social Media Management:",
     description:
-      "Developing social media strategies, creating content calendars, managing social media profiles, engaging with followers, and analyzing performance metrics.",
+      "Managing social media: strategy, content, engagement, and analytics.",
   },
   {
     icon: "influencer-marketing",
     service: "Influencer Marketing",
-    description:
-      "Identifying relevant influencers, establishing partnerships, and managing influencer campaigns to amplify brand reach and credibility.",
+    description: "Executing influencer campaigns to amplify brand credibility",
   },
   {
     icon: "email-marketing",
     service: "Email Marketing",
     description:
-      "Creating and managing email campaigns to nurture leads, engage customers, and drive conversions.",
+      "Managing email campaigns to nurture leads and drive conversions.",
   },
   {
     icon: "event-and-experiential-marketing",
     service: "Event and Experiential Marketing",
-    description:
-      "Planning and executing events such as product launches, conferences, webinars, and trade shows to promote brand awareness and generate leads.",
+    description: "Planning and executing events to boost brand awareness.",
   },
 ];
 
@@ -335,56 +331,54 @@ export const MARKETING_ANALYTICS = [
     icon: "data-collection-and-management",
     service: "Data Collection and Management",
     description:
-      "Implementing tools and systems to collect, organize, and manage marketing data from various sources such as websites, social media platforms, CRM systems, and third-party analytics tools.",
+      "Implementing tools for collecting and managing marketing data.",
   },
 
   {
     icon: "performance-marketing-and-tracking",
     service: "Performance Marketing and Tracking",
     description:
-      "Monitoring and analyzing key performance indicators (KPIs) and metrics across different marketing channels to assess the effectiveness of campaigns and strategies.",
+      "Tracking and analysing KPIs across marketing channels for performance",
   },
   {
     icon: "customer-segmentation-and-user-profiling",
     service: "Customer Segmentation and User Profiling",
     description:
-      " Using data analysis techniques to segment customers based on demographics, behavior, and preferences for targeted marketing efforts.",
+      "Segmenting customers using data for targeted marketing efforts.",
   },
   {
     icon: "predictive-analytics",
     service: "Predictive Analytics",
-    description:
-      "Utilizing advanced analytics techniques to forecast future trends, customer behavior, and campaign outcomes to make data-driven decisions.",
+    description: "Using advanced analytics to predict trends and outcomes.",
   },
   {
     icon: "roi-analysis",
     service: "ROI Analysis",
     description:
-      "Calculating the return on investment (ROI) for marketing initiatives by measuring the cost of acquiring customers against the revenue generated.Leveraging design communications to showcases brands and create immersive brand experience and elements to drive brands outcomes. Graphics Design, Animations and interactive designs of all kinds.",
+      "Analysing ROI by comparing customer acquisition costs to revenue.",
   },
   {
     icon: "ab-testing",
     service: "A/B Testing",
-    description:
-      "Conducting experiments to compare different marketing strategies, messages, or designs to identify the most effective approach for optimizing conversion rates.",
+    description: "Conducting A/B tests to optimize conversion rates.",
   },
   {
     icon: "digital-analytics",
     service: "Digital Analytics",
     description:
-      "Implementing analytical tools and softwares to help collect and analyse marketing data across different channels for informed business decision making.",
+      "Utilizing analytics tools to analyse marketing data across channels.",
   },
   {
     icon: "data-visualisation",
     service: "Data Visualisation",
     description:
-      "Presenting complex marketing data in visually appealing and easy-to-understand formats such as charts, graphs, and dashboards to facilitate decision-making.",
+      "visualizing marketing data for intuitive decision-making with charts & dashboards.",
   },
   {
     icon: "measurement-and-optimisation",
     service: "Measurement and Optimisation",
     description:
-      "Leveraging first and third party data touchpoints to measure campaigns and marketing efforts to decide if the desired outcomes were meet and uncover areas of opportunities.",
+      "Using first and third-party data to measure and optimize campaigns.",
   },
 ];
 
@@ -393,37 +387,35 @@ export const MARKETING_TECHNOLOGY = [
     icon: "customer-experience",
     service: "Customer Experience (CX)",
     description:
-      "Improvement of the overall customer experience by gathering feedback, analyzing customer interactions, and personalizing marketing efforts.",
+      "Improving CX through feedback analysis and personalized marketing.",
   },
 
   {
     icon: "marketing-automation",
     service: "Marketing Automation",
     description:
-      "Tech-infused automotive marketing tools enables brands to automate repetitive tasks, nurture leads, and personalize communication with consumers.",
+      "Marketing automation tools streamline tasks, nurture leads, and personalise..",
   },
   {
     icon: "adtest",
     service: "AdTest",
     description:
-      "Management and optimization of digital advertising campaigns for businesses across different channels, such as search engines, social media, and display networks.",
+      "Managing and optimising digital advertising campaigns across channels.",
   },
   {
     icon: "augmented-reality",
     service: "Augmented Reality (AR) and Virtual Reality (VR)",
-    description:
-      "We leverage on emerging technologies like AR and VR to offer new opportunities for creatives marketing experiences. Tools like Snapchat Lens Studio, Spark AR, or Unity enable brands create immersive AR/VR content.",
+    description: "We use AR/VR tools for creative marketing.",
   },
   {
     icon: "machine-learning",
     service: "Machine Learning",
-    description:
-      "We Personalize marketing campaigns with the help of artificial intelligence.",
+    description: "We use AI and machine learning for personalized marketing.",
   },
   {
     icon: "analytics-attribution-softwares",
     service: "Analytics/ Attribution Softwares",
     description:
-      "Tracking and measurement of effectiveness of marketing campaigns, attributing conversions and sales to specific channels and touchpoints.",
+      "Tracking campaign effectiveness and attribution with analytics.",
   },
 ];

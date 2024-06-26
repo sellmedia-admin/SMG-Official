@@ -20,7 +20,7 @@ const AchievementsSection = () => (
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
-      marginTop={{ base: 10, md: 20 }}
+      marginTop={{ base: "15px", md: 20 }}
       maxWidth={1300}
       className="mx-auto"
     >
@@ -42,7 +42,7 @@ const AchievementsSection = () => (
         />
       </div>
     </Flex>
-    <Box className="max-w-[1205px] mx-auto px-[5%] md:px-0 grid grid-cols-2 md:grid-cols-3 gap-[18px]">
+    <Box className="max-w-[1205px] mx-auto px-[2%] md:px-0 grid grid-cols-2 md:grid-cols-3 gap-[18px]">
       {ACHIEVEMENTS.map((achievement) => (
         <Box
           key={achievement.title}
