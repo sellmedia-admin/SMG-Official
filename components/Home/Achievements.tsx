@@ -4,7 +4,7 @@ import SectionTitle from "../SectionTitles/SectionTitle";
 
 const AchievementsSection = () => (
   <>
-    <Box className="pt-[80px]">
+    <Box className="pt-5 md:pt-[80px]">
       <Box className="w-max md:mx-auto">
         <SectionTitle
           title="Achievements"

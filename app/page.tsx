@@ -41,25 +41,28 @@ export default function Home() {
             started with us
           </Text>
           <Box position={"relative"}>
-            <Flex alignItems={"center"} className="gap-4 md:gap-6">
-              <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
-                <Link href={"/start-project"}>
-                  <CustomButton className="bg-custom-gradient hover:bg-darkCustom-gradient border-1 border-bd-grey-1 rounded-20 text-red-200">
+            <Flex
+              alignItems={"center"}
+              className="gap-4 md:gap-6"
+              position={"relative"}
+              zIndex={2}
+            >
+              <Link href={"/start-project"}>
+                <div className="bg-custom-gradient hover:bg-darkCustom-gradient p-[1px] rounded-20">
+                  <CustomButton className="border-1 border-bd-grey-1 rounded-20 text-red-200">
                     Start a project
                   </CustomButton>
-                </Link>
-              </div>
-              <Link
-                href={"#"}
-                className=" p-[1px] rounded-20 border border-bd-grey-1"
-              >
+                </div>
+              </Link>
+
+              <Box className="p-[1px] rounded-20 border border-bd-grey-1">
                 <CustomButton
                   className="text-b-ash rounded-20 "
                   onClick={onOpen}
                 >
                   Contact Us
                 </CustomButton>
-              </Link>
+              </Box>
             </Flex>
             <div className="-mt-4 md:-mt-12 max-w-[94px] max-h-[94px] md:max-w-[224px] md:max-h-[224px]">
               <img
@@ -99,7 +102,7 @@ export default function Home() {
       </section>
 
       <section>
-        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto my-[80px]  md:px-0">
+        <Box className="min-h-[60vh] grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto my-5 md:my-[80px]  md:px-0">
           <Box>
             <SectionTitle
               title="Clientele"

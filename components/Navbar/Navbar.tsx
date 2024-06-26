@@ -82,7 +82,10 @@ const Navbar = () => {
       </nav>
       {/* for mobile */}
       {isNavOpen && (
-        <Box className="absolute z-50 top-0 mt-[80px] left-0 w-full h-full bg-white border-t text-b-grey px-5 py-20 font-semibold">
+        <Box
+          className="absolute top-0 mt-[80px] left-0 w-full h-full bg-white border-t text-b-grey px-5 py-20 font-semibold"
+          zIndex={100}
+        >
           {navItems.map((item, index) => (
             <Link href={item.link} key={index}>
               <Box

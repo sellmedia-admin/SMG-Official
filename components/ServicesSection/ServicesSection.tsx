@@ -34,7 +34,7 @@ const ServiceText = ({ title, text, linkTo, orderBy }: ServicesText) => {
       className="md:max-w-[523px]"
     >
       <h3 className="md:leading-[46px]">{title}</h3>
-      <Text className="my-4 md:my-6">{text}</Text>
+      <Text className="mt-4 mb-0 md:my-6">{text}</Text>
       <Link href={linkTo}>
         <CustomButton
           className="text-b-pink !justify-start !pl-0"
@@ -62,7 +62,11 @@ const ServicesSection = ({
   const isImageRight = index === 1;
 
   return (
-    <Box textAlign="center" mt="80px" px={{ base: "20px", md: "0" }}>
+    <Box
+      textAlign="center"
+      mt={{ base: "40px", md: "80px" }}
+      px={{ base: "20px", md: "0" }}
+    >
       <div className="md:max-w-max mx-auto">
         <h2 className="text-start md:text-center text-[18px] md:text-2xl">
           {topTitle}
@@ -83,9 +87,9 @@ const ServicesSection = ({
 
       <Grid
         templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-        gap="54px"
+        gap={{ base: "24px", md: "54px" }}
         mt="40px"
-        mb="80px"
+        mb={{ base: "0px", md: "80px" }}
         w="full"
         maxW="1217px"
         mx="auto"

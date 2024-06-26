@@ -106,7 +106,7 @@ const Footer = () => {
             style={{ gridTemplateColumns: "repeat(2, 200px)" }}
           >
             {footerLinks.map((section, index) => (
-              <Box key={index} className="max-w-max">
+              <Box key={index} className="max-w-max mt-10 md:mt-0">
                 <div className="mb-[14px]">
                   <Text className="font-semibold text-white opacity-80 ">
                     {section.title}
@@ -164,7 +164,7 @@ const Footer = () => {
                         <Link
                           href={link.link}
                           className={`hover:text-b-green-2 ${
-                            link.name.includes("@") ? "underline my-1" : ""
+                            link.name.includes("@") ? "underline md:my-1" : ""
                           }`}
                         >
                           {link.name}

@@ -39,7 +39,7 @@ const AboutSection = () => (
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
-      marginTop={20}
+      marginTop={{ base: 10, md: 20 }}
       maxWidth={1300}
       className="mx-auto"
     >
@@ -65,7 +65,7 @@ const AboutSection = () => (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] px-[5%] md:px-0 md:-mt-6"
+      className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] md:-mt-6"
     >
       {SERVICES_HELP.map((achievement) => (
         <div

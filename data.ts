@@ -170,14 +170,13 @@ export const CULTURE1 = [
   {
     img: "research",
     title: "Research & Knowledge Base",
-    description:
-      "We distill valuable insights learned to enrich our knowledge base—a repository honed over years of practice. Armed with thorough research, we navigate tasks with precision. Our approach spares clients the frustration of trial and error, ensuring efficient and effective solutions consistently",
+    description: "We distil insights for precise, effective solutions",
   },
   {
     img: "plans",
     title: "Plans, Timeframes & Performance Metrics",
     description:
-      "From single requests to year-long campaigns, our clients receive comprehensive action plans, complete with clear timeframes and performance metrics, empowering them to track progress with confidence",
+      "We provide plans, timeframes, and metrics to empower client progress",
   },
 ];
 
@@ -186,13 +185,13 @@ export const CULTURE2 = [
     img: "quality",
     title: "Quality Control",
     description:
-      "Our stringent quality control processes feature multiple layers of filtration, guaranteeing the delivery of superior results to our clients. This reflects our unwavering dedication to excellence",
+      "Our stringent quality control ensures superior client results",
   },
   {
     img: "involvement",
     title: "Involvement & Follow-up",
     description:
-      "Our clients are integral to every step of the journey. With a focus on building long-term partnerships, we provide dedicated Account Managers to address their needs. Regular status reports, enriched with figures and visuals, ensure transparency and collaboration throughout our engagement",
+      "Dedicated Account Managers ensure transparency and collaboration",
   },
 ];
 
