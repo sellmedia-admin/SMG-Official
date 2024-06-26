@@ -132,7 +132,7 @@ const Service = ({ params }: { params: { slug: string } }) => {
         </Flex>
 
         {/* tabs */}
-        <div className="max-w-[1200px] md:px-[5%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-[18px] gap-y-10 mb-20">
+        <div className="max-w-[1200px] md:px-[5%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-4 md:gap-x-[18px] md:gap-y-10 mb-5 md:mb-20">
           {activeTab === "marketing-communication" && <CommunicationTab />}
           {activeTab === "marketing-analytics" && <AnalyticsTab />}
           {activeTab === "marketing-technology" && <TechnologyTab />}
