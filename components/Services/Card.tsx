@@ -2,18 +2,28 @@ import { Box, useDisclosure, VStack } from "@chakra-ui/react";
 import CustomButton from "../Button/Button";
 import { ContactModal, Modal } from "..";
 
+const borderColorMap = {
+  communication: "#005132",
+  analytics: "#460B32",
+  technology: "#250749",
+};
+
 const Card = ({
   img,
   title,
   description,
   isLast,
+  identifier,
 }: {
   img: string;
   title: string;
   description: string;
   isLast: boolean;
+  identifier: keyof typeof borderColorMap;
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const borderColor = borderColorMap[identifier] || "transparent";
+
   return (
     <>
       <Box
@@ -22,7 +32,10 @@ const Card = ({
           isLast ? "col-span-2" : ""
         }`}
       >
-        <div className="h-8 w-8 md:h-20 md:w-20">
+        <div
+          className="h-8 w-8 md:h-20 md:w-20"
+          style={{ border: `2px solid ${borderColor}`, borderRadius: "100%" }}
+        >
           <img
             src={`/icons/services/${img}.svg`}
             alt={title}

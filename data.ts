@@ -254,21 +254,33 @@ export const PROJECTS = [
   { label: "Retail", value: "Retail" },
 ];
 
-export const SERVICES_OFFERED = [
+type IdentifierType = "communication" | "analytics" | "technology";
+
+type ServiceType = {
+  icon: string;
+  service: string;
+  link: string;
+  identifier: IdentifierType; // Use the defined type here
+};
+
+export const SERVICES_OFFERED: ServiceType[] = [
   {
     icon: "/icons/services/analytics.svg",
     service: "Marketing Communications",
     link: "#communications",
+    identifier: "communication",
   },
   {
     icon: "/icons/services/communications.svg",
     service: "Marketing Analytics",
     link: "#analytics",
+    identifier: "analytics",
   },
   {
     icon: "/icons/services/technology.svg",
     service: "Marketing Technology",
     link: "#technology",
+    identifier: "technology",
   },
 ];
 

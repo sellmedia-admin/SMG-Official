@@ -13,6 +13,7 @@ const Technology = () => {
           title={service.service}
           description={service.description}
           isLast={isOdd && index === MARKETING_TECHNOLOGY.length - 1}
+          identifier="technology"
         />
       ))}
     </>
