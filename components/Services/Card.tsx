@@ -32,7 +32,9 @@ const Card = ({
         </div>
 
         <VStack spacing={4} align="center">
-          <h3 className="text-[#434343] max-w-[291px]">{title}</h3>
+          <h3 className="text-[#434343] max-w-[291px] text-[14px] leading-[22px] md:text-[24px] md:leading-8">
+            {title}
+          </h3>
           <p className="text-xs leading-[18px] md:text-[16px] md:leading-6 text-[#5D5D5D]">
             {description}
           </p>

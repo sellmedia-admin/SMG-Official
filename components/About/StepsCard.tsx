@@ -16,7 +16,7 @@ const ApproachCard = forwardRef<HTMLDivElement, ApproachCardProps>(
   ({ stage, title, description, className }, ref) => {
     return (
       <div ref={ref} className={cn("text-center w-full", className)}>
-        <p className="bg-black rounded-lg py-3 px-6 text-white mb-6 text-[16px] w-max mx-auto">
+        <p className="bg-black rounded-lg py-3 px-6 text-white mb-6 text-[14px] md:text-[16px] w-max mx-auto">
           {stage}
         </p>
         <h3>{title}</h3>
