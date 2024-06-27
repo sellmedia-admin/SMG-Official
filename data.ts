@@ -274,13 +274,13 @@ type ServiceType = {
 
 export const SERVICES_OFFERED: ServiceType[] = [
   {
-    icon: "/icons/services/analytics.svg",
+    icon: "/icons/services/communications.svg",
     service: "Marketing Communications",
     link: "#communications",
     identifier: "communication",
   },
   {
-    icon: "/icons/services/communications.svg",
+    icon: "/icons/services/analytics.svg",
     service: "Marketing Analytics",
     link: "#analytics",
     identifier: "analytics",

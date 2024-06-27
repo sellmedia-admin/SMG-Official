@@ -3,8 +3,8 @@ import CustomButton from "../Button/Button";
 import { ContactModal, Modal } from "..";
 
 const borderColorMap = {
-  communication: "#460B32",
-  analytics: "#005132",
+  communication: "#005132",
+  analytics: "#460B32",
   technology: "#250749",
 };
 
@@ -29,7 +29,7 @@ const Card = ({
       <Box
         key={img}
         className={`md:min-h-[392px] rounded-10 text-center flex flex-col gap-6 items-center py-6 px-3 md:py-10 md:px-[24.5px] shadow-pale-blue border border-[#b3b3b3] ${
-          isLast ? "col-span-2" : ""
+          isLast ? "col-span-2 md:col-span-1" : ""
         }`}
       >
         <div
