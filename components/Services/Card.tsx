@@ -3,8 +3,8 @@ import CustomButton from "../Button/Button";
 import { ContactModal, Modal } from "..";
 
 const borderColorMap = {
-  communication: "#005132",
-  analytics: "#460B32",
+  communication: "#460B32",
+  analytics: "#005132",
   technology: "#250749",
 };
 

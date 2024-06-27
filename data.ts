@@ -8,7 +8,6 @@ export const SERVICES = [
     contentText:
       "Our Marketing Communication services are designed to cut through the noise. We develop and deliver messages that capture attention and drive engagement. By understanding your audience and crafting tailored content, we ensure your brand's voice is heard loud and clear.",
     orderBy: "",
-    // separator: "4rem",
   },
   {
     image: "service2.gif",
@@ -19,7 +18,6 @@ export const SERVICES = [
     contentText:
       "Data-driven decision-making is at the heart of our Marketing Analysis services. We delve deep into market research, competitive analysis, and consumer behavior studies to provide actionable insights. Our analytical prowess empowers you to make informed decisions that drive growth and success.",
     orderBy: "-1",
-    // separator: "7rem",
   },
   {
     image: "service3.png",
@@ -30,7 +28,6 @@ export const SERVICES = [
     contentText:
       "Stay ahead of the curve with our Marketing Technology services. We integrate the latest technological advancements into your marketing strategy, enhancing efficiency and effectiveness. From automation tools to advanced analytics, we equip you with the technology to thrive in a digital-first world.",
     orderBy: "",
-    // separator: "10rem",
   },
 ];
 
@@ -51,24 +48,36 @@ export const ACHIEVEMENTS = [
     text: "We’re visible in 5 continents, & growing",
   },
 ];
-export const SERVICES_HELP = [
+
+type ServiceHelpType = {
+  title: string;
+  text: string;
+  icon: string;
+  bgColor: string;
+  identifier: IdentifierType;
+};
+
+export const SERVICES_HELP: ServiceHelpType[] = [
   {
     title: "Strategic Marketing Communications",
     text: "Crafting compelling messages that resonate with your targets audience, inspiring them to take your desired actions.",
     icon: "marketing-icon",
     bgColor: "bg-b-light-green",
+    identifier: "communication",
   },
   {
     title: "In-Depth Marketing Analysis",
     text: "Leveraging data to uncover insights and drive strategy and informed business decisions.",
     icon: "analysis-icon",
     bgColor: "bg-b-lightPink",
+    identifier: "analytics",
   },
   {
     title: "Advanced Marketing Technology",
     text: "Implementing the latest technologies to enhance your marketing efforts and drive business outcomes.",
     icon: "technology-icon",
     bgColor: "bg-pryPurple",
+    identifier: "technology",
   },
 ];
 
@@ -182,13 +191,13 @@ export const CULTURE1 = [
 
 export const CULTURE2 = [
   {
-    img: "quality",
+    img: "research",
     title: "Quality Control",
     description:
       "Our stringent quality control ensures superior client results",
   },
   {
-    img: "involvement",
+    img: "research",
     title: "Involvement & Follow-up",
     description:
       "Dedicated Account Managers ensure transparency and collaboration",
@@ -260,7 +269,7 @@ type ServiceType = {
   icon: string;
   service: string;
   link: string;
-  identifier: IdentifierType; // Use the defined type here
+  identifier: IdentifierType;
 };
 
 export const SERVICES_OFFERED: ServiceType[] = [

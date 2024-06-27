@@ -62,11 +62,7 @@ const ServicesSection = ({
   const isImageRight = index === 1;
 
   return (
-    <Box
-      textAlign="center"
-      mt={{ base: "40px", md: "80px" }}
-      px={{ base: "20px", md: "0" }}
-    >
+    <Box textAlign="center" mt={{ base: "40px", md: "80px" }}>
       <div className="md:max-w-max mx-auto">
         <h2 className="text-start md:text-center text-[18px] md:text-[34px]">
           {topTitle}
@@ -80,7 +76,7 @@ const ServicesSection = ({
           />
         </div>
 
-        <h2 className="text-start md:text-center text-[18px] md:text-[34px]">
+        <h2 className="text-start md:text-center text-[16px] md:text-[34px]">
           {bottomTitle}
         </h2>
       </div>

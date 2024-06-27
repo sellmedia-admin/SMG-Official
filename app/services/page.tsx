@@ -7,7 +7,6 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-// Define the possible identifier values
 type IdentifierType = "communication" | "analytics" | "technology";
 
 const borderColorMap: Record<IdentifierType, string> = {
