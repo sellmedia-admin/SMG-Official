@@ -4,6 +4,14 @@ import { Flex, Text } from "@chakra-ui/react";
 import { AboutSections } from "@/components";
 import { SERVICES_HELP } from "@/data";
 
+type IdentifierType = "communication" | "analytics" | "technology";
+
+const borderColorMap: Record<IdentifierType, string> = {
+  communication: "#005132",
+  analytics: "#460B32",
+  technology: "#250749",
+};
+
 const AboutSection = () => (
   <>
     <AboutSections
@@ -67,31 +75,40 @@ const AboutSection = () => (
       whileInView={{ y: 0, opacity: 1 }}
       className="grid grid-cols-1  md:grid-cols-3 gap-[18px] mx-auto max-w-[1200px] md:-mt-6"
     >
-      {SERVICES_HELP.map((achievement) => (
-        <div
-          key={achievement.title}
-          className="rounded-10 bg-white  border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-5 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
-        >
+      {SERVICES_HELP.map((achievement) => {
+        const borderColor =
+          borderColorMap[achievement.identifier as IdentifierType] ||
+          "transparent";
+        return (
           <div
-            className={`w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white ${achievement.bgColor}`}
+            key={achievement.title}
+            className="rounded-10 bg-white border border-[#B3B3B3] text-start md:text-center h-[344px] flex flex-col items-start md:items-center justify-center gap-6 py-6 px-5 md:py-0 md:px-0 shadow-pale-blue hover:bg-b-lightPink hover:cursor-pointer group"
           >
-            <img
-              src={`icons/${achievement.icon}.svg`}
-              alt={achievement.icon}
-              width={50}
-              height={50}
-            />
+            <div
+              className={`w-[80px] h-[80px] rounded-full grid place-items-center group-hover:bg-white ${achievement.bgColor}`}
+              style={{
+                border: `2px solid ${borderColor}`,
+                borderRadius: "100%",
+              }}
+            >
+              <img
+                src={`icons/${achievement.icon}.svg`}
+                alt={achievement.icon}
+                width={50}
+                height={50}
+              />
+            </div>
+            <div className="md:mx-auto max-w-[291px]">
+              <h2 className="text-[18px] leading-[23px] md:text-2xl md:leading-8 text-b-ash">
+                {achievement.title}
+              </h2>
+            </div>
+            <p className="max-w-[339px] md:text-base md:leading-[30px]">
+              {achievement.text}
+            </p>
           </div>
-          <div className=" md:mx-auto max-w-[291px]">
-            <h2 className="text-[18px] leading-[23px] md:text-2xl md:leading-8 text-b-ash">
-              {achievement.title}
-            </h2>
-          </div>
-          <p className="max-w-[339px] md:text-base md:leading-[30px]">
-            {achievement.text}
-          </p>
-        </div>
-      ))}
+        );
+      })}
     </motion.div>
   </>
 );
