@@ -147,12 +147,15 @@ const AboutUsPage = () => {
                       : ""
                   }`}
                 >
-                  <img
-                    src={`/icons/values/${value.toLowerCase()}.svg`}
-                    alt={value}
-                    width={80}
-                    height={80}
-                  />
+                  <div className="w-[30px] h-[30px] md:w-[80px] md:h-[80px]">
+                    <img
+                      src={`/icons/values/${value.toLowerCase()}.svg`}
+                      alt={value}
+                      width={"100%"}
+                      height={"100%"}
+                    />
+                  </div>
+
                   <span className="text-[#5D5D5D] md:text-[18px] lg:text-[24px] font-bold">
                     {value}
                   </span>

@@ -28,7 +28,7 @@ export const StatementSection: React.FC<StatementProps> = ({
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         className="w-max md:mx-auto"
-        textStyle="md:text-[28px]"
+        textStyle="text-[18px] md:text-[28px]"
       />
 
       <Text className="mt-[26px]">{textContent}</Text>
