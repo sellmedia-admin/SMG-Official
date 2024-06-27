@@ -67,6 +67,11 @@ input:focus {
   border: none;
 }
 
+input:focus {
+  border-color: black !important;
+  box-shadow: 0 0 2px #000000;
+}
+
 @media screen and (max-width: 1000px) {
   p {
     font-size: 16px;
