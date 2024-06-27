@@ -8,7 +8,7 @@ export const navItems = [
     link: "/about-us",
   },
   { name: "Services", link: "/services" },
-  { name: "Blog", link: "/blog" },
+  { name: "Blog", link: "https://blog.sellmedia.africa/" },
   {
     name: "Contact Us",
     link: "/contact-us",
