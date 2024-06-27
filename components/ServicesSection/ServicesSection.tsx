@@ -68,10 +68,10 @@ const ServicesSection = ({
       px={{ base: "20px", md: "0" }}
     >
       <div className="md:max-w-max mx-auto">
-        <h2 className="text-start md:text-center text-[26px] md:text-[34px]">
+        <h2 className="text-start md:text-center text-[18px] md:text-[34px]">
           {topTitle}
         </h2>
-        <div className="max-w-[200px] md:ml-12">
+        <div className="max-w-[161px] md:max-w-[200px] md:ml-12">
           <img
             src="/imgs/line-separator.png"
             alt="line"
@@ -80,7 +80,7 @@ const ServicesSection = ({
           />
         </div>
 
-        <h2 className="text-start md:text-center text-[26px] md:text-[34px]">
+        <h2 className="text-start md:text-center text-[18px] md:text-[34px]">
           {bottomTitle}
         </h2>
       </div>

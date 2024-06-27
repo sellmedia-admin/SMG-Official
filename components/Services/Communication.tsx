@@ -12,6 +12,7 @@ const Communication = () => {
           title={service.service}
           description={service.description}
           isLast={isOdd && index === MARKETING_COMMUNICATION.length - 1}
+          identifier="communication"
         />
       ))}
     </>

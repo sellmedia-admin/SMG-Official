@@ -13,6 +13,7 @@ const Analytics = () => {
           title={service.service}
           description={service.description}
           isLast={isOdd && index === MARKETING_ANALYTICS.length - 1}
+          identifier="analytics"
         />
       ))}
     </>

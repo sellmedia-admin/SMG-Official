@@ -147,7 +147,7 @@ const AboutUsPage = () => {
                       : ""
                   }`}
                 >
-                  <div className="w-[30px] h-[30px] md:w-[80px] md:h-[80px]">
+                  <div className="w-[30px] h-[30px] md:w-[80px] md:h-[80px] border-2 border-[#460B32] rounded-full">
                     <img
                       src={`/icons/values/${value.toLowerCase()}.svg`}
                       alt={value}

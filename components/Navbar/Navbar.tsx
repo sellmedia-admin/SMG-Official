@@ -118,7 +118,9 @@ const Navbar = () => {
                     className="transition ease-in-out hover:scale-110"
                   />
                 </Link>
-                <Box className="font-600 leading-[18px]">{option.label}</Box>
+                <Box className="font-600 text-[12px] leading-[18px]">
+                  {option.label}
+                </Box>
               </Flex>
             ))}
           </div>
