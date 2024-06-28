@@ -113,7 +113,7 @@ const Footer = () => {
                   </Text>
                   <div className="w-full max-w-[80px]" />
                 </div>
-                {section.title === "SocialMedia Inc" ? (
+                {section.title === "SocialMedia" ? (
                   <>
                     <Flex gap={4}>
                       {section.links.map(
@@ -263,7 +263,7 @@ const footerLinks = [
     ],
   },
   {
-    title: "SocialMedia Inc",
+    title: "SocialMedia",
     links: [
       {
         name: "",

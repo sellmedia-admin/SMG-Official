@@ -61,6 +61,9 @@ const ContactUsPage = () => {
                 <Text className=" text-base leading-[30px]">
                   hello@sellmedia.africa{" "}
                 </Text>
+                <Text className=" text-base leading-[30px]">
+                  sales@sellmedia.africa{" "}
+                </Text>
               </div>
             </div>
 
