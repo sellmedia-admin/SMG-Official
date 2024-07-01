@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
           </Box>
           <Box
-            className="grid grid-cols-2-150px md:!grid-cols-3 gap-x-8 md:gap-x-4 text-base"
+            className="grid grid-cols-2-150px md:!grid-cols-3 gap-x-6 md:gap-x-4 text-base"
             style={{ gridTemplateColumns: "repeat(2, 200px)" }}
           >
             {footerLinks.map((section, index) => (
@@ -242,12 +242,16 @@ const footerLinks = [
         link: "mailto:hello@sellmedia.africa",
       },
       {
+        name: "sales@sellmedia.africa",
+        link: "mailto:sales@sellmedia.africa",
+      },
+      {
         name: "",
         link: "#",
         icon: "/icons/telephone.svg",
       },
       {
-        name: "+234 706 419 1282",
+        name: "+234013300401",
         link: "tel:+234013300401",
       },
     ],
