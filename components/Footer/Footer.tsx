@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
           </Box>
           <Box
-            className="grid grid-cols-2-150px md:!grid-cols-3 gap-x-6 md:gap-x-4 text-base"
+            className="grid grid-cols-2-150px md:!grid-cols-3 gap-x-6d md:gap-x-4 text-base"
             style={{ gridTemplateColumns: "repeat(2, 200px)" }}
           >
             {footerLinks.map((section, index) => (
