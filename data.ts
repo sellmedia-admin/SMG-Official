@@ -236,7 +236,7 @@ export const TEAM = [
 ];
 
 export const PROJECTS = [
-  { label: "Agriculture", value: "Agriculture".replace(/\s+/g, "-") },
+  { label: "Agriculture", value: "Agriculture" },
   { label: "Automobiles and Components", value: "Automobiles-and-Components" },
   {
     label: "Commercial and Professional Service",

@@ -1,28 +1,63 @@
 "use client";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
-import CustomButton from "../Button/Button";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import CustomButton from "../Button/Button";
 
 const EmailForm = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      console.log(response);
+
+      if (response) {
+        alert("Thanks you for subscribing!");
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error submitting form", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Box className="bg-b-ash1 py-10 text-white px-5">
-      <Box className="max-w-[1184px] flex flex-col md:flex-row  justify-between items-start md:items-center mx-auto md:px-0 gap-6">
+      <Box className="max-w-[1184px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto md:px-0 gap-6">
         <div className="flex flex-col gap-[18px]">
           <h2>Stay informed</h2>
           <Text fontWeight={600}>Signup for our newsletter</Text>
         </div>
         <form
-          action="#"
-          className="w-full flex flex-col md:flex-row  gap-4 md:max-w-[420px]"
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col md:flex-row gap-4 md:max-w-[420px]"
         >
           <VStack alignItems={"left"}>
             <input
               type="email"
-              name="email"
+              name="Email"
               id="email"
               placeholder="Your Email Address"
               className="h-[48px] rounded-20 email-input pl-6 text-b-black w-full md:w-[248px]"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </VStack>
           <CustomButton
@@ -31,6 +66,7 @@ const EmailForm = () => {
             leftIcon={
               <img src="/icons/mail.svg" alt="email" width={24} height={24} />
             }
+            isLoading={isLoading}
           >
             Subscribe
           </CustomButton>

@@ -45,7 +45,7 @@ const ReusableInput: React.FC<ReusableInputProps> = ({
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value.trim();
     setIsInvalid(!validate(value));
-    onChange(event); // Call the onChange prop with the event
+    onChange(event);
   };
 
   return (
