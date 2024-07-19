@@ -1,11 +1,10 @@
 "use client";
+import { PROJECTS } from "@/data";
+import { FormLabel, Select, Textarea } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { CustomButton, Input } from "..";
-import { FormLabel, Select, Textarea } from "@chakra-ui/react";
-import { PROJECTS } from "@/data";
 
 const Contact = () => {
-  // State variables for form inputs and loading state
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -14,71 +13,76 @@ const Contact = () => {
   const [project, setProject] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
+  const [fileName, setFileName] = useState("");
+  const [fileSize, setFileSize] = useState("");
 
-  // Handler for project selection change
   const handleProjectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setProject(event.target.value);
   };
 
-  // Handler for form submission
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files && files[0]) {
+      const selectedFile = files[0];
+      setFile(selectedFile);
+      setFileName(selectedFile.name);
+      setFileSize((selectedFile.size / 1024).toFixed(2) + " KB");
+    }
+  };
+
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent default form submission
-    setLoading(true); // Set loading state to true while sending email
+    event.preventDefault();
+    setLoading(true);
 
-    // Construct email body
-    const emailBody = `
-      <p>First Name: ${firstName}</p>
-      <p>Last Name: ${lastName}</p>
-      <p>Company Name: ${companyName}</p>
-      <p>Phone Number: ${phoneNumber}</p>
-      <p>Work Email: ${companyEmail}</p>
-      <p>Type of Enquiry: ${project}</p>
-      <p>${message}</p>
-    `;
-
-    // Prepare data for API request
-    const requestData = {
-      firstName,
-      lastName,
-      companyName,
-      phoneNumber,
-      companyEmail,
-      project,
-      message,
-      body: emailBody,
-    };
+    const formData = new FormData();
+    formData.append("SingleLine", firstName);
+    formData.append("SingleLine1", lastName);
+    formData.append("SingleLine2", companyName);
+    formData.append("PhoneNumber_countrycode", phoneNumber);
+    formData.append("Email", companyEmail);
+    formData.append("SingleLine3", project);
+    formData.append("MultiLine", message);
+    if (file) {
+      formData.append("FileUpload", file);
+    }
 
     try {
-      const response = await fetch("/api/startProject", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestData),
-      });
+      const response = await fetch(
+        "https://forms.zohopublic.com/sellmediaafrica/form/Startaprojectform/formperma/jWVOBYYbxMaGJGMecK9yvuRk1qmz8WKHB-cjpDM43wI/htmlRecords/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-      if (!response.ok) {
-        throw new Error("Failed to send email");
+      if (response) {
+        console.log(response);
+        alert("Form submitted successfully");
+
+        console.log("success");
       }
-
-      alert("Email sent successfully!"); // Display success message
     } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Failed to send email. Please try again."); // Display error message
+      console.error("Error submitting form:", error);
     } finally {
-      setLoading(false); // Set loading state back to false after request completes
+      setLoading(false);
     }
   };
 
   return (
     <form
       className="max-w-[744px] mx-auto mb-[80px] md:border rounded-2xl md:p-8 md:shadow-dark-blue"
-      onSubmit={handleSubmit} // Bind form submission handler
+      onSubmit={handleSubmit}
+      action="https://forms.zohopublic.com/sellmediaafrica/form/Startaprojectform/formperma/jWVOBYYbxMaGJGMecK9yvuRk1qmz8WKHB-cjpDM43wI/htmlRecords/submit"
+      name="form"
+      id="form"
+      method="POST"
+      acceptCharset="UTF-8"
+      encType="multipart/form-data"
     >
-      {/* Input fields for first name, last name, company name, phone number, and work email */}
       <Input
         id="first-name"
-        name="first-name"
+        name="SingleLine"
         label="First Name"
         type="text"
         placeholder="Enter first name"
@@ -87,7 +91,7 @@ const Contact = () => {
       />
       <Input
         id="last-name"
-        name="last-name"
+        name="SingleLine1"
         label="Last Name"
         type="text"
         placeholder="Enter last name"
@@ -96,7 +100,7 @@ const Contact = () => {
       />
       <Input
         id="company-name"
-        name="company-name"
+        name="SingleLine2"
         label="Company Name"
         type="text"
         placeholder="Enter company name"
@@ -105,7 +109,7 @@ const Contact = () => {
       />
       <Input
         id="phone-number"
-        name="phone-number"
+        name="PhoneNumber_countrycode"
         label="Phone Number"
         type="number"
         placeholder="Enter phone number"
@@ -114,7 +118,7 @@ const Contact = () => {
       />
       <Input
         id="work-email"
-        name="work-email"
+        name="Email"
         label="Work Email"
         type="email"
         placeholder="Enter work email"
@@ -122,7 +126,6 @@ const Contact = () => {
         onChange={(e) => setCompanyEmail(e.target.value)}
       />
 
-      {/* Select field for type of enquiry */}
       <FormLabel
         htmlFor={"project"}
         fontSize="14px"
@@ -135,7 +138,7 @@ const Contact = () => {
       <Select
         required
         id="project"
-        name="project"
+        name="SingleLine3"
         onChange={handleProjectChange}
         className="border-solid border-1 border-gray-300 !rounded-20 !h-16 mb-3"
         icon={
@@ -153,7 +156,6 @@ const Contact = () => {
         }
         placeholder="Select type"
       >
-        {/* Map over PROJECTS array to populate select options */}
         {PROJECTS.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
@@ -161,53 +163,59 @@ const Contact = () => {
         ))}
       </Select>
 
-      {/* Textarea for message input */}
-      <>
-        <FormLabel
-          htmlFor={"message"}
-          fontSize="14px"
-          lineHeight="27px"
-          fontWeight="400"
-          mb="2"
-        >
-          Message
-        </FormLabel>
-        <Textarea
-          required
-          id="message"
-          name="message"
-          className="border-solid border-1 border-gray-300 !rounded-20 mb-6 !p-4"
-          placeholder="Type in your message"
-          _placeholder={{
-            color: "#7C7C7C",
-            fontSize: "16px",
-            lineHeight: "30px",
-          }}
-          rows={10}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></Textarea>
-      </>
+      <FormLabel
+        htmlFor={"message"}
+        fontSize="14px"
+        lineHeight="27px"
+        fontWeight="400"
+        mb="2"
+      >
+        Message
+      </FormLabel>
+      <Textarea
+        required
+        id="message"
+        name="MultiLine"
+        className="border-solid border-1 border-gray-300 !rounded-20 mb-6 !p-4"
+        placeholder="Type in your message"
+        _placeholder={{
+          color: "#7C7C7C",
+          fontSize: "16px",
+          lineHeight: "30px",
+        }}
+        rows={10}
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      ></Textarea>
 
-      <div className="block">
-        <CustomButton
-          leftIcon={<img src="/icons/attach.svg" width={24} height={24} />}
-          className="bg-[#F2F4F7] text-black !border !border-[#D0D5DD] !rounded-[12px] mb-8 "
+      <div className="flex items-center mb-8">
+        <label
+          className="flex items-center py-2.5 px-4 max-w-max bg-[#F2F4F7] text-black border border-[#D0D5DD] rounded-[12px]"
+          htmlFor="file"
         >
-          {" "}
-          <input type="file" name="file" id="file" hidden />
-          Attach a file{" "}
-        </CustomButton>
+          <img src="/icons/attach.svg" width={24} height={24} />
+          <input
+            type="file"
+            name="FileUpload"
+            id="file"
+            hidden
+            onChange={handleFileChange}
+          />
+          Attach a file
+        </label>
+        {file && (
+          <div className="ml-4 inline-block">
+            {fileName} ({fileSize})
+          </div>
+        )}
       </div>
-
-      {/* Submit button with loading state */}
 
       <CustomButton
         className=" bg-b-black text-white !w-[194px]"
         type="submit"
         isLoading={loading}
       >
-        Send us a message
+        Submit
       </CustomButton>
     </form>
   );
