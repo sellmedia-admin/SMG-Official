@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     const formData = new URLSearchParams();
     formData.append("Email", body.email);
 
-    console.log(formData);
+    // console.log(formData);
 
     try {
       const response = await fetch(
