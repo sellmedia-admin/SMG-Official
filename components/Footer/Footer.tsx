@@ -22,7 +22,7 @@ const EmailForm = () => {
         body: JSON.stringify({ email }),
       });
 
-      console.log(response);
+      // console.log(response);
 
       if (response) {
         alert("Thanks you for subscribing!");
